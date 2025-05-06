@@ -18,15 +18,14 @@ func main() {
 		fmt.Println("Error reading JSON file:", err)
 		return
 	}
-	name := recipe.RecipeMap["Excalibur"].Name
+	name := recipe.RecipeMap["Mud"].Name
 	fmt.Println("Name:", name)
 	bus := &recipe.RecipeTreeNode{Name: name}
-	recipe.BuildRecipeTreeBFS(bus)
+	// recipe.BuildRecipeTreeBFS(bus)
+	recipe.BuildRecipeTreeDFS(bus)
 	fmt.Println("Recipe tree built successfully.")
 	recipe.PrintRecipeTree(bus, "", true)
 	fmt.Println("Recipe tree printed successfully.")
-	// recipe.BFSPrintRecipeTree(bus)
-	// fmt.Println("BFS recipe tree printed successfully.")
 }
 
 //how to run this code?

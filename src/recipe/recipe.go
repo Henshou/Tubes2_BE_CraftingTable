@@ -81,6 +81,46 @@ func BuildRecipeTreeBFS(root *RecipeTreeNode) error {
 	return nil
 }
 
+func BuildRecipeTreeDFS(root *RecipeTreeNode) error {
+	stack := []*RecipeTreeNode{root}
+
+	for len(stack) > 0 {
+		n := len(stack) - 1
+		current := stack[n]
+		stack = stack[:n]
+
+		if _, ok := VisitedMap[current.Name]; ok {
+			continue
+		}
+
+		recipe, ok := RecipeMap[current.Name]
+		if !ok {
+			return fmt.Errorf("recipe not found: %s", current.Name)
+		}
+
+		if len(recipe.Recipes) == 0 {
+			fmt.Println("Base Element Found:", current.Name)
+		}
+
+		for _, childGroup := range recipe.Recipes {
+			var children []*RecipeTreeNode
+			for _, childName := range childGroup {
+				if existing, ok := VisitedMap[childName]; ok {
+					children = append(children, existing)
+				} else {
+					childNode := &RecipeTreeNode{Name: childName}
+					children = append(children, childNode)
+					stack = append(stack, childNode)
+				}
+			}
+			current.AddChild(children)
+		}
+
+		VisitedMap[current.Name] = current
+	}
+	return nil
+}
+
 func PrintRecipeTree(node *RecipeTreeNode, prefix string, isLast bool) {
 	// Print the current node
 	if _, ok := VisitedPrintMap[node.Name]; ok {
