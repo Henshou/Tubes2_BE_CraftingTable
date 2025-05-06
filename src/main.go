@@ -18,6 +18,18 @@ func main() {
 		fmt.Println("Error reading JSON file:", err)
 		return
 	}
-	name := recipe.RecipeMap["Fire"].Name
+	name := recipe.RecipeMap["Excalibur"].Name
 	fmt.Println("Name:", name)
+	bus := &recipe.RecipeTreeNode{Name: name}
+	recipe.BuildRecipeTreeBFS(bus)
+	fmt.Println("Recipe tree built successfully.")
+	recipe.PrintRecipeTree(bus, "", true)
+	fmt.Println("Recipe tree printed successfully.")
+	// recipe.BFSPrintRecipeTree(bus)
+	// fmt.Println("BFS recipe tree printed successfully.")
 }
+
+//how to run this code?
+// go run src/main.go
+//how to compile this code?
+// go build -o main src/main.go

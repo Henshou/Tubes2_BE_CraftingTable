@@ -18,6 +18,7 @@ type RecipeTreeNode struct {
 
 var VisitedMap = make(map[string]*RecipeTreeNode)
 var RecipeMap = make(map[string]Recipe) // from readJson
+var VisitedPrintMap = make(map[string]bool)
 
 func (node *RecipeTreeNode) AddChild(child []*RecipeTreeNode) {
 	node.Children = append(node.Children, child)
@@ -31,17 +32,21 @@ func ReadJson(filename string) (map[string]Recipe, error) {
 	defer file.Close()
 
 	decoder := json.NewDecoder(file)
-	var Recipes map[string]Recipe
-	if err := decoder.Decode(&Recipes); err != nil {
+	var recipes []Recipe
+	if err := decoder.Decode(&recipes); err != nil {
 		return nil, fmt.Errorf("error decoding JSON: %w", err)
 	}
 
-	return Recipes, nil
+	var recipeMap = make(map[string]Recipe)
+	for _, recipe := range recipes {
+		recipeMap[recipe.Name] = recipe
+	}
+
+	return recipeMap, nil
 }
 
 func BuildRecipeTreeBFS(root *RecipeTreeNode) error {
 	queue := []*RecipeTreeNode{root}
-
 	for len(queue) > 0 {
 		current := queue[0]
 		queue = queue[1:]
@@ -50,7 +55,6 @@ func BuildRecipeTreeBFS(root *RecipeTreeNode) error {
 			continue
 		}
 
-		VisitedMap[current.Name] = current
 		recipe, ok := RecipeMap[current.Name]
 		if !ok {
 			return fmt.Errorf("recipe not found: %s", current.Name)
@@ -71,6 +75,36 @@ func BuildRecipeTreeBFS(root *RecipeTreeNode) error {
 			}
 			current.AddChild(Children)
 		}
+		VisitedMap[current.Name] = current
+
 	}
 	return nil
+}
+
+func PrintRecipeTree(node *RecipeTreeNode, prefix string, isLast bool) {
+	// Print the current node
+	if _, ok := VisitedPrintMap[node.Name]; ok {
+		return
+	}
+	fmt.Print(prefix)
+	if isLast {
+		fmt.Print("└── ")
+		prefix += "    "
+	} else {
+		fmt.Print("├── ")
+		prefix += "│   "
+	}
+	fmt.Println(node.Name)
+
+	// Flatten all children combinations
+	var allChildren []*RecipeTreeNode
+	for _, group := range node.Children {
+		allChildren = append(allChildren, group...)
+	}
+
+	// Recursively print each child
+	for i, child := range allChildren {
+		PrintRecipeTree(child, prefix, i == len(allChildren)-1)
+		VisitedPrintMap[node.Name] = true
+	}
 }

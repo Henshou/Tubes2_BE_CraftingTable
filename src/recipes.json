@@ -1,5 +1,29 @@
 [
   {
+    "element": "Air",
+    "recipes": [
+      []
+    ]
+  },
+  {
+    "element": "Earth",
+    "recipes": [
+      []
+    ]
+  },
+  {
+    "element": "Fire",
+    "recipes": [
+      []
+    ]
+  },
+  {
+    "element": "Water",
+    "recipes": [
+      []
+    ]
+  },
+  {
     "element": "Dust",
     "recipes": [
       [

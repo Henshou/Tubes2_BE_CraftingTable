@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"strings"
+
 	"github.com/gocolly/colly"
 )
 
@@ -49,6 +50,11 @@ func FindRecipes() {
 			elements = append(elements, ElementWithRecipes{
 				Element: elementName,
 				Recipes: recipes,
+			})
+		} else if baseElements[elementName] {
+			elements = append(elements, ElementWithRecipes{
+				Element: elementName,
+				Recipes: [][]string{{}},
 			})
 		}
 	})
