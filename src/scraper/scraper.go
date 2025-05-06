@@ -5,12 +5,14 @@ import (
 	"log"
 	"os"
 	"strings"
+
 	"github.com/gocolly/colly"
 )
 
 type ElementWithRecipes struct {
-	Element string     `json:"element"`
-	Recipes [][]string `json:"recipes"`
+	Element  string     `json:"element"`
+	ImageURL string     `json:"image_url"`
+	Recipes  [][]string `json:"recipes"`
 }
 
 func FindRecipes() {
@@ -31,6 +33,11 @@ func FindRecipes() {
 			return
 		}
 
+		imageURL := e.ChildAttr("td:nth-of-type(1) a", "href")
+		if imageURL == "" {
+			imageURL = "No image" // In case the image URL is not found
+		}
+
 		var recipes [][]string
 		e.ForEach("td:nth-of-type(2) li", func(_ int, li *colly.HTMLElement) {
 			var components []string
@@ -47,8 +54,15 @@ func FindRecipes() {
 
 		if len(recipes) > 0 && !baseElements[elementName] {
 			elements = append(elements, ElementWithRecipes{
-				Element: elementName,
-				Recipes: recipes,
+				Element:  elementName,
+				ImageURL: imageURL,
+				Recipes:  recipes,
+			})
+		} else if baseElements[elementName] {
+			elements = append(elements, ElementWithRecipes{
+				Element:  elementName,
+				ImageURL: imageURL,
+				Recipes:  [][]string{{}},
 			})
 		}
 	})

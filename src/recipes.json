@@ -1,6 +1,35 @@
 [
   {
+    "element": "Air",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/03/Air_2.svg/revision/latest?cb=20210827121954",
+    "recipes": [
+      []
+    ]
+  },
+  {
+    "element": "Earth",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/21/Earth_2.svg/revision/latest?cb=20210827132928",
+    "recipes": [
+      []
+    ]
+  },
+  {
+    "element": "Fire",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/01/Fire_2.svg/revision/latest?cb=20210827122013",
+    "recipes": [
+      []
+    ]
+  },
+  {
+    "element": "Water",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f4/Water_2.svg/revision/latest?cb=20210827124229",
+    "recipes": [
+      []
+    ]
+  },
+  {
     "element": "Dust",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a4/Dust_2.svg/revision/latest?cb=20210827130147",
     "recipes": [
       [
         "Earth",
@@ -18,6 +47,7 @@
   },
   {
     "element": "Energy",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ed/Energy_2.svg/revision/latest?cb=20210827224722",
     "recipes": [
       [
         "Fire",
@@ -39,6 +69,7 @@
   },
   {
     "element": "Land",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9b/Land_2.svg/revision/latest?cb=20210827132944",
     "recipes": [
       [
         "Soil",
@@ -64,6 +95,7 @@
   },
   {
     "element": "Lava",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/85/Lava_2.svg/revision/latest?cb=20210830114616",
     "recipes": [
       [
         "Earth",
@@ -81,6 +113,7 @@
   },
   {
     "element": "Mist",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e3/Mist_2.svg/revision/latest?cb=20210827122019",
     "recipes": [
       [
         "Air",
@@ -98,6 +131,7 @@
   },
   {
     "element": "Mud",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8b/Mud_2.svg/revision/latest?cb=20210827231218",
     "recipes": [
       [
         "Water",
@@ -111,6 +145,7 @@
   },
   {
     "element": "Pressure",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7a/Pressure_2.svg/revision/latest?cb=20210828104218",
     "recipes": [
       [
         "Air",
@@ -136,6 +171,7 @@
   },
   {
     "element": "Puddle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c3/Puddle_2.svg/revision/latest?cb=20210827132946",
     "recipes": [
       [
         "Water",
@@ -149,6 +185,7 @@
   },
   {
     "element": "Smoke",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/32/Smoke_2.svg/revision/latest?cb=20210827122035",
     "recipes": [
       [
         "Earth",
@@ -190,6 +227,7 @@
   },
   {
     "element": "Steam",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/95/Steam_2.svg/revision/latest?cb=20210828104228",
     "recipes": [
       [
         "Water",
@@ -211,6 +249,7 @@
   },
   {
     "element": "Brick",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/64/Brick_2.svg/revision/latest?cb=20210829004252",
     "recipes": [
       [
         "Mud",
@@ -236,6 +275,7 @@
   },
   {
     "element": "Continent",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4d/Continent_2.svg/revision/latest?cb=20210827132923",
     "recipes": [
       [
         "Land",
@@ -257,6 +297,7 @@
   },
   {
     "element": "Earthquake",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/51/Earthquake_2.svg/revision/latest?cb=20210827231104",
     "recipes": [
       [
         "Earth",
@@ -274,6 +315,7 @@
   },
   {
     "element": "Eruption",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e1/Eruption_2.svg/revision/latest?cb=20210830114613",
     "recipes": [
       [
         "Pressure",
@@ -291,6 +333,7 @@
   },
   {
     "element": "Geyser",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e0/Geyser_2.svg/revision/latest?cb=20210902171449",
     "recipes": [
       [
         "Steam",
@@ -312,6 +355,7 @@
   },
   {
     "element": "Granite",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/38/Granite_2.svg/revision/latest?cb=20210831023009",
     "recipes": [
       [
         "Pressure",
@@ -329,6 +373,7 @@
   },
   {
     "element": "Gunpowder",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c3/Gunpowder_2.svg/revision/latest?cb=20210828134754",
     "recipes": [
       [
         "Charcoal",
@@ -354,6 +399,7 @@
   },
   {
     "element": "Heat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e0/Heat_2.svg/revision/latest?cb=20210828145419",
     "recipes": [
       [
         "Fire",
@@ -375,6 +421,7 @@
   },
   {
     "element": "Obsidian",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3a/Obsidian_2.svg/revision/latest?cb=20210902102216",
     "recipes": [
       [
         "Lava",
@@ -392,6 +439,7 @@
   },
   {
     "element": "Pond",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/75/Pond_2.svg/revision/latest?cb=20210827124216",
     "recipes": [
       [
         "Puddle",
@@ -413,6 +461,7 @@
   },
   {
     "element": "Stone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/eb/Stone_2.svg/revision/latest?cb=20210828104229",
     "recipes": [
       [
         "Earth",
@@ -430,6 +479,7 @@
   },
   {
     "element": "Volcano",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a6/Volcano_2.svg/revision/latest?cb=20210830114632",
     "recipes": [
       [
         "Lava",
@@ -467,6 +517,7 @@
   },
   {
     "element": "Wind",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bb/Wind_2.svg/revision/latest?cb=20210828104241",
     "recipes": [
       [
         "Motion",
@@ -484,6 +535,7 @@
   },
   {
     "element": "Chimney",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Chimney_2.svg/revision/latest?cb=20210829004313",
     "recipes": [
       [
         "House",
@@ -517,6 +569,7 @@
   },
   {
     "element": "Clay",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/55/Clay_2.svg/revision/latest?cb=20210828111121",
     "recipes": [
       [
         "Mud",
@@ -550,6 +603,7 @@
   },
   {
     "element": "Explosion",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8b/Explosion_2.svg/revision/latest?cb=20210827224723",
     "recipes": [
       [
         "Fire",
@@ -595,6 +649,7 @@
   },
   {
     "element": "Lake",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b4/Lake_2.svg/revision/latest?cb=20210827124207",
     "recipes": [
       [
         "Pond",
@@ -616,6 +671,7 @@
   },
   {
     "element": "Metal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/df/Metal_2.svg/revision/latest?cb=20210827122017",
     "recipes": [
       [
         "Stone",
@@ -641,6 +697,7 @@
   },
   {
     "element": "Mountain",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3f/Mountain_2.svg/revision/latest?cb=20210827130156",
     "recipes": [
       [
         "Big",
@@ -670,6 +727,7 @@
   },
   {
     "element": "Planet",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8a/Planet_2.svg/revision/latest?cb=20210827224737",
     "recipes": [
       [
         "Continent",
@@ -695,6 +753,7 @@
   },
   {
     "element": "Plasma",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/86/Plasma_2.svg/revision/latest?cb=20210902171507",
     "recipes": [
       [
         "Science",
@@ -716,6 +775,7 @@
   },
   {
     "element": "Sand",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/01/Sand_2.svg/revision/latest?cb=20210828104225",
     "recipes": [
       [
         "Stone",
@@ -749,6 +809,7 @@
   },
   {
     "element": "Tornado",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Tornado_2.svg/revision/latest?cb=20210828104234",
     "recipes": [
       [
         "Storm",
@@ -778,6 +839,7 @@
   },
   {
     "element": "Wall",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/49/Wall_2.svg/revision/latest?cb=20210828104237",
     "recipes": [
       [
         "Brick",
@@ -795,6 +857,7 @@
   },
   {
     "element": "Warmth",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/83/Warmth_2.svg/revision/latest?cb=20210904141718",
     "recipes": [
       [
         "Heat",
@@ -808,6 +871,7 @@
   },
   {
     "element": "Atmosphere",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5d/Atmosphere_2.svg/revision/latest?cb=20210827224704",
     "recipes": [
       [
         "Air",
@@ -821,6 +885,7 @@
   },
   {
     "element": "Atomic bomb",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/69/Atomic_bomb_2.svg/revision/latest?cb=20210827224705",
     "recipes": [
       [
         "Explosion",
@@ -838,6 +903,7 @@
   },
   {
     "element": "Avalanche",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/90/Avalanche_2.svg/revision/latest?cb=20210827231027",
     "recipes": [
       [
         "Earthquake",
@@ -895,6 +961,7 @@
   },
   {
     "element": "Beach",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/45/Beach_2.svg/revision/latest?cb=20210827132922",
     "recipes": [
       [
         "Sand",
@@ -920,6 +987,7 @@
   },
   {
     "element": "Blade",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5e/Blade_2.svg/revision/latest?cb=20210827231049",
     "recipes": [
       [
         "Stone",
@@ -941,6 +1009,7 @@
   },
   {
     "element": "Boiler",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/96/Boiler_2.svg/revision/latest?cb=20210828104159",
     "recipes": [
       [
         "Pressure",
@@ -966,6 +1035,7 @@
   },
   {
     "element": "Bullet",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0a/Bullet_2.svg/revision/latest?cb=20210827224711",
     "recipes": [
       [
         "Gunpowder",
@@ -987,6 +1057,7 @@
   },
   {
     "element": "Dam",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d5/Dam_2.svg/revision/latest?cb=20210828104205",
     "recipes": [
       [
         "River",
@@ -1028,6 +1099,7 @@
   },
   {
     "element": "Desert",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7b/Desert_2.svg/revision/latest?cb=20210827132927",
     "recipes": [
       [
         "Sand",
@@ -1053,6 +1125,7 @@
   },
   {
     "element": "Dune",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2d/Dune_2.svg/revision/latest?cb=20210828145412",
     "recipes": [
       [
         "Wind",
@@ -1078,6 +1151,7 @@
   },
   {
     "element": "Firewall",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2d/Firewall_2.svg/revision/latest?cb=20210909182838",
     "recipes": [
       [
         "Fire",
@@ -1087,6 +1161,7 @@
   },
   {
     "element": "Glass",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/88/Glass_2.svg/revision/latest?cb=20210827132937",
     "recipes": [
       [
         "Sand",
@@ -1108,6 +1183,7 @@
   },
   {
     "element": "Gold",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/88/Gold_2.svg/revision/latest?cb=20210827124201",
     "recipes": [
       [
         "Metal",
@@ -1173,6 +1249,7 @@
   },
   {
     "element": "Grenade",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ed/Grenade_2.svg/revision/latest?cb=20210831023013",
     "recipes": [
       [
         "Explosion",
@@ -1190,6 +1267,7 @@
   },
   {
     "element": "House",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5a/House_2.svg/revision/latest?cb=20210827132940",
     "recipes": [
       [
         "Wall",
@@ -1215,6 +1293,7 @@
   },
   {
     "element": "Mercury",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0d/Mercury_2.svg/revision/latest?cb=20210827124212",
     "recipes": [
       [
         "Planet",
@@ -1228,6 +1307,7 @@
   },
   {
     "element": "Moon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1c/Moon_2.svg/revision/latest?cb=20210827224730",
     "recipes": [
       [
         "Sky",
@@ -1269,6 +1349,7 @@
   },
   {
     "element": "Mountain range",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ee/Mountain_range_2.svg/revision/latest?cb=20210827130158",
     "recipes": [
       [
         "Mountain",
@@ -1282,6 +1363,7 @@
   },
   {
     "element": "Plow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4b/Plow_2.svg/revision/latest?cb=20210830145957",
     "recipes": [
       [
         "Earth",
@@ -1315,6 +1397,7 @@
   },
   {
     "element": "River",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3d/River_2.svg/revision/latest?cb=20210827130201",
     "recipes": [
       [
         "Lake",
@@ -1340,6 +1423,7 @@
   },
   {
     "element": "Rust",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/49/Rust_2.svg/revision/latest?cb=20210901142445",
     "recipes": [
       [
         "Air",
@@ -1361,6 +1445,7 @@
   },
   {
     "element": "Sandstone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a1/Sandstone_2.svg/revision/latest?cb=20210903150042",
     "recipes": [
       [
         "Sand",
@@ -1378,6 +1463,7 @@
   },
   {
     "element": "Sandstorm",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a7/Sandstorm_2.svg/revision/latest?cb=20210829125345",
     "recipes": [
       [
         "Sand",
@@ -1411,6 +1497,7 @@
   },
   {
     "element": "Sea",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/32/Sea_2.svg/revision/latest?cb=20210827224741",
     "recipes": [
       [
         "Lake",
@@ -1432,6 +1519,7 @@
   },
   {
     "element": "Solar system",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/75/Solar_system_2.svg/revision/latest?cb=20210827124219",
     "recipes": [
       [
         "Planet",
@@ -1473,6 +1561,7 @@
   },
   {
     "element": "Sun",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c1/Sun_2.svg/revision/latest?cb=20210827124223",
     "recipes": [
       [
         "Sky",
@@ -1506,6 +1595,7 @@
   },
   {
     "element": "Venus",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b3/Venus_2.svg/revision/latest?cb=20210827124226",
     "recipes": [
       [
         "Planet",
@@ -1523,6 +1613,7 @@
   },
   {
     "element": "Waterfall",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/57/Waterfall_2.svg/revision/latest?cb=20210904141722",
     "recipes": [
       [
         "River",
@@ -1552,6 +1643,7 @@
   },
   {
     "element": "Wave",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/db/Wave_2.svg/revision/latest?cb=20210827231238",
     "recipes": [
       [
         "Ocean",
@@ -1593,6 +1685,7 @@
   },
   {
     "element": "Aquarium",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9b/Aquarium_2.svg/revision/latest?cb=20210827132919",
     "recipes": [
       [
         "Glass",
@@ -1622,6 +1715,7 @@
   },
   {
     "element": "Aurora",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/34/Aurora_2.svg/revision/latest?cb=20210827224707",
     "recipes": [
       [
         "Electricity",
@@ -1655,6 +1749,7 @@
   },
   {
     "element": "Bank",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8d/Bank_2.svg/revision/latest?cb=20210827231044",
     "recipes": [
       [
         "Gold",
@@ -1704,6 +1799,7 @@
   },
   {
     "element": "Black hole",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/ff/Black_hole_2.svg/revision/latest?cb=20210828104104",
     "recipes": [
       [
         "Pressure",
@@ -1725,6 +1821,7 @@
   },
   {
     "element": "Blender",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5b/Blender_2.svg/revision/latest?cb=20210828104108",
     "recipes": [
       [
         "Blade",
@@ -1750,6 +1847,7 @@
   },
   {
     "element": "Bridge",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bb/Bridge_2.svg/revision/latest?cb=20210828111115",
     "recipes": [
       [
         "Wood",
@@ -1779,6 +1877,7 @@
   },
   {
     "element": "Cloud",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b9/Cloud_2.svg/revision/latest?cb=20210827122005",
     "recipes": [
       [
         "Atmosphere",
@@ -1800,6 +1899,7 @@
   },
   {
     "element": "Current",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c6/Current_2.svg/revision/latest?cb=20210829104334",
     "recipes": [
       [
         "Ocean",
@@ -1837,6 +1937,7 @@
   },
   {
     "element": "Eclipse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6b/Eclipse_2.svg/revision/latest?cb=20210830114609",
     "recipes": [
       [
         "Sun",
@@ -1846,6 +1947,7 @@
   },
   {
     "element": "Factory",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/11/Factory_2.svg/revision/latest?cb=20210910114329",
     "recipes": [
       [
         "House",
@@ -1859,6 +1961,7 @@
   },
   {
     "element": "Field",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Field_2.svg/revision/latest?cb=20210827231110",
     "recipes": [
       [
         "Farmer",
@@ -1900,6 +2003,7 @@
   },
   {
     "element": "Fireworks",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/43/Fireworks_2.svg/revision/latest?cb=20210830145939",
     "recipes": [
       [
         "Explosion",
@@ -1913,6 +2017,7 @@
   },
   {
     "element": "Flood",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c5/Flood_2.svg/revision/latest?cb=20210830145941",
     "recipes": [
       [
         "Rain",
@@ -1954,6 +2059,7 @@
   },
   {
     "element": "Galaxy",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/72/Galaxy_2.svg/revision/latest?cb=20210827124158",
     "recipes": [
       [
         "Star",
@@ -1995,6 +2101,7 @@
   },
   {
     "element": "Glasses",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/dd/Glasses_2.svg/revision/latest?cb=20210831023006",
     "recipes": [
       [
         "Glass",
@@ -2024,6 +2131,7 @@
   },
   {
     "element": "Gun",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1a/Gun_2.svg/revision/latest?cb=20210827231115",
     "recipes": [
       [
         "Bullet",
@@ -2057,6 +2165,7 @@
   },
   {
     "element": "Hourglass",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/25/Hourglass_2.svg/revision/latest?cb=20210831120904",
     "recipes": [
       [
         "Sand",
@@ -2082,6 +2191,7 @@
   },
   {
     "element": "Hurricane",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ef/Hurricane_2.svg/revision/latest?cb=20210828104216",
     "recipes": [
       [
         "Ocean",
@@ -2103,6 +2213,7 @@
   },
   {
     "element": "Island",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/07/Island_2.svg/revision/latest?cb=20210827224727",
     "recipes": [
       [
         "Volcano",
@@ -2124,6 +2235,7 @@
   },
   {
     "element": "Katana",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/22/Katana_2.svg/revision/latest?cb=20210831154318",
     "recipes": [
       [
         "Blade",
@@ -2149,6 +2261,7 @@
   },
   {
     "element": "Mars",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fe/Mars_2.svg/revision/latest?cb=20210827124210",
     "recipes": [
       [
         "Planet",
@@ -2162,6 +2275,7 @@
   },
   {
     "element": "Meteoroid",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ab/Meteoroid_2.svg/revision/latest?cb=20210901142433",
     "recipes": [
       [
         "Space",
@@ -2203,6 +2317,7 @@
   },
   {
     "element": "Mirror",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9b/Mirror_2.svg/revision/latest?cb=20210829104354",
     "recipes": [
       [
         "Glass",
@@ -2220,6 +2335,7 @@
   },
   {
     "element": "Oasis",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ee/Oasis_2.svg/revision/latest?cb=20210902102215",
     "recipes": [
       [
         "Desert",
@@ -2257,6 +2373,7 @@
   },
   {
     "element": "Ocean",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/89/Ocean_2.svg/revision/latest?cb=20210827224734",
     "recipes": [
       [
         "Sea",
@@ -2278,6 +2395,7 @@
   },
   {
     "element": "Primordial soup",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/af/Primordial_soup_2.svg/revision/latest?cb=20210827231225",
     "recipes": [
       [
         "Lava",
@@ -2307,6 +2425,7 @@
   },
   {
     "element": "Pyramid",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/01/Pyramid_2.svg/revision/latest?cb=20210901142444",
     "recipes": [
       [
         "Desert",
@@ -2344,6 +2463,7 @@
   },
   {
     "element": "Rainbow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/26/Rainbow_2.svg/revision/latest?cb=20210828134759",
     "recipes": [
       [
         "Rain",
@@ -2377,6 +2497,7 @@
   },
   {
     "element": "Rocket",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/97/Rocket_2.svg/revision/latest?cb=20210827224738",
     "recipes": [
       [
         "Atmosphere",
@@ -2418,6 +2539,7 @@
   },
   {
     "element": "Safe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/04/Safe_2.svg/revision/latest?cb=20210827231227",
     "recipes": [
       [
         "Metal",
@@ -2447,6 +2569,7 @@
   },
   {
     "element": "Salt",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8a/Salt_2.svg/revision/latest?cb=20210829004327",
     "recipes": [
       [
         "Sea",
@@ -2476,6 +2599,7 @@
   },
   {
     "element": "Scissors",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/32/Scissors_2.svg/revision/latest?cb=20210828111149",
     "recipes": [
       [
         "Blade",
@@ -2501,6 +2625,7 @@
   },
   {
     "element": "Sky",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6c/Sky_2.svg/revision/latest?cb=20210827224743",
     "recipes": [
       [
         "Air",
@@ -2522,6 +2647,7 @@
   },
   {
     "element": "Solar cell",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/53/Solar_cell_2.svg/revision/latest?cb=20210830114629",
     "recipes": [
       [
         "Sun",
@@ -2547,6 +2673,7 @@
   },
   {
     "element": "Sound",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/77/Sound_2.svg/revision/latest?cb=20210827124220",
     "recipes": [
       [
         "Wave",
@@ -2568,6 +2695,7 @@
   },
   {
     "element": "Space station",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/39/Space_station_2.svg/revision/latest?cb=20210827224746",
     "recipes": [
       [
         "Space",
@@ -2597,6 +2725,7 @@
   },
   {
     "element": "Supernova",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/64/Supernova_2.svg/revision/latest?cb=20210831023025",
     "recipes": [
       [
         "Explosion",
@@ -2618,6 +2747,7 @@
   },
   {
     "element": "Swimming pool",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/56/Swimming_pool_2.svg/revision/latest?cb=20210827132957",
     "recipes": [
       [
         "House",
@@ -2635,6 +2765,7 @@
   },
   {
     "element": "Sword",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c5/Sword_2.svg/revision/latest?cb=20210827231232",
     "recipes": [
       [
         "Blade",
@@ -2652,6 +2783,7 @@
   },
   {
     "element": "Telescope",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e9/Telescope_2.svg/revision/latest?cb=20210903150050",
     "recipes": [
       [
         "Glass",
@@ -2713,6 +2845,7 @@
   },
   {
     "element": "Tide",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f3/Tide_2.svg/revision/latest?cb=20210902102222",
     "recipes": [
       [
         "Ocean",
@@ -2734,6 +2867,7 @@
   },
   {
     "element": "Tsunami",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/07/Tsunami_2.svg/revision/latest?cb=20210830150002",
     "recipes": [
       [
         "Sea",
@@ -2763,6 +2897,7 @@
   },
   {
     "element": "Village",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/99/Village_2.svg/revision/latest?cb=20210829010145",
     "recipes": [
       [
         "House",
@@ -2788,6 +2923,7 @@
   },
   {
     "element": "Windmill",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/17/Windmill_2.svg/revision/latest?cb=20210828104244",
     "recipes": [
       [
         "Wind",
@@ -2813,6 +2949,7 @@
   },
   {
     "element": "Acid rain",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1d/Acid_rain_2.svg/revision/latest?cb=20210827120128",
     "recipes": [
       [
         "Rain",
@@ -2846,6 +2983,7 @@
   },
   {
     "element": "Archipelago",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d9/Archipelago_2.svg/revision/latest?cb=20210827224653",
     "recipes": [
       [
         "Island",
@@ -2863,6 +3001,7 @@
   },
   {
     "element": "Barn",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1f/Barn_2.svg/revision/latest?cb=20210827231046",
     "recipes": [
       [
         "House",
@@ -2936,6 +3075,7 @@
   },
   {
     "element": "Bayonet",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/18/Bayonet_2.svg/revision/latest?cb=20210902171448",
     "recipes": [
       [
         "Gun",
@@ -2953,6 +3093,7 @@
   },
   {
     "element": "Bell",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/33/Bell_2.svg/revision/latest?cb=20210827124152",
     "recipes": [
       [
         "Sound",
@@ -2978,6 +3119,7 @@
   },
   {
     "element": "Binoculars",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/50/Binoculars_2.svg/revision/latest?cb=20210909182835",
     "recipes": [
       [
         "Telescope",
@@ -2991,6 +3133,7 @@
   },
   {
     "element": "City",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c8/City_2.svg/revision/latest?cb=20210827122002",
     "recipes": [
       [
         "Village",
@@ -3032,6 +3175,7 @@
   },
   {
     "element": "Day",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0f/Day_2.svg/revision/latest?cb=20210829125312",
     "recipes": [
       [
         "Sun",
@@ -3053,6 +3197,7 @@
   },
   {
     "element": "Double rainbow!",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/87/Double_rainbow%21_2.svg/revision/latest?cb=20210828134753",
     "recipes": [
       [
         "Rainbow",
@@ -3062,6 +3207,7 @@
   },
   {
     "element": "Electricity",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7c/Electricity_2.svg/revision/latest?cb=20210827224719",
     "recipes": [
       [
         "Metal",
@@ -3107,6 +3253,7 @@
   },
   {
     "element": "Excalibur",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/36/Excalibur_2.svg/revision/latest?cb=20210830114614",
     "recipes": [
       [
         "Sword",
@@ -3136,6 +3283,7 @@
   },
   {
     "element": "Fence",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/23/Fence_2.svg/revision/latest?cb=20210830145935",
     "recipes": [
       [
         "Wood",
@@ -3165,6 +3313,7 @@
   },
   {
     "element": "Flamethrower",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/34/Flamethrower_2.svg/revision/latest?cb=20210830145940",
     "recipes": [
       [
         "Gun",
@@ -3182,6 +3331,7 @@
   },
   {
     "element": "Fog",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a5/Fog_2.svg/revision/latest?cb=20210829125329",
     "recipes": [
       [
         "Cloud",
@@ -3211,6 +3361,7 @@
   },
   {
     "element": "Galaxy cluster",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9b/Galaxy_cluster_2.svg/revision/latest?cb=20210827124159",
     "recipes": [
       [
         "Galaxy",
@@ -3224,6 +3375,7 @@
   },
   {
     "element": "Hangar",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3c/Hangar_2.svg/revision/latest?cb=20210831120857",
     "recipes": [
       [
         "Airplane",
@@ -3309,6 +3461,7 @@
   },
   {
     "element": "Horizon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/97/Horizon_2.svg/revision/latest?cb=20210831120902",
     "recipes": [
       [
         "Earth",
@@ -3338,6 +3491,7 @@
   },
   {
     "element": "Jupiter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/30/Jupiter_2.svg/revision/latest?cb=20210827124206",
     "recipes": [
       [
         "Planet",
@@ -3367,6 +3521,7 @@
   },
   {
     "element": "Life",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0f/Life_2.svg/revision/latest?cb=20210827124209",
     "recipes": [
       [
         "Primordial soup",
@@ -3420,6 +3575,7 @@
   },
   {
     "element": "Light sword",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/59/Light_sword_2.svg/revision/latest?cb=20210830145953",
     "recipes": [
       [
         "Sword",
@@ -3445,6 +3601,7 @@
   },
   {
     "element": "Lightning",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/37/Lightning_2.svg/revision/latest?cb=20210830114617",
     "recipes": [
       [
         "Electricity",
@@ -3486,6 +3643,7 @@
   },
   {
     "element": "Meteor",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/83/Meteor_2.svg/revision/latest?cb=20210901142432",
     "recipes": [
       [
         "Meteoroid",
@@ -3511,6 +3669,7 @@
   },
   {
     "element": "Night",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/60/Night_2.svg/revision/latest?cb=20210828145427",
     "recipes": [
       [
         "Sky",
@@ -3532,6 +3691,7 @@
   },
   {
     "element": "Paint",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/57/Paint_2.svg/revision/latest?cb=20210828134757",
     "recipes": [
       [
         "Water",
@@ -3577,6 +3737,7 @@
   },
   {
     "element": "Park",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/50/Park_2.svg/revision/latest?cb=20210902171456",
     "recipes": [
       [
         "City",
@@ -3614,6 +3775,7 @@
   },
   {
     "element": "Prism",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2a/Prism_2.svg/revision/latest?cb=20210902171513",
     "recipes": [
       [
         "Glass",
@@ -3635,6 +3797,7 @@
   },
   {
     "element": "Rain",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/18/Rain_2.svg/revision/latest?cb=20210827122025",
     "recipes": [
       [
         "Cloud",
@@ -3652,6 +3815,7 @@
   },
   {
     "element": "Ruins",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f0/Ruins_2.svg/revision/latest?cb=20210903114747",
     "recipes": [
       [
         "Time",
@@ -3685,6 +3849,7 @@
   },
   {
     "element": "Safety glasses",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8a/Safety_glasses_2.svg/revision/latest?cb=20210901142446",
     "recipes": [
       [
         "Glasses",
@@ -3710,6 +3875,7 @@
   },
   {
     "element": "Skyscraper",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/69/Skyscraper_2.svg/revision/latest?cb=20210827231231",
     "recipes": [
       [
         "House",
@@ -3731,6 +3897,7 @@
   },
   {
     "element": "Space",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/02/Space_2.svg/revision/latest?cb=20210827124221",
     "recipes": [
       [
         "Star",
@@ -3756,6 +3923,7 @@
   },
   {
     "element": "Storm",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/68/Storm_2.svg/revision/latest?cb=20210828104231",
     "recipes": [
       [
         "Cloud",
@@ -3777,6 +3945,7 @@
   },
   {
     "element": "Stun gun",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/ce/Stun_gun_2.svg/revision/latest?cb=20210904021104",
     "recipes": [
       [
         "Gun",
@@ -3802,6 +3971,7 @@
   },
   {
     "element": "Sunglasses",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7e/Sunglasses_2.svg/revision/latest?cb=20210903161945",
     "recipes": [
       [
         "Glasses",
@@ -3827,6 +3997,7 @@
   },
   {
     "element": "Swim goggles",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/eb/Swim_goggles_2.svg/revision/latest?cb=20210904021107",
     "recipes": [
       [
         "Glasses",
@@ -3872,6 +4043,7 @@
   },
   {
     "element": "Water gun",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d6/Water_gun_2.svg/revision/latest?cb=20210904141720",
     "recipes": [
       [
         "Gun",
@@ -3889,6 +4061,7 @@
   },
   {
     "element": "Alien",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ee/Alien_2.svg/revision/latest?cb=20210827124151",
     "recipes": [
       [
         "Life",
@@ -3930,6 +4103,7 @@
   },
   {
     "element": "Animal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/53/Animal_2.svg/revision/latest?cb=20210827132909",
     "recipes": [
       [
         "Life",
@@ -3959,6 +4133,7 @@
   },
   {
     "element": "Bacteria",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4a/Bacteria_2.svg/revision/latest?cb=20210827231033",
     "recipes": [
       [
         "Life",
@@ -3976,6 +4151,7 @@
   },
   {
     "element": "Clock",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0a/Clock_2.svg/revision/latest?cb=20210827124153",
     "recipes": [
       [
         "Time",
@@ -4021,6 +4197,7 @@
   },
   {
     "element": "Darkness",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/07/Darkness_2.svg/revision/latest?cb=20210828104207",
     "recipes": [
       [
         "Sky",
@@ -4034,6 +4211,7 @@
   },
   {
     "element": "Dawn",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9d/Dawn_2.svg/revision/latest?cb=20210827124155",
     "recipes": [
       [
         "Day",
@@ -4047,6 +4225,7 @@
   },
   {
     "element": "Death",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0d/Death_2.svg/revision/latest?cb=20210829104338",
     "recipes": [
       [
         "Time",
@@ -4072,6 +4251,7 @@
   },
   {
     "element": "Farm",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ef/Farm_2.svg/revision/latest?cb=20210827132932",
     "recipes": [
       [
         "Farmer",
@@ -4097,6 +4277,7 @@
   },
   {
     "element": "Human",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b5/Human_2.svg/revision/latest?cb=20210827124203",
     "recipes": [
       [
         "Time",
@@ -4122,6 +4303,7 @@
   },
   {
     "element": "Light bulb",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Light_bulb_2.svg/revision/latest?cb=20210829010130",
     "recipes": [
       [
         "Glass",
@@ -4139,6 +4321,7 @@
   },
   {
     "element": "Magic",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a7/Magic_2.svg/revision/latest?cb=20210829104350",
     "recipes": [
       [
         "Life",
@@ -4160,6 +4343,7 @@
   },
   {
     "element": "Ozone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/73/Ozone_2.svg/revision/latest?cb=20210902102220",
     "recipes": [
       [
         "Oxygen",
@@ -4181,6 +4365,7 @@
   },
   {
     "element": "Phoenix",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/54/Phoenix_2.svg/revision/latest?cb=20210830114624",
     "recipes": [
       [
         "Fire",
@@ -4202,6 +4387,7 @@
   },
   {
     "element": "Plankton",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/97/Plankton_2.svg/revision/latest?cb=20210902171506",
     "recipes": [
       [
         "Water",
@@ -4231,6 +4417,7 @@
   },
   {
     "element": "Robot",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6d/Robot_2.svg/revision/latest?cb=20210829104357",
     "recipes": [
       [
         "Life",
@@ -4260,6 +4447,7 @@
   },
   {
     "element": "Smog",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5d/Smog_2.svg/revision/latest?cb=20210827122031",
     "recipes": [
       [
         "Smoke",
@@ -4285,6 +4473,7 @@
   },
   {
     "element": "Snow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/07/Snow_2.svg/revision/latest?cb=20210827132952",
     "recipes": [
       [
         "Rain",
@@ -4306,6 +4495,7 @@
   },
   {
     "element": "Soil",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/44/Soil_2.svg/revision/latest?cb=20210827132953",
     "recipes": [
       [
         "Earth",
@@ -4327,6 +4517,7 @@
   },
   {
     "element": "Spaceship",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c4/Spaceship_2.svg/revision/latest?cb=20210827224748",
     "recipes": [
       [
         "Space",
@@ -4364,6 +4555,7 @@
   },
   {
     "element": "Star",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f6/Star_2.svg/revision/latest?cb=20210828104226",
     "recipes": [
       [
         "Night",
@@ -4393,6 +4585,7 @@
   },
   {
     "element": "Twilight",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fe/Twilight_2.svg/revision/latest?cb=20210829125351",
     "recipes": [
       [
         "Day",
@@ -4406,6 +4599,7 @@
   },
   {
     "element": "Universe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d0/Universe_2.svg/revision/latest?cb=20210828104235",
     "recipes": [
       [
         "Space",
@@ -4427,6 +4621,7 @@
   },
   {
     "element": "Wind turbine",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9a/Wind_turbine_2.svg/revision/latest?cb=20210828104243",
     "recipes": [
       [
         "Windmill",
@@ -4448,6 +4643,7 @@
   },
   {
     "element": "Wire",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8c/Wire_2.svg/revision/latest?cb=20210828111155",
     "recipes": [
       [
         "Metal",
@@ -4473,6 +4669,7 @@
   },
   {
     "element": "Alarm clock",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/40/Alarm_clock_2.svg/revision/latest?cb=20210827124145",
     "recipes": [
       [
         "Clock",
@@ -4502,6 +4699,7 @@
   },
   {
     "element": "Alchemist",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f0/Alchemist_2.svg/revision/latest?cb=20210827124147",
     "recipes": [
       [
         "Human",
@@ -4515,6 +4713,7 @@
   },
   {
     "element": "Allergy",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f6/Allergy_2.svg/revision/latest?cb=20210827130134",
     "recipes": [
       [
         "Human",
@@ -4528,6 +4727,7 @@
   },
   {
     "element": "Antarctica",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/78/Antarctica_2.svg/revision/latest?cb=20210827132914",
     "recipes": [
       [
         "Desert",
@@ -4549,6 +4749,7 @@
   },
   {
     "element": "Archeologist",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/91/Archeologist_2.svg/revision/latest?cb=20210827224652",
     "recipes": [
       [
         "Ruins",
@@ -4562,6 +4763,7 @@
   },
   {
     "element": "Astronaut",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/36/Astronaut_2.svg/revision/latest?cb=20210827224702",
     "recipes": [
       [
         "Human",
@@ -4615,6 +4817,7 @@
   },
   {
     "element": "Astronomer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/25/Astronomer_2.svg/revision/latest?cb=20210909182830",
     "recipes": [
       [
         "Human",
@@ -4624,6 +4827,7 @@
   },
   {
     "element": "Beaver",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/62/Beaver_2.svg/revision/latest?cb=20210828104052",
     "recipes": [
       [
         "Animal",
@@ -4645,6 +4849,7 @@
   },
   {
     "element": "Bird",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/99/Bird_2.svg/revision/latest?cb=20210827121958",
     "recipes": [
       [
         "Animal",
@@ -4682,6 +4887,7 @@
   },
   {
     "element": "Blizzard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5c/Blizzard_2.svg/revision/latest?cb=20210828104141",
     "recipes": [
       [
         "Snow",
@@ -4711,6 +4917,7 @@
   },
   {
     "element": "Blood",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d6/Blood_2.svg/revision/latest?cb=20210827231052",
     "recipes": [
       [
         "Human",
@@ -4724,6 +4931,7 @@
   },
   {
     "element": "Butterfly",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/21/Butterfly_2.svg/revision/latest?cb=20210828134748",
     "recipes": [
       [
         "Animal",
@@ -4745,6 +4953,7 @@
   },
   {
     "element": "Cable car",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/17/Cable_car_2.svg/revision/latest?cb=20210828145348",
     "recipes": [
       [
         "Mountain",
@@ -4774,6 +4983,7 @@
   },
   {
     "element": "Camel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b2/Camel_2.svg/revision/latest?cb=20210828145351",
     "recipes": [
       [
         "Desert",
@@ -4831,6 +5041,7 @@
   },
   {
     "element": "Cat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cd/Cat_2.svg/revision/latest?cb=20210827224714",
     "recipes": [
       [
         "Animal",
@@ -4848,6 +5059,7 @@
   },
   {
     "element": "Chain",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cd/Chain_2.svg/revision/latest?cb=20210828104204",
     "recipes": [
       [
         "Rope",
@@ -4869,6 +5081,7 @@
   },
   {
     "element": "Cold",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/38/Cold_2.svg/revision/latest?cb=20210827224716",
     "recipes": [
       [
         "Human",
@@ -4902,6 +5115,7 @@
   },
   {
     "element": "Constellation",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/02/Constellation_2.svg/revision/latest?cb=20210829101400",
     "recipes": [
       [
         "Star",
@@ -4911,6 +5125,7 @@
   },
   {
     "element": "Corpse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0f/Corpse_2.svg/revision/latest?cb=20210828111122",
     "recipes": [
       [
         "Human",
@@ -4952,6 +5167,7 @@
   },
   {
     "element": "Crystal ball",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Crystal_ball_2.svg/revision/latest?cb=20210829104331",
     "recipes": [
       [
         "Glass",
@@ -4981,6 +5197,7 @@
   },
   {
     "element": "Cyborg",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fd/Cyborg_2.svg/revision/latest?cb=20210829104337",
     "recipes": [
       [
         "Robot",
@@ -5034,6 +5251,7 @@
   },
   {
     "element": "Dew",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1f/Dew_2.svg/revision/latest?cb=20210829125313",
     "recipes": [
       [
         "Grass",
@@ -5075,6 +5293,7 @@
   },
   {
     "element": "Domestication",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5f/Domestication_2.svg/revision/latest?cb=20210829004315",
     "recipes": [
       [
         "Animal",
@@ -5096,6 +5315,7 @@
   },
   {
     "element": "Dynamite",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ea/Dynamite_2.svg/revision/latest?cb=20210829125328",
     "recipes": [
       [
         "Gunpowder",
@@ -5113,6 +5333,7 @@
   },
   {
     "element": "Egg",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/df/Egg_2.svg/revision/latest?cb=20210828104210",
     "recipes": [
       [
         "Life",
@@ -5258,6 +5479,7 @@
   },
   {
     "element": "Electrician",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8c/Electrician_2.svg/revision/latest?cb=20210829104340",
     "recipes": [
       [
         "Human",
@@ -5271,6 +5493,7 @@
   },
   {
     "element": "Family",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/86/Family_2.svg/revision/latest?cb=20210830145932",
     "recipes": [
       [
         "Human",
@@ -5288,6 +5511,7 @@
   },
   {
     "element": "Farmer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7f/Farmer_2.svg/revision/latest?cb=20210828104211",
     "recipes": [
       [
         "Human",
@@ -5321,6 +5545,7 @@
   },
   {
     "element": "Firefighter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/57/Firefighter_2.svg/revision/latest?cb=20210829104343",
     "recipes": [
       [
         "Human",
@@ -5338,6 +5563,7 @@
   },
   {
     "element": "Fish",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e6/Fish_2.svg/revision/latest?cb=20210827132933",
     "recipes": [
       [
         "Animal",
@@ -5375,6 +5601,7 @@
   },
   {
     "element": "Force knight",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/be/Force_knight_2.svg/revision/latest?cb=20210830145943",
     "recipes": [
       [
         "Human",
@@ -5392,6 +5619,7 @@
   },
   {
     "element": "Frog",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/be/Frog_2.svg/revision/latest?cb=20210830114616",
     "recipes": [
       [
         "Animal",
@@ -5413,6 +5641,7 @@
   },
   {
     "element": "Glacier",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6b/Glacier_2.svg/revision/latest?cb=20210827231111",
     "recipes": [
       [
         "Mountain",
@@ -5438,6 +5667,7 @@
   },
   {
     "element": "Gravestone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/38/Gravestone_2.svg/revision/latest?cb=20210831023010",
     "recipes": [
       [
         "Grave",
@@ -5467,6 +5697,7 @@
   },
   {
     "element": "Hacker",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Hacker_2.svg/revision/latest?cb=20210829101418",
     "recipes": [
       [
         "Human",
@@ -5488,6 +5719,7 @@
   },
   {
     "element": "Hero",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a3/Hero_2.svg/revision/latest?cb=20210829125334",
     "recipes": [
       [
         "Human",
@@ -5509,6 +5741,7 @@
   },
   {
     "element": "Horse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/38/Horse_2.svg/revision/latest?cb=20210827231124",
     "recipes": [
       [
         "Animal",
@@ -5546,6 +5779,7 @@
   },
   {
     "element": "Idea",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/03/Idea_2.svg/revision/latest?cb=20210828111132",
     "recipes": [
       [
         "Human",
@@ -5675,6 +5909,7 @@
   },
   {
     "element": "Igloo",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e7/Igloo_2.svg/revision/latest?cb=20210831153620",
     "recipes": [
       [
         "House",
@@ -5696,6 +5931,7 @@
   },
   {
     "element": "Lamp",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/70/Lamp_2.svg/revision/latest?cb=20210828145422",
     "recipes": [
       [
         "Light bulb",
@@ -5709,6 +5945,7 @@
   },
   {
     "element": "Light",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/80/Light_2.svg/revision/latest?cb=20210827130153",
     "recipes": [
       [
         "Electricity",
@@ -5722,6 +5959,7 @@
   },
   {
     "element": "Livestock",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c4/Livestock_2.svg/revision/latest?cb=20210827231126",
     "recipes": [
       [
         "Animal",
@@ -5743,6 +5981,7 @@
   },
   {
     "element": "Lizard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8c/Lizard_2.svg/revision/latest?cb=20210827130154",
     "recipes": [
       [
         "Stone",
@@ -5784,6 +6023,7 @@
   },
   {
     "element": "Love",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/19/Love_2.svg/revision/latest?cb=20210830145954",
     "recipes": [
       [
         "Human",
@@ -5801,6 +6041,7 @@
   },
   {
     "element": "Meat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/59/Meat_2.svg/revision/latest?cb=20210827232414",
     "recipes": [
       [
         "Tool",
@@ -5970,6 +6211,7 @@
   },
   {
     "element": "Microscope",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/98/Microscope_2.svg/revision/latest?cb=20210901142434",
     "recipes": [
       [
         "Bacteria",
@@ -5995,6 +6237,7 @@
   },
   {
     "element": "Monarch",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a2/Monarch_2.svg/revision/latest?cb=20210829004321",
     "recipes": [
       [
         "Human",
@@ -6008,6 +6251,7 @@
   },
   {
     "element": "Mummy",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c2/Mummy_2.svg/revision/latest?cb=20210901142441",
     "recipes": [
       [
         "Pyramid",
@@ -6037,6 +6281,7 @@
   },
   {
     "element": "Organic matter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f8/Organic_matter_2.svg/revision/latest?cb=20210829004323",
     "recipes": [
       [
         "Life",
@@ -6058,6 +6303,7 @@
   },
   {
     "element": "Painter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e0/Painter_2.svg/revision/latest?cb=20210902171450",
     "recipes": [
       [
         "Human",
@@ -6075,6 +6321,7 @@
   },
   {
     "element": "Pig",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1c/Pig_2.svg/revision/latest?cb=20210827231222",
     "recipes": [
       [
         "Mud",
@@ -6092,6 +6339,7 @@
   },
   {
     "element": "Plant",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2a/Plant_2.svg/revision/latest?cb=20210827124215",
     "recipes": [
       [
         "Tree",
@@ -6137,6 +6385,7 @@
   },
   {
     "element": "Potter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a6/Potter_2.svg/revision/latest?cb=20210902171511",
     "recipes": [
       [
         "Human",
@@ -6150,6 +6399,7 @@
   },
   {
     "element": "Sailor",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/27/Sailor_2.svg/revision/latest?cb=20210827132947",
     "recipes": [
       [
         "Human",
@@ -6179,6 +6429,7 @@
   },
   {
     "element": "Samurai",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3a/Samurai_2.svg/revision/latest?cb=20210909182844",
     "recipes": [
       [
         "Human",
@@ -6188,6 +6439,7 @@
   },
   {
     "element": "Science",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5e/Science_2.svg/revision/latest?cb=20210829104358",
     "recipes": [
       [
         "Human",
@@ -6205,6 +6457,7 @@
   },
   {
     "element": "Scorpion",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/04/Scorpion_2.svg/revision/latest?cb=20210830114627",
     "recipes": [
       [
         "Animal",
@@ -6230,6 +6483,7 @@
   },
   {
     "element": "Shuriken",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/19/Shuriken_2.svg/revision/latest?cb=20210831154323",
     "recipes": [
       [
         "Star",
@@ -6255,6 +6509,7 @@
   },
   {
     "element": "Sickness",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/77/Sickness_2.svg/revision/latest?cb=20210827122029",
     "recipes": [
       [
         "Human",
@@ -6272,6 +6527,7 @@
   },
   {
     "element": "Ski goggles",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0f/Ski_goggles_2.svg/revision/latest?cb=20210903161939",
     "recipes": [
       [
         "Snow",
@@ -6309,6 +6565,7 @@
   },
   {
     "element": "Skier",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/29/Skier_2.svg/revision/latest?cb=20210831153629",
     "recipes": [
       [
         "Human",
@@ -6326,6 +6583,7 @@
   },
   {
     "element": "Sloth",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1c/Sloth_2.svg/revision/latest?cb=20210903161941",
     "recipes": [
       [
         "Animal",
@@ -6339,6 +6597,7 @@
   },
   {
     "element": "Snake",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b7/Snake_2.svg/revision/latest?cb=20210829004331",
     "recipes": [
       [
         "Animal",
@@ -6356,6 +6615,7 @@
   },
   {
     "element": "Snow globe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f0/Snow_globe_2.svg/revision/latest?cb=20210829104401",
     "recipes": [
       [
         "Crystal ball",
@@ -6433,6 +6693,7 @@
   },
   {
     "element": "Snowball",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/37/Snowball_2.svg/revision/latest?cb=20210903161943",
     "recipes": [
       [
         "Snow",
@@ -6454,6 +6715,7 @@
   },
   {
     "element": "Snowman",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a3/Snowman_2.svg/revision/latest?cb=20210828145436",
     "recipes": [
       [
         "Snow",
@@ -6483,6 +6745,7 @@
   },
   {
     "element": "Starfish",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/47/Starfish_2.svg/revision/latest?cb=20210904021101",
     "recipes": [
       [
         "Star",
@@ -6500,6 +6763,7 @@
   },
   {
     "element": "Sundial",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/14/Sundial_2.svg/revision/latest?cb=20210829010136",
     "recipes": [
       [
         "Sun",
@@ -6545,6 +6809,7 @@
   },
   {
     "element": "Surfer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fc/Surfer_2.svg/revision/latest?cb=20210831153633",
     "recipes": [
       [
         "Human",
@@ -6558,6 +6823,7 @@
   },
   {
     "element": "Swimmer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bd/Swimmer_2.svg/revision/latest?cb=20210829125350",
     "recipes": [
       [
         "Human",
@@ -6579,6 +6845,7 @@
   },
   {
     "element": "Tool",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/22/Tool_2.svg/revision/latest?cb=20210827231235",
     "recipes": [
       [
         "Human",
@@ -6620,6 +6887,7 @@
   },
   {
     "element": "Turtle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/04/Turtle_2.svg/revision/latest?cb=20210829004332",
     "recipes": [
       [
         "Egg",
@@ -6637,6 +6905,7 @@
   },
   {
     "element": "Ufo",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/29/Ufo_2.svg/revision/latest?cb=20210904120738",
     "recipes": [
       [
         "Alien",
@@ -6666,6 +6935,7 @@
   },
   {
     "element": "Warrior",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1b/Warrior_2.svg/revision/latest?cb=20210828104238",
     "recipes": [
       [
         "Human",
@@ -6679,6 +6949,7 @@
   },
   {
     "element": "Watch",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/96/Watch_2.svg/revision/latest?cb=20210827124227",
     "recipes": [
       [
         "Clock",
@@ -6692,6 +6963,7 @@
   },
   {
     "element": "Wizard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/13/Wizard_2.svg/revision/latest?cb=20210829104404",
     "recipes": [
       [
         "Human",
@@ -6713,6 +6985,7 @@
   },
   {
     "element": "Wolf",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/32/Wolf_2.svg/revision/latest?cb=20210828111156",
     "recipes": [
       [
         "Animal",
@@ -6734,6 +7007,7 @@
   },
   {
     "element": "Airplane",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e3/Airplane_2.svg/revision/latest?cb=20210827121955",
     "recipes": [
       [
         "Bird",
@@ -6891,6 +7165,7 @@
   },
   {
     "element": "Algae",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b2/Algae_2.svg/revision/latest?cb=20210827124149",
     "recipes": [
       [
         "Water",
@@ -6912,6 +7187,7 @@
   },
   {
     "element": "Alligator",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3c/Alligator_2.svg/revision/latest?cb=20210827130136",
     "recipes": [
       [
         "Lizard",
@@ -6929,6 +7205,7 @@
   },
   {
     "element": "Angel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5a/Angel_2.svg/revision/latest?cb=20210827130142",
     "recipes": [
       [
         "Human",
@@ -6958,6 +7235,7 @@
   },
   {
     "element": "Arctic",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Arctic_2.svg/revision/latest?cb=20210827224655",
     "recipes": [
       [
         "Cold",
@@ -6971,6 +7249,7 @@
   },
   {
     "element": "Ash",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5e/Ash_2.svg/revision/latest?cb=20210827224701",
     "recipes": [
       [
         "Fire",
@@ -7028,6 +7307,7 @@
   },
   {
     "element": "Bacon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/85/Bacon_2.svg/revision/latest?cb=20210827231032",
     "recipes": [
       [
         "Pig",
@@ -7049,6 +7329,7 @@
   },
   {
     "element": "Birdcage",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a3/Birdcage_2.svg/revision/latest?cb=20210828104101",
     "recipes": [
       [
         "Bird",
@@ -7070,6 +7351,7 @@
   },
   {
     "element": "Birdhouse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/99/Birdhouse_2.svg/revision/latest?cb=20210828104103",
     "recipes": [
       [
         "Bird",
@@ -7087,6 +7369,7 @@
   },
   {
     "element": "Bone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/88/Bone_2.svg/revision/latest?cb=20210828111108",
     "recipes": [
       [
         "Time",
@@ -7112,6 +7395,7 @@
   },
   {
     "element": "Butcher",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b5/Butcher_2.svg/revision/latest?cb=20210828134746",
     "recipes": [
       [
         "Human",
@@ -7125,6 +7409,7 @@
   },
   {
     "element": "Cactus",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b4/Cactus_2.svg/revision/latest?cb=20210828145349",
     "recipes": [
       [
         "Sand",
@@ -7146,6 +7431,7 @@
   },
   {
     "element": "Cage",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/83/Cage_2.svg/revision/latest?cb=20210828104202",
     "recipes": [
       [
         "Wolf",
@@ -7199,6 +7485,7 @@
   },
   {
     "element": "Carbon dioxide",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d7/Carbon_dioxide_2.svg/revision/latest?cb=20210828145400",
     "recipes": [
       [
         "Human",
@@ -7232,6 +7519,7 @@
   },
   {
     "element": "Carrot",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c8/Carrot_2.svg/revision/latest?cb=20210828145402",
     "recipes": [
       [
         "Vegetable",
@@ -7253,6 +7541,7 @@
   },
   {
     "element": "Castle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/09/Castle_2.svg/revision/latest?cb=20210828145406",
     "recipes": [
       [
         "Knight",
@@ -7322,6 +7611,7 @@
   },
   {
     "element": "Catnip",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/db/Catnip_2.svg/revision/latest?cb=20210829004254",
     "recipes": [
       [
         "Cat",
@@ -7343,6 +7633,7 @@
   },
   {
     "element": "Cave",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a9/Cave_2.svg/revision/latest?cb=20210829004255",
     "recipes": [
       [
         "House",
@@ -7380,6 +7671,7 @@
   },
   {
     "element": "Centaur",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e0/Centaur_2.svg/revision/latest?cb=20210829004258",
     "recipes": [
       [
         "Horse",
@@ -7393,6 +7685,7 @@
   },
   {
     "element": "Chameleon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9f/Chameleon_2.svg/revision/latest?cb=20210829004301",
     "recipes": [
       [
         "Lizard",
@@ -7422,6 +7715,7 @@
   },
   {
     "element": "Charcoal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c7/Charcoal_2.svg/revision/latest?cb=20210829004303",
     "recipes": [
       [
         "Fire",
@@ -7443,6 +7737,7 @@
   },
   {
     "element": "Chicken",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/79/Chicken_2.svg/revision/latest?cb=20210829004307",
     "recipes": [
       [
         "Bird",
@@ -7488,6 +7783,7 @@
   },
   {
     "element": "Chill",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/99/Chill_2.svg/revision/latest?cb=20210829004311",
     "recipes": [
       [
         "Air",
@@ -7505,6 +7801,7 @@
   },
   {
     "element": "Coal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/17/Coal_2.svg/revision/latest?cb=20210829101325",
     "recipes": [
       [
         "Pressure",
@@ -7534,6 +7831,7 @@
   },
   {
     "element": "Computer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2d/Computer_2.svg/revision/latest?cb=20210829101341",
     "recipes": [
       [
         "Hacker",
@@ -7559,6 +7857,7 @@
   },
   {
     "element": "Cotton",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d3/Cotton_2.svg/revision/latest?cb=20210829104328",
     "recipes": [
       [
         "Plant",
@@ -7584,6 +7883,7 @@
   },
   {
     "element": "Cow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/da/Cow_2.svg/revision/latest?cb=20210827231059",
     "recipes": [
       [
         "Livestock",
@@ -7605,6 +7905,7 @@
   },
   {
     "element": "Crow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4b/Crow_2.svg/revision/latest?cb=20210827122008",
     "recipes": [
       [
         "Bird",
@@ -7642,6 +7943,7 @@
   },
   {
     "element": "Cuckoo",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/81/Cuckoo_2.svg/revision/latest?cb=20210829010128",
     "recipes": [
       [
         "Bird",
@@ -7671,6 +7973,7 @@
   },
   {
     "element": "Dinosaur",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6e/Dinosaur_2.svg/revision/latest?cb=20210828104208",
     "recipes": [
       [
         "Lizard",
@@ -7684,6 +7987,7 @@
   },
   {
     "element": "Dog",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4a/Dog_2.svg/revision/latest?cb=20210827224717",
     "recipes": [
       [
         "Wolf",
@@ -7717,6 +8021,7 @@
   },
   {
     "element": "Don quixote",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Don_quixote_2.svg/revision/latest?cb=20210829125319",
     "recipes": [
       [
         "Windmill",
@@ -7738,6 +8043,7 @@
   },
   {
     "element": "Dragon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/12/Dragon_2.svg/revision/latest?cb=20210829125320",
     "recipes": [
       [
         "Lizard",
@@ -7771,6 +8077,7 @@
   },
   {
     "element": "Duck",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/af/Duck_2.svg/revision/latest?cb=20210827122010",
     "recipes": [
       [
         "Bird",
@@ -7832,6 +8139,7 @@
   },
   {
     "element": "Eagle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/50/Eagle_2.svg/revision/latest?cb=20210827122011",
     "recipes": [
       [
         "Bird",
@@ -7845,6 +8153,7 @@
   },
   {
     "element": "Egg timer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7c/Egg_timer_2.svg/revision/latest?cb=20210830114610",
     "recipes": [
       [
         "Egg",
@@ -7862,6 +8171,7 @@
   },
   {
     "element": "Electric eel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5e/Electric_eel_2.svg/revision/latest?cb=20210830114612",
     "recipes": [
       [
         "Fish",
@@ -7871,6 +8181,7 @@
   },
   {
     "element": "Family tree",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/13/Family_tree_2.svg/revision/latest?cb=20210830145933",
     "recipes": [
       [
         "Tree",
@@ -7888,6 +8199,7 @@
   },
   {
     "element": "Firestation",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b8/Firestation_2.svg/revision/latest?cb=20210830145937",
     "recipes": [
       [
         "House",
@@ -7913,6 +8225,7 @@
   },
   {
     "element": "Fishing rod",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f9/Fishing_rod_2.svg/revision/latest?cb=20210827132934",
     "recipes": [
       [
         "Fish",
@@ -7966,6 +8279,7 @@
   },
   {
     "element": "Flashlight",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/dd/Flashlight_2.svg/revision/latest?cb=20210828145414",
     "recipes": [
       [
         "Tool",
@@ -7987,6 +8301,7 @@
   },
   {
     "element": "Flower",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7c/Flower_2.svg/revision/latest?cb=20210828104213",
     "recipes": [
       [
         "Plant",
@@ -8024,6 +8339,7 @@
   },
   {
     "element": "Flying fish",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9a/Flying_fish_2.svg/revision/latest?cb=20210830114615",
     "recipes": [
       [
         "Fish",
@@ -8041,6 +8357,7 @@
   },
   {
     "element": "Fossil",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Fossil_2.svg/revision/latest?cb=20210829104345",
     "recipes": [
       [
         "Dinosaur",
@@ -8106,6 +8423,7 @@
   },
   {
     "element": "Frankenstein's monster",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/81/Frankenstein%27s_monster_2.svg/revision/latest?cb=20210830145945",
     "recipes": [
       [
         "Corpse",
@@ -8143,6 +8461,7 @@
   },
   {
     "element": "Fridge",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e3/Fridge_2.svg/revision/latest?cb=20210830145947",
     "recipes": [
       [
         "Cold",
@@ -8184,6 +8503,7 @@
   },
   {
     "element": "Garden",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/40/Garden_2.svg/revision/latest?cb=20210827232412",
     "recipes": [
       [
         "Plant",
@@ -8225,6 +8545,7 @@
   },
   {
     "element": "Gas",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/06/Gas_2.svg/revision/latest?cb=20210831023003",
     "recipes": [
       [
         "Air",
@@ -8242,6 +8563,7 @@
   },
   {
     "element": "Ghost",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/48/Ghost_2.svg/revision/latest?cb=20210831023004",
     "recipes": [
       [
         "Graveyard",
@@ -8303,6 +8625,7 @@
   },
   {
     "element": "Goat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7b/Goat_2.svg/revision/latest?cb=20210827231113",
     "recipes": [
       [
         "Livestock",
@@ -8332,6 +8655,7 @@
   },
   {
     "element": "Grass",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e1/Grass_2.svg/revision/latest?cb=20210827124202",
     "recipes": [
       [
         "Plant",
@@ -8345,6 +8669,7 @@
   },
   {
     "element": "Grave",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9e/Grave_2.svg/revision/latest?cb=20210829125331",
     "recipes": [
       [
         "Earth",
@@ -8386,6 +8711,7 @@
   },
   {
     "element": "Graveyard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/77/Graveyard_2.svg/revision/latest?cb=20210829125332",
     "recipes": [
       [
         "Grave",
@@ -8419,6 +8745,7 @@
   },
   {
     "element": "Greenhouse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Greenhouse_2.svg/revision/latest?cb=20210831023012",
     "recipes": [
       [
         "Glass",
@@ -8456,6 +8783,7 @@
   },
   {
     "element": "Ham",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bf/Ham_2.svg/revision/latest?cb=20210827231117",
     "recipes": [
       [
         "Smoke",
@@ -8469,6 +8797,7 @@
   },
   {
     "element": "Hammer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5b/Hammer_2.svg/revision/latest?cb=20210828104214",
     "recipes": [
       [
         "Tool",
@@ -8494,6 +8823,7 @@
   },
   {
     "element": "Hedge",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7d/Hedge_2.svg/revision/latest?cb=20210831120859",
     "recipes": [
       [
         "Plant",
@@ -8523,6 +8853,7 @@
   },
   {
     "element": "Hippo",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5d/Hippo_2.svg/revision/latest?cb=20210831120900",
     "recipes": [
       [
         "Horse",
@@ -8544,6 +8875,7 @@
   },
   {
     "element": "Horseshoe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f3/Horseshoe_2.svg/revision/latest?cb=20210828145421",
     "recipes": [
       [
         "Horse",
@@ -8557,6 +8889,7 @@
   },
   {
     "element": "Hospital",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e8/Hospital_2.svg/revision/latest?cb=20210827130151",
     "recipes": [
       [
         "House",
@@ -8590,6 +8923,7 @@
   },
   {
     "element": "Hummingbird",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/38/Hummingbird_2.svg/revision/latest?cb=20210827122014",
     "recipes": [
       [
         "Bird",
@@ -8639,6 +8973,7 @@
   },
   {
     "element": "Ice",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cb/Ice_2.svg/revision/latest?cb=20210827132942",
     "recipes": [
       [
         "Water",
@@ -8660,6 +8995,7 @@
   },
   {
     "element": "Iceberg",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Iceberg_2.svg/revision/latest?cb=20210831153618",
     "recipes": [
       [
         "Sea",
@@ -8689,6 +9025,7 @@
   },
   {
     "element": "Ivy",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/08/Ivy_2.svg/revision/latest?cb=20210831153621",
     "recipes": [
       [
         "Plant",
@@ -8702,6 +9039,7 @@
   },
   {
     "element": "Jerky",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/be/Jerky_2.svg/revision/latest?cb=20210831153625",
     "recipes": [
       [
         "Meat",
@@ -8723,6 +9061,7 @@
   },
   {
     "element": "Knight",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/ff/Knight_2.svg/revision/latest?cb=20210829004320",
     "recipes": [
       [
         "Human",
@@ -8744,6 +9083,7 @@
   },
   {
     "element": "Lava lamp",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d7/Lava_lamp_2.svg/revision/latest?cb=20210901125744",
     "recipes": [
       [
         "Lamp",
@@ -8761,6 +9101,7 @@
   },
   {
     "element": "Leather",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d8/Leather_2.svg/revision/latest?cb=20210829125338",
     "recipes": [
       [
         "Blade",
@@ -8802,6 +9143,7 @@
   },
   {
     "element": "Lens",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cb/Lens_2.svg/revision/latest?cb=20210831023018",
     "recipes": [
       [
         "Glass",
@@ -8815,6 +9157,7 @@
   },
   {
     "element": "Lighthouse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/85/Lighthouse_2.svg/revision/latest?cb=20210901125748",
     "recipes": [
       [
         "Light",
@@ -8852,6 +9195,7 @@
   },
   {
     "element": "Lion",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6b/Lion_2.svg/revision/latest?cb=20210828145424",
     "recipes": [
       [
         "Cat",
@@ -8873,6 +9217,7 @@
   },
   {
     "element": "Liquid",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a8/Liquid_2.svg/revision/latest?cb=20210828111135",
     "recipes": [
       [
         "Water",
@@ -8890,6 +9235,7 @@
   },
   {
     "element": "Machine",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0a/Machine_2.svg/revision/latest?cb=20210827122016",
     "recipes": [
       [
         "Tool",
@@ -8923,6 +9269,7 @@
   },
   {
     "element": "Magma",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c9/Magma_2.svg/revision/latest?cb=20210901142423",
     "recipes": [
       [
         "Lava",
@@ -8936,6 +9283,7 @@
   },
   {
     "element": "Medusa",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8b/Medusa_2.svg/revision/latest?cb=20210901142431",
     "recipes": [
       [
         "Snake",
@@ -8957,6 +9305,7 @@
   },
   {
     "element": "Mermaid",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/86/Mermaid_2.svg/revision/latest?cb=20210901142432",
     "recipes": [
       [
         "Fish",
@@ -8986,6 +9335,7 @@
   },
   {
     "element": "Mineral",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2d/Mineral_2.svg/revision/latest?cb=20210827224729",
     "recipes": [
       [
         "Organic matter",
@@ -9015,6 +9365,7 @@
   },
   {
     "element": "Moss",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cc/Moss_2.svg/revision/latest?cb=20210901142439",
     "recipes": [
       [
         "Stone",
@@ -9056,6 +9407,7 @@
   },
   {
     "element": "Moth",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8c/Moth_2.svg/revision/latest?cb=20210830114618",
     "recipes": [
       [
         "Butterfly",
@@ -9085,6 +9437,7 @@
   },
   {
     "element": "Motion",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f8/Motion_2.svg/revision/latest?cb=20210828104217",
     "recipes": [
       [
         "Wind",
@@ -9126,6 +9479,7 @@
   },
   {
     "element": "Nest",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a0/Nest_2.svg/revision/latest?cb=20210902102213",
     "recipes": [
       [
         "Bird",
@@ -9163,6 +9517,7 @@
   },
   {
     "element": "Ninja",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/01/Ninja_2.svg/revision/latest?cb=20210831154322",
     "recipes": [
       [
         "Human",
@@ -9172,6 +9527,7 @@
   },
   {
     "element": "Ninja turtle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/eb/Ninja_turtle_2.svg/revision/latest?cb=20210902102214",
     "recipes": [
       [
         "Turtle",
@@ -9189,6 +9545,7 @@
   },
   {
     "element": "Omelette",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6f/Omelette_2.svg/revision/latest?cb=20210902102217",
     "recipes": [
       [
         "Egg",
@@ -9206,6 +9563,7 @@
   },
   {
     "element": "Optical fiber",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a2/Optical_fiber_2.svg/revision/latest?cb=20210902102218",
     "recipes": [
       [
         "Wire",
@@ -9223,6 +9581,7 @@
   },
   {
     "element": "Ostrich",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d8/Ostrich_2.svg/revision/latest?cb=20210830114619",
     "recipes": [
       [
         "Bird",
@@ -9240,6 +9599,7 @@
   },
   {
     "element": "Owl",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c4/Owl_2.svg/revision/latest?cb=20210827122020",
     "recipes": [
       [
         "Bird",
@@ -9261,6 +9621,7 @@
   },
   {
     "element": "Oxygen",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/68/Oxygen_2.svg/revision/latest?cb=20210828145428",
     "recipes": [
       [
         "Sun",
@@ -9298,6 +9659,7 @@
   },
   {
     "element": "Peacock",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7d/Peacock_2.svg/revision/latest?cb=20210830114621",
     "recipes": [
       [
         "Bird",
@@ -9315,6 +9677,7 @@
   },
   {
     "element": "Pegasus",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1e/Pegasus_2.svg/revision/latest?cb=20210902171459",
     "recipes": [
       [
         "Horse",
@@ -9336,6 +9699,7 @@
   },
   {
     "element": "Penguin",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d5/Penguin_2.svg/revision/latest?cb=20210830114622",
     "recipes": [
       [
         "Bird",
@@ -9361,6 +9725,7 @@
   },
   {
     "element": "Philosophy",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5d/Philosophy_2.svg/revision/latest?cb=20210827124213",
     "recipes": [
       [
         "Human",
@@ -9378,6 +9743,7 @@
   },
   {
     "element": "Pigeon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9f/Pigeon_2.svg/revision/latest?cb=20210827122021",
     "recipes": [
       [
         "Bird",
@@ -9403,6 +9769,7 @@
   },
   {
     "element": "Piggy bank",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9c/Piggy_bank_2.svg/revision/latest?cb=20210902171503",
     "recipes": [
       [
         "Pig",
@@ -9420,6 +9787,7 @@
   },
   {
     "element": "Piranha",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/10/Piranha_2.svg/revision/latest?cb=20210830114625",
     "recipes": [
       [
         "Fish",
@@ -9433,6 +9801,7 @@
   },
   {
     "element": "Pirate",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fd/Pirate_2.svg/revision/latest?cb=20210902171505",
     "recipes": [
       [
         "Sailor",
@@ -9454,6 +9823,7 @@
   },
   {
     "element": "Platypus",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/df/Platypus_2.svg/revision/latest?cb=20210902171508",
     "recipes": [
       [
         "Beaver",
@@ -9471,6 +9841,7 @@
   },
   {
     "element": "Pollen",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/da/Pollen_2.svg/revision/latest?cb=20210827130200",
     "recipes": [
       [
         "Plant",
@@ -9492,6 +9863,7 @@
   },
   {
     "element": "Pottery",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ad/Pottery_2.svg/revision/latest?cb=20210828111146",
     "recipes": [
       [
         "Clay",
@@ -9505,6 +9877,7 @@
   },
   {
     "element": "Reed",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/62/Reed_2.svg/revision/latest?cb=20210903114742",
     "recipes": [
       [
         "Plant",
@@ -9542,6 +9915,7 @@
   },
   {
     "element": "Ring",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/37/Ring_2.svg/revision/latest?cb=20210903114743",
     "recipes": [
       [
         "Diamond",
@@ -9575,6 +9949,7 @@
   },
   {
     "element": "Roe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/29/Roe_2.svg/revision/latest?cb=20210829004326",
     "recipes": [
       [
         "Egg",
@@ -9604,6 +9979,7 @@
   },
   {
     "element": "Rope",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4c/Rope_2.svg/revision/latest?cb=20210828111147",
     "recipes": [
       [
         "Thread",
@@ -9633,6 +10009,7 @@
   },
   {
     "element": "Rose",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8a/Rose_2.svg/revision/latest?cb=20210902171514",
     "recipes": [
       [
         "Love",
@@ -9654,6 +10031,7 @@
   },
   {
     "element": "Saddle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/16/Saddle_2.svg/revision/latest?cb=20210831120909",
     "recipes": [
       [
         "Horse",
@@ -9671,6 +10049,7 @@
   },
   {
     "element": "Seagull",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d0/Seagull_2.svg/revision/latest?cb=20210827122028",
     "recipes": [
       [
         "Bird",
@@ -9712,6 +10091,7 @@
   },
   {
     "element": "Seahorse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e5/Seahorse_2.svg/revision/latest?cb=20210903150045",
     "recipes": [
       [
         "Horse",
@@ -9737,6 +10117,7 @@
   },
   {
     "element": "Seasickness",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/20/Seasickness_2.svg/revision/latest?cb=20210903150047",
     "recipes": [
       [
         "Sickness",
@@ -9766,6 +10147,7 @@
   },
   {
     "element": "Seaweed",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d8/Seaweed_2.svg/revision/latest?cb=20210903150048",
     "recipes": [
       [
         "Plant",
@@ -9791,6 +10173,7 @@
   },
   {
     "element": "Shark",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b9/Shark_2.svg/revision/latest?cb=20210901142449",
     "recipes": [
       [
         "Wolf",
@@ -9820,6 +10203,7 @@
   },
   {
     "element": "Sheep",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/44/Sheep_2.svg/revision/latest?cb=20210827130203",
     "recipes": [
       [
         "Livestock",
@@ -9849,6 +10233,7 @@
   },
   {
     "element": "Skeleton",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/83/Skeleton_2.svg/revision/latest?cb=20210829125348",
     "recipes": [
       [
         "Time",
@@ -9866,6 +10251,7 @@
   },
   {
     "element": "Snowboard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a2/Snowboard_2.svg/revision/latest?cb=20210903161944",
     "recipes": [
       [
         "Snow",
@@ -9895,6 +10281,7 @@
   },
   {
     "element": "Solid",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/69/Solid_2.svg/revision/latest?cb=20210831153631",
     "recipes": [
       [
         "Earth",
@@ -9908,6 +10295,7 @@
   },
   {
     "element": "Spotlight",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c5/Spotlight_2.svg/revision/latest?cb=20210901125751",
     "recipes": [
       [
         "Light",
@@ -9925,6 +10313,7 @@
   },
   {
     "element": "Steak",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/32/Steak_2.svg/revision/latest?cb=20210831153632",
     "recipes": [
       [
         "Meat",
@@ -9946,6 +10335,7 @@
   },
   {
     "element": "Stethoscope",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/35/Stethoscope_2.svg/revision/latest?cb=20210829125349",
     "recipes": [
       [
         "Doctor",
@@ -9971,6 +10361,7 @@
   },
   {
     "element": "Story",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ec/Story_2.svg/revision/latest?cb=20210828111152",
     "recipes": [
       [
         "Human",
@@ -9984,6 +10375,7 @@
   },
   {
     "element": "Sunflower",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fb/Sunflower_2.svg/revision/latest?cb=20210902102221",
     "recipes": [
       [
         "Sun",
@@ -9997,6 +10389,7 @@
   },
   {
     "element": "Swordfish",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b9/Swordfish_2.svg/revision/latest?cb=20210830150000",
     "recipes": [
       [
         "Fish",
@@ -10018,6 +10411,7 @@
   },
   {
     "element": "Tobacco",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4f/Tobacco_2.svg/revision/latest?cb=20210829010138",
     "recipes": [
       [
         "Plant",
@@ -10035,6 +10429,7 @@
   },
   {
     "element": "Toolbox",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/47/Toolbox_2.svg/revision/latest?cb=20210829010139",
     "recipes": [
       [
         "Tool",
@@ -10084,6 +10479,7 @@
   },
   {
     "element": "Toucan",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c5/Toucan_2.svg/revision/latest?cb=20210904120730",
     "recipes": [
       [
         "Bird",
@@ -10113,6 +10509,7 @@
   },
   {
     "element": "Tree",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bc/Tree_2.svg/revision/latest?cb=20210827224749",
     "recipes": [
       [
         "Plant",
@@ -10134,6 +10531,7 @@
   },
   {
     "element": "Umbrella",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4a/Umbrella_2.svg/revision/latest?cb=20210829010141",
     "recipes": [
       [
         "Rain",
@@ -10155,6 +10553,7 @@
   },
   {
     "element": "Unicorn",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bf/Unicorn_2.svg/revision/latest?cb=20210830150003",
     "recipes": [
       [
         "Horse",
@@ -10180,6 +10579,7 @@
   },
   {
     "element": "Vampire",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/85/Vampire_2.svg/revision/latest?cb=20210827224751",
     "recipes": [
       [
         "Human",
@@ -10197,6 +10597,7 @@
   },
   {
     "element": "Vegetable",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/50/Vegetable_2.svg/revision/latest?cb=20210828145441",
     "recipes": [
       [
         "Farmer",
@@ -10222,6 +10623,7 @@
   },
   {
     "element": "Vulture",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b6/Vulture_2.svg/revision/latest?cb=20210827122053",
     "recipes": [
       [
         "Corpse",
@@ -10287,6 +10689,7 @@
   },
   {
     "element": "Wand",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/db/Wand_2.svg/revision/latest?cb=20210904141717",
     "recipes": [
       [
         "Wizard",
@@ -10308,6 +10711,7 @@
   },
   {
     "element": "Werewolf",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/35/Werewolf_2.svg/revision/latest?cb=20210901142451",
     "recipes": [
       [
         "Human",
@@ -10325,6 +10729,7 @@
   },
   {
     "element": "Wheel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1d/Wheel_2.svg/revision/latest?cb=20210828104240",
     "recipes": [
       [
         "Motion",
@@ -10358,6 +10763,7 @@
   },
   {
     "element": "Wild boar",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/06/Wild_boar_2.svg/revision/latest?cb=20210901125751",
     "recipes": [
       [
         "Pig",
@@ -10375,6 +10781,7 @@
   },
   {
     "element": "Windsurfer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/48/Windsurfer_2.svg/revision/latest?cb=20210904141725",
     "recipes": [
       [
         "Wind",
@@ -10384,6 +10791,7 @@
   },
   {
     "element": "Zombie",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bc/Zombie_2.svg/revision/latest?cb=20210830150004",
     "recipes": [
       [
         "Corpse",
@@ -10409,6 +10817,7 @@
   },
   {
     "element": "Alpaca",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/eb/Alpaca_2.svg/revision/latest?cb=20210827130139",
     "recipes": [
       [
         "Sheep",
@@ -10426,6 +10835,7 @@
   },
   {
     "element": "Angler",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8d/Angler_2.svg/revision/latest?cb=20210827132908",
     "recipes": [
       [
         "Human",
@@ -10439,6 +10849,7 @@
   },
   {
     "element": "Ant",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/49/Ant_2.svg/revision/latest?cb=20210827132911",
     "recipes": [
       [
         "Grass",
@@ -10452,6 +10863,7 @@
   },
   {
     "element": "Battery",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/46/Battery_2.svg/revision/latest?cb=20210827232408",
     "recipes": [
       [
         "Container",
@@ -10473,6 +10885,7 @@
   },
   {
     "element": "Bee",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/91/Bee_2.svg/revision/latest?cb=20210828104054",
     "recipes": [
       [
         "Animal",
@@ -10486,6 +10899,7 @@
   },
   {
     "element": "Bicycle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8f/Bicycle_2.svg/revision/latest?cb=20210828104100",
     "recipes": [
       [
         "Wheel",
@@ -10503,6 +10917,7 @@
   },
   {
     "element": "Big",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/08/Big_2.svg/revision/latest?cb=20210827224708",
     "recipes": [
       [
         "Universe",
@@ -10532,6 +10947,7 @@
   },
   {
     "element": "Bonsai tree",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/00/Bonsai_tree_2.svg/revision/latest?cb=20210828111109",
     "recipes": [
       [
         "Tree",
@@ -10553,6 +10969,7 @@
   },
   {
     "element": "Cannon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8d/Cannon_2.svg/revision/latest?cb=20210828145356",
     "recipes": [
       [
         "Gunpowder",
@@ -10574,6 +10991,7 @@
   },
   {
     "element": "Car",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/08/Car_2.svg/revision/latest?cb=20210827122001",
     "recipes": [
       [
         "Wheel",
@@ -10615,6 +11033,7 @@
   },
   {
     "element": "Cauldron",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c3/Cauldron_2.svg/revision/latest?cb=20210904141713",
     "recipes": [
       [
         "Witch",
@@ -10644,6 +11063,7 @@
   },
   {
     "element": "Caviar",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/72/Caviar_2.svg/revision/latest?cb=20210829004256",
     "recipes": [
       [
         "Roe",
@@ -10657,6 +11077,7 @@
   },
   {
     "element": "Chicken coop",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6e/Chicken_coop_2.svg/revision/latest?cb=20210829004309",
     "recipes": [
       [
         "Chicken",
@@ -10690,6 +11111,7 @@
   },
   {
     "element": "Chicken soup",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Chicken_soup_2.svg/revision/latest?cb=20210829004310",
     "recipes": [
       [
         "Chicken",
@@ -10711,6 +11133,7 @@
   },
   {
     "element": "Chicken wing",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c5/Chicken_wing_2.svg/revision/latest?cb=20210828134751",
     "recipes": [
       [
         "Chicken",
@@ -10724,6 +11147,7 @@
   },
   {
     "element": "Christmas tree",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/ba/Christmas_tree_2.svg/revision/latest?cb=20210828145410",
     "recipes": [
       [
         "Tree",
@@ -10749,6 +11173,7 @@
   },
   {
     "element": "Coconut",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2f/Coconut_2.svg/revision/latest?cb=20210829101327",
     "recipes": [
       [
         "Palm",
@@ -10778,6 +11203,7 @@
   },
   {
     "element": "Combustion engine",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0f/Combustion_engine_2.svg/revision/latest?cb=20210828145411",
     "recipes": [
       [
         "Petroleum",
@@ -10803,6 +11229,7 @@
   },
   {
     "element": "Computer mouse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8d/Computer_mouse_2.svg/revision/latest?cb=20210829101347",
     "recipes": [
       [
         "Computer",
@@ -10816,6 +11243,7 @@
   },
   {
     "element": "Container",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3e/Container_2.svg/revision/latest?cb=20210827122007",
     "recipes": [
       [
         "Philosophy",
@@ -10845,6 +11273,7 @@
   },
   {
     "element": "Cook",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/16/Cook_2.svg/revision/latest?cb=20210827132924",
     "recipes": [
       [
         "Human",
@@ -10866,6 +11295,7 @@
   },
   {
     "element": "Coral",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/58/Coral_2.svg/revision/latest?cb=20210829104327",
     "recipes": [
       [
         "Tree",
@@ -10895,6 +11325,7 @@
   },
   {
     "element": "Cyclist",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8b/Cyclist_2.svg/revision/latest?cb=20210829125311",
     "recipes": [
       [
         "Human",
@@ -10908,6 +11339,7 @@
   },
   {
     "element": "Diamond",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ab/Diamond_2.svg/revision/latest?cb=20210829125314",
     "recipes": [
       [
         "Coal",
@@ -10917,6 +11349,7 @@
   },
   {
     "element": "Doctor",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/77/Doctor_2.svg/revision/latest?cb=20210827130146",
     "recipes": [
       [
         "Human",
@@ -10930,6 +11363,7 @@
   },
   {
     "element": "Doge",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/34/Doge_2.svg/revision/latest?cb=20210829125317",
     "recipes": [
       [
         "Dog",
@@ -10943,6 +11377,7 @@
   },
   {
     "element": "Doghouse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cf/Doghouse_2.svg/revision/latest?cb=20210829125318",
     "recipes": [
       [
         "Dog",
@@ -10972,6 +11407,7 @@
   },
   {
     "element": "Drone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b1/Drone_2.svg/revision/latest?cb=20210829125322",
     "recipes": [
       [
         "Robot",
@@ -10993,6 +11429,7 @@
   },
   {
     "element": "Dry ice",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8b/Dry_ice_2.svg/revision/latest?cb=20210829125326",
     "recipes": [
       [
         "Carbon dioxide",
@@ -11006,6 +11443,7 @@
   },
   {
     "element": "Duckling",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Duckling_2.svg/revision/latest?cb=20210829125327",
     "recipes": [
       [
         "Egg",
@@ -11015,6 +11453,7 @@
   },
   {
     "element": "Engineer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/67/Engineer_2.svg/revision/latest?cb=20210829104342",
     "recipes": [
       [
         "Human",
@@ -11028,6 +11467,7 @@
   },
   {
     "element": "Fairy tale",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/63/Fairy_tale_2.svg/revision/latest?cb=20210828111130",
     "recipes": [
       [
         "Story",
@@ -11061,6 +11501,7 @@
   },
   {
     "element": "Faun",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cf/Faun_2.svg/revision/latest?cb=20210830145934",
     "recipes": [
       [
         "Human",
@@ -11098,6 +11539,7 @@
   },
   {
     "element": "Fire extinguisher",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d9/Fire_extinguisher_2.svg/revision/latest?cb=20210830145936",
     "recipes": [
       [
         "Carbon dioxide",
@@ -11123,6 +11565,7 @@
   },
   {
     "element": "Forest",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ab/Forest_2.svg/revision/latest?cb=20210827132936",
     "recipes": [
       [
         "Tree",
@@ -11144,6 +11587,7 @@
   },
   {
     "element": "Fox",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/ec/Fox_2.svg/revision/latest?cb=20210828145416",
     "recipes": [
       [
         "Chicken",
@@ -11173,6 +11617,7 @@
   },
   {
     "element": "Fruit",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bc/Fruit_2.svg/revision/latest?cb=20210827124156",
     "recipes": [
       [
         "Flower",
@@ -11202,6 +11647,7 @@
   },
   {
     "element": "Gardener",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2e/Gardener_2.svg/revision/latest?cb=20210831023003",
     "recipes": [
       [
         "Human",
@@ -11215,6 +11661,7 @@
   },
   {
     "element": "Gnome",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9e/Gnome_2.svg/revision/latest?cb=20210831023007",
     "recipes": [
       [
         "Garden",
@@ -11236,6 +11683,7 @@
   },
   {
     "element": "Golem",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/41/Golem_2.svg/revision/latest?cb=20210831023008",
     "recipes": [
       [
         "Clay",
@@ -11261,6 +11709,7 @@
   },
   {
     "element": "Hail",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Hail_2.svg/revision/latest?cb=20210831120856",
     "recipes": [
       [
         "Ice",
@@ -11290,6 +11739,7 @@
   },
   {
     "element": "Harp",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/10/Harp_2.svg/revision/latest?cb=20210831120858",
     "recipes": [
       [
         "Angel",
@@ -11311,6 +11761,7 @@
   },
   {
     "element": "Hay",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f2/Hay_2.svg/revision/latest?cb=20210827231118",
     "recipes": [
       [
         "Grass",
@@ -11356,6 +11807,7 @@
   },
   {
     "element": "Helicopter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/88/Helicopter_2.svg/revision/latest?cb=20210829125333",
     "recipes": [
       [
         "Airplane",
@@ -11385,6 +11837,7 @@
   },
   {
     "element": "Husky",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c2/Husky_2.svg/revision/latest?cb=20210829125335",
     "recipes": [
       [
         "Dog",
@@ -11414,6 +11867,7 @@
   },
   {
     "element": "Internet",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/74/Internet_2.svg/revision/latest?cb=20210829125337",
     "recipes": [
       [
         "Computer",
@@ -11435,6 +11889,7 @@
   },
   {
     "element": "Jack-o'-lantern",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/30/Jack-o%27-lantern_2.svg/revision/latest?cb=20210831153623",
     "recipes": [
       [
         "Pumpkin",
@@ -11476,6 +11931,7 @@
   },
   {
     "element": "Juice",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9a/Juice_2.svg/revision/latest?cb=20210827124205",
     "recipes": [
       [
         "Fruit",
@@ -11525,6 +11981,7 @@
   },
   {
     "element": "Kaiju",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/04/Kaiju_2.svg/revision/latest?cb=20210831154317",
     "recipes": [
       [
         "Dinosaur",
@@ -11554,6 +12011,7 @@
   },
   {
     "element": "Lasso",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/70/Lasso_2.svg/revision/latest?cb=20210901125743",
     "recipes": [
       [
         "Rope",
@@ -11583,6 +12041,7 @@
   },
   {
     "element": "Lawn",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Lawn_2.svg/revision/latest?cb=20210831023017",
     "recipes": [
       [
         "Grass",
@@ -11604,6 +12063,7 @@
   },
   {
     "element": "Lawn mower",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c2/Lawn_mower_2.svg/revision/latest?cb=20210901125745",
     "recipes": [
       [
         "Grass",
@@ -11645,6 +12105,7 @@
   },
   {
     "element": "Leaf",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4f/Leaf_2.svg/revision/latest?cb=20210831120905",
     "recipes": [
       [
         "Tree",
@@ -11666,6 +12127,7 @@
   },
   {
     "element": "Legend",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a9/Legend_2.svg/revision/latest?cb=20210828111133",
     "recipes": [
       [
         "Story",
@@ -11695,6 +12157,7 @@
   },
   {
     "element": "Lumberjack",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7d/Lumberjack_2.svg/revision/latest?cb=20210827231128",
     "recipes": [
       [
         "Human",
@@ -11716,6 +12179,7 @@
   },
   {
     "element": "Manatee",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/76/Manatee_2.svg/revision/latest?cb=20210901142425",
     "recipes": [
       [
         "Cow",
@@ -11741,6 +12205,7 @@
   },
   {
     "element": "Milk",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b3/Milk_2.svg/revision/latest?cb=20210827232415",
     "recipes": [
       [
         "Cow",
@@ -11778,6 +12243,7 @@
   },
   {
     "element": "Minotaur",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7e/Minotaur_2.svg/revision/latest?cb=20210901142435",
     "recipes": [
       [
         "Human",
@@ -11803,6 +12269,7 @@
   },
   {
     "element": "Mold",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a2/Mold_2.svg/revision/latest?cb=20210901142436",
     "recipes": [
       [
         "Bread",
@@ -11832,6 +12299,7 @@
   },
   {
     "element": "Monkey",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/96/Monkey_2.svg/revision/latest?cb=20210827231216",
     "recipes": [
       [
         "Animal",
@@ -11841,6 +12309,7 @@
   },
   {
     "element": "Mountain goat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/60/Mountain_goat_2.svg/revision/latest?cb=20210827130157",
     "recipes": [
       [
         "Goat",
@@ -11854,6 +12323,7 @@
   },
   {
     "element": "Narwhal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/dd/Narwhal_2.svg/revision/latest?cb=20210902102211",
     "recipes": [
       [
         "Unicorn",
@@ -11887,6 +12357,7 @@
   },
   {
     "element": "Nessie",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/56/Nessie_2.svg/revision/latest?cb=20210902102212",
     "recipes": [
       [
         "Lake",
@@ -11908,6 +12379,7 @@
   },
   {
     "element": "Net",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f5/Net_2.svg/revision/latest?cb=20210828134756",
     "recipes": [
       [
         "Angler",
@@ -11933,6 +12405,7 @@
   },
   {
     "element": "Nuts",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5c/Nuts_2.svg/revision/latest?cb=20210829101420",
     "recipes": [
       [
         "Tree",
@@ -11950,6 +12423,7 @@
   },
   {
     "element": "Oil",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/43/Oil_2.svg/revision/latest?cb=20210828111140",
     "recipes": [
       [
         "Sunflower",
@@ -11971,6 +12445,7 @@
   },
   {
     "element": "Ore",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c5/Ore_2.svg/revision/latest?cb=20210827232418",
     "recipes": [
       [
         "Hammer",
@@ -12000,6 +12475,7 @@
   },
   {
     "element": "Paleontologist",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d2/Paleontologist_2.svg/revision/latest?cb=20210902171452",
     "recipes": [
       [
         "Human",
@@ -12021,6 +12497,7 @@
   },
   {
     "element": "Palm",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5a/Palm_2.svg/revision/latest?cb=20210829101423",
     "recipes": [
       [
         "Tree",
@@ -12038,6 +12515,7 @@
   },
   {
     "element": "Parachute",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b4/Parachute_2.svg/revision/latest?cb=20210902171454",
     "recipes": [
       [
         "Pilot",
@@ -12067,6 +12545,7 @@
   },
   {
     "element": "Parrot",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/88/Parrot_2.svg/revision/latest?cb=20210830114620",
     "recipes": [
       [
         "Bird",
@@ -12088,6 +12567,7 @@
   },
   {
     "element": "Peat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9f/Peat_2.svg/revision/latest?cb=20210829101426",
     "recipes": [
       [
         "Swamp",
@@ -12109,6 +12589,7 @@
   },
   {
     "element": "Perfume",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/11/Perfume_2.svg/revision/latest?cb=20210828111144",
     "recipes": [
       [
         "Flower",
@@ -12150,6 +12631,7 @@
   },
   {
     "element": "Petroleum",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/de/Petroleum_2.svg/revision/latest?cb=20210829101427",
     "recipes": [
       [
         "Fossil",
@@ -12171,6 +12653,7 @@
   },
   {
     "element": "Pilot",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4d/Pilot_2.svg/revision/latest?cb=20210827122023",
     "recipes": [
       [
         "Human",
@@ -12184,6 +12667,7 @@
   },
   {
     "element": "Pipe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/32/Pipe_2.svg/revision/latest?cb=20210829125342",
     "recipes": [
       [
         "Tobacco",
@@ -12197,6 +12681,7 @@
   },
   {
     "element": "Pirate ship",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3d/Pirate_ship_2.svg/revision/latest?cb=20210828145430",
     "recipes": [
       [
         "Sailboat",
@@ -12222,6 +12707,7 @@
   },
   {
     "element": "Polar bear",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Polar_bear_2.svg/revision/latest?cb=20210902171509",
     "recipes": [
       [
         "Animal",
@@ -12235,6 +12721,7 @@
   },
   {
     "element": "Potato",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/25/Potato_2.svg/revision/latest?cb=20210830145958",
     "recipes": [
       [
         "Earth",
@@ -12244,6 +12731,7 @@
   },
   {
     "element": "Pterodactyl",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/df/Pterodactyl_2.svg/revision/latest?cb=20210828104220",
     "recipes": [
       [
         "Dinosaur",
@@ -12273,6 +12761,7 @@
   },
   {
     "element": "Pumpkin",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/52/Pumpkin_2.svg/revision/latest?cb=20210831153628",
     "recipes": [
       [
         "Vegetable",
@@ -12294,6 +12783,7 @@
   },
   {
     "element": "Quicksilver",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4d/Quicksilver_2.svg/revision/latest?cb=20210831023020",
     "recipes": [
       [
         "Metal",
@@ -12303,6 +12793,7 @@
   },
   {
     "element": "Rabbit",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c1/Rabbit_2.svg/revision/latest?cb=20210903114739",
     "recipes": [
       [
         "Animal",
@@ -12316,6 +12807,7 @@
   },
   {
     "element": "Rivulet",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2c/Rivulet_2.svg/revision/latest?cb=20210903114744",
     "recipes": [
       [
         "Stream",
@@ -12329,6 +12821,7 @@
   },
   {
     "element": "Sand castle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b0/Sand_castle_2.svg/revision/latest?cb=20210904163223",
     "recipes": [
       [
         "Castle",
@@ -12350,6 +12843,7 @@
   },
   {
     "element": "Sap",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7b/Sap_2.svg/revision/latest?cb=20210901142447",
     "recipes": [
       [
         "Tree",
@@ -12359,6 +12853,7 @@
   },
   {
     "element": "Saturn",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b5/Saturn_2.svg/revision/latest?cb=20210827124217",
     "recipes": [
       [
         "Ring",
@@ -12372,6 +12867,7 @@
   },
   {
     "element": "Scalpel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Scalpel_2.svg/revision/latest?cb=20210903150043",
     "recipes": [
       [
         "Blade",
@@ -12401,6 +12897,7 @@
   },
   {
     "element": "Scythe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f1/Scythe_2.svg/revision/latest?cb=20210831023022",
     "recipes": [
       [
         "Blade",
@@ -12430,6 +12927,7 @@
   },
   {
     "element": "Seal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2a/Seal_2.svg/revision/latest?cb=20210903150046",
     "recipes": [
       [
         "Dog",
@@ -12455,6 +12953,7 @@
   },
   {
     "element": "Seaplane",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/60/Seaplane_2.svg/revision/latest?cb=20210829125347",
     "recipes": [
       [
         "Airplane",
@@ -12476,6 +12975,7 @@
   },
   {
     "element": "Seed",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d9/Seed_2.svg/revision/latest?cb=20210829010135",
     "recipes": [
       [
         "Pollen",
@@ -12493,6 +12993,7 @@
   },
   {
     "element": "Skateboard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e8/Skateboard_2.svg/revision/latest?cb=20210903161937",
     "recipes": [
       [
         "Wheel",
@@ -12510,6 +13011,7 @@
   },
   {
     "element": "Small",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d0/Small_2.svg/revision/latest?cb=20210827132949",
     "recipes": [
       [
         "Philosophy",
@@ -12563,6 +13065,7 @@
   },
   {
     "element": "Snowboarder",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ad/Snowboarder_2.svg/revision/latest?cb=20210909182847",
     "recipes": [
       [
         "Human",
@@ -12572,6 +13075,7 @@
   },
   {
     "element": "Soda",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/44/Soda_2.svg/revision/latest?cb=20210828111150",
     "recipes": [
       [
         "Carbon dioxide",
@@ -12589,6 +13093,7 @@
   },
   {
     "element": "Sphinx",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4d/Sphinx_2.svg/revision/latest?cb=20210904021058",
     "recipes": [
       [
         "Statue",
@@ -12610,6 +13115,7 @@
   },
   {
     "element": "Statue",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1a/Statue_2.svg/revision/latest?cb=20210830145959",
     "recipes": [
       [
         "Stone",
@@ -12751,6 +13257,7 @@
   },
   {
     "element": "Steam engine",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/92/Steam_engine_2.svg/revision/latest?cb=20210827122043",
     "recipes": [
       [
         "Steam",
@@ -12768,6 +13275,7 @@
   },
   {
     "element": "Steel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1a/Steel_2.svg/revision/latest?cb=20210827122046",
     "recipes": [
       [
         "Metal",
@@ -12789,6 +13297,7 @@
   },
   {
     "element": "Stream",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c2/Stream_2.svg/revision/latest?cb=20210828104232",
     "recipes": [
       [
         "Pond",
@@ -12806,6 +13315,7 @@
   },
   {
     "element": "Sushi",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/78/Sushi_2.svg/revision/latest?cb=20210904021105",
     "recipes": [
       [
         "Fish",
@@ -12819,6 +13329,7 @@
   },
   {
     "element": "Swamp",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1e/Swamp_2.svg/revision/latest?cb=20210827130204",
     "recipes": [
       [
         "Mud",
@@ -12856,6 +13367,7 @@
   },
   {
     "element": "The one ring",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/ff/The_one_ring_2.svg/revision/latest?cb=20210904120728",
     "recipes": [
       [
         "Ring",
@@ -12869,6 +13381,7 @@
   },
   {
     "element": "Thread",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c2/Thread_2.svg/revision/latest?cb=20210828145439",
     "recipes": [
       [
         "Cotton",
@@ -12890,6 +13403,7 @@
   },
   {
     "element": "Treehouse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e4/Treehouse_2.svg/revision/latest?cb=20210904120734",
     "recipes": [
       [
         "Tree",
@@ -12903,6 +13417,7 @@
   },
   {
     "element": "Trojan horse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/78/Trojan_horse_2.svg/revision/latest?cb=20210904120735",
     "recipes": [
       [
         "Horse",
@@ -12920,6 +13435,7 @@
   },
   {
     "element": "Tunnel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d7/Tunnel_2.svg/revision/latest?cb=20210904120736",
     "recipes": [
       [
         "Engineer",
@@ -12961,6 +13477,7 @@
   },
   {
     "element": "Tyrannosaurus rex",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a8/Tyrannosaurus_rex_2.svg/revision/latest?cb=20210830114630",
     "recipes": [
       [
         "Dinosaur",
@@ -12978,6 +13495,7 @@
   },
   {
     "element": "Vase",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/64/Vase_2.svg/revision/latest?cb=20210904120739",
     "recipes": [
       [
         "Pottery",
@@ -13015,6 +13533,7 @@
   },
   {
     "element": "Water lily",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4c/Water_lily_2.svg/revision/latest?cb=20210904141720",
     "recipes": [
       [
         "Flower",
@@ -13036,6 +13555,7 @@
   },
   {
     "element": "Wheat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/43/Wheat_2.svg/revision/latest?cb=20210827124230",
     "recipes": [
       [
         "Grass",
@@ -13053,6 +13573,7 @@
   },
   {
     "element": "Wood",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e8/Wood_2.svg/revision/latest?cb=20210827224752",
     "recipes": [
       [
         "Tree",
@@ -13106,6 +13627,7 @@
   },
   {
     "element": "Woodpecker",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c2/Woodpecker_2.svg/revision/latest?cb=20210830114633",
     "recipes": [
       [
         "Bird",
@@ -13123,6 +13645,7 @@
   },
   {
     "element": "Wool",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/77/Wool_2.svg/revision/latest?cb=20210828145445",
     "recipes": [
       [
         "Sheep",
@@ -13140,6 +13663,7 @@
   },
   {
     "element": "Yeti",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a7/Yeti_2.svg/revision/latest?cb=20210904141726",
     "recipes": [
       [
         "Mountain",
@@ -13193,6 +13717,7 @@
   },
   {
     "element": "Zoo",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e9/Zoo_2.svg/revision/latest?cb=20210904141728",
     "recipes": [
       [
         "Animal",
@@ -13206,6 +13731,7 @@
   },
   {
     "element": "Alcohol",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c1/Alcohol_2.svg/revision/latest?cb=20210827124148",
     "recipes": [
       [
         "Time",
@@ -13227,6 +13753,7 @@
   },
   {
     "element": "Ambulance",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f5/Ambulance_2.svg/revision/latest?cb=20210827130140",
     "recipes": [
       [
         "Car",
@@ -13240,6 +13767,7 @@
   },
   {
     "element": "Ant farm",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c1/Ant_farm_2.svg/revision/latest?cb=20210827132912",
     "recipes": [
       [
         "Farm",
@@ -13265,6 +13793,7 @@
   },
   {
     "element": "Anthill",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/26/Anthill_2.svg/revision/latest?cb=20210827132915",
     "recipes": [
       [
         "Ant",
@@ -13294,6 +13823,7 @@
   },
   {
     "element": "Arrow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5c/Arrow_2.svg/revision/latest?cb=20210827224659",
     "recipes": [
       [
         "Wood",
@@ -13307,6 +13837,7 @@
   },
   {
     "element": "Aviary",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/55/Aviary_2.svg/revision/latest?cb=20210909182831",
     "recipes": [
       [
         "Big",
@@ -13316,6 +13847,7 @@
   },
   {
     "element": "Axe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/61/Axe_2.svg/revision/latest?cb=20210827231029",
     "recipes": [
       [
         "Wood",
@@ -13341,6 +13873,7 @@
   },
   {
     "element": "Banana",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/98/Banana_2.svg/revision/latest?cb=20210827231037",
     "recipes": [
       [
         "Fruit",
@@ -13350,6 +13883,7 @@
   },
   {
     "element": "Beehive",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0a/Beehive_2.svg/revision/latest?cb=20210828104055",
     "recipes": [
       [
         "House",
@@ -13379,6 +13913,7 @@
   },
   {
     "element": "Beekeeper",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3c/Beekeeper_2.svg/revision/latest?cb=20210828104057",
     "recipes": [
       [
         "Human",
@@ -13400,6 +13935,7 @@
   },
   {
     "element": "Blood bag",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1c/Blood_bag_2.svg/revision/latest?cb=20210828104157",
     "recipes": [
       [
         "Blood",
@@ -13417,6 +13953,7 @@
   },
   {
     "element": "Boat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5c/Boat_2.svg/revision/latest?cb=20210827122000",
     "recipes": [
       [
         "Wood",
@@ -13442,6 +13979,7 @@
   },
   {
     "element": "Book",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/09/Book_2.svg/revision/latest?cb=20210828111111",
     "recipes": [
       [
         "Newspaper",
@@ -13475,6 +14013,7 @@
   },
   {
     "element": "Bottle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9d/Bottle_2.svg/revision/latest?cb=20210828104201",
     "recipes": [
       [
         "Container",
@@ -13528,6 +14067,7 @@
   },
   {
     "element": "Boulder",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6a/Boulder_2.svg/revision/latest?cb=20210828111112",
     "recipes": [
       [
         "Big",
@@ -13557,6 +14097,7 @@
   },
   {
     "element": "Bow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9c/Bow_2.svg/revision/latest?cb=20210827224710",
     "recipes": [
       [
         "Wood",
@@ -13578,6 +14119,7 @@
   },
   {
     "element": "Broom",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c9/Broom_2.svg/revision/latest?cb=20210829010121",
     "recipes": [
       [
         "Wood",
@@ -13591,6 +14133,7 @@
   },
   {
     "element": "Bucket",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5b/Bucket_2.svg/revision/latest?cb=20210828134740",
     "recipes": [
       [
         "Container",
@@ -13624,6 +14167,7 @@
   },
   {
     "element": "Bus",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7d/Bus_2.svg/revision/latest?cb=20210828134743",
     "recipes": [
       [
         "Car",
@@ -13645,6 +14189,7 @@
   },
   {
     "element": "Butter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/96/Butter_2.svg/revision/latest?cb=20210828134747",
     "recipes": [
       [
         "Milk",
@@ -13666,6 +14211,7 @@
   },
   {
     "element": "Butterfly net",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/95/Butterfly_net_2.svg/revision/latest?cb=20210828134750",
     "recipes": [
       [
         "Butterfly",
@@ -13679,6 +14225,7 @@
   },
   {
     "element": "Campfire",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cf/Campfire_2.svg/revision/latest?cb=20210827224713",
     "recipes": [
       [
         "Fire",
@@ -13688,6 +14235,7 @@
   },
   {
     "element": "Cart",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/be/Cart_2.svg/revision/latest?cb=20210828145403",
     "recipes": [
       [
         "Wheel",
@@ -13697,6 +14245,7 @@
   },
   {
     "element": "Cashmere",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ab/Cashmere_2.svg/revision/latest?cb=20210828145405",
     "recipes": [
       [
         "Mountain goat",
@@ -13722,6 +14271,7 @@
   },
   {
     "element": "Cereal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ab/Cereal_2.svg/revision/latest?cb=20210828111118",
     "recipes": [
       [
         "Wheat",
@@ -13739,6 +14289,7 @@
   },
   {
     "element": "Chainsaw",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/05/Chainsaw_2.svg/revision/latest?cb=20210829004259",
     "recipes": [
       [
         "Axe",
@@ -13764,6 +14315,7 @@
   },
   {
     "element": "Cheese",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/55/Cheese_2.svg/revision/latest?cb=20210829004304",
     "recipes": [
       [
         "Milk",
@@ -13785,6 +14337,7 @@
   },
   {
     "element": "Christmas stocking",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a4/Christmas_stocking_2.svg/revision/latest?cb=20210828145408",
     "recipes": [
       [
         "Fireplace",
@@ -13806,6 +14359,7 @@
   },
   {
     "element": "Closet",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c7/Closet_2.svg/revision/latest?cb=20210829010126",
     "recipes": [
       [
         "Container",
@@ -13831,6 +14385,7 @@
   },
   {
     "element": "Coconut milk",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4f/Coconut_milk_2.svg/revision/latest?cb=20210827232409",
     "recipes": [
       [
         "Coconut",
@@ -13860,6 +14415,7 @@
   },
   {
     "element": "Coffin",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/ba/Coffin_2.svg/revision/latest?cb=20210829101339",
     "recipes": [
       [
         "Wood",
@@ -13877,6 +14433,7 @@
   },
   {
     "element": "Cutting board",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/97/Cutting_board_2.svg/revision/latest?cb=20210829104335",
     "recipes": [
       [
         "Wood",
@@ -13886,6 +14443,7 @@
   },
   {
     "element": "Drum",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/82/Drum_2.svg/revision/latest?cb=20210829125323",
     "recipes": [
       [
         "Wood",
@@ -13903,6 +14461,7 @@
   },
   {
     "element": "Electric car",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/df/Electric_car_2.svg/revision/latest?cb=20210830114611",
     "recipes": [
       [
         "Electricity",
@@ -13932,6 +14491,7 @@
   },
   {
     "element": "Fabric",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c4/Fabric_2.svg/revision/latest?cb=20210827132930",
     "recipes": [
       [
         "Thread",
@@ -13949,6 +14509,7 @@
   },
   {
     "element": "Fireplace",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/51/Fireplace_2.svg/revision/latest?cb=20210829004317",
     "recipes": [
       [
         "Campfire",
@@ -13974,6 +14535,7 @@
   },
   {
     "element": "Firetruck",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d7/Firetruck_2.svg/revision/latest?cb=20210830145938",
     "recipes": [
       [
         "Firefighter",
@@ -14003,6 +14565,7 @@
   },
   {
     "element": "Flour",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/68/Flour_2.svg/revision/latest?cb=20210827232410",
     "recipes": [
       [
         "Wheat",
@@ -14028,6 +14591,7 @@
   },
   {
     "element": "Flute",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1c/Flute_2.svg/revision/latest?cb=20210830145942",
     "recipes": [
       [
         "Wood",
@@ -14041,6 +14605,7 @@
   },
   {
     "element": "Fountain",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/43/Fountain_2.svg/revision/latest?cb=20210830145944",
     "recipes": [
       [
         "Statue",
@@ -14054,6 +14619,7 @@
   },
   {
     "element": "French fries",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/18/French_fries_2.svg/revision/latest?cb=20210830145946",
     "recipes": [
       [
         "Oil",
@@ -14071,6 +14637,7 @@
   },
   {
     "element": "Fruit tree",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e8/Fruit_tree_2.svg/revision/latest?cb=20210830145950",
     "recipes": [
       [
         "Fruit",
@@ -14088,6 +14655,7 @@
   },
   {
     "element": "Garage",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4d/Garage_2.svg/revision/latest?cb=20210904120725",
     "recipes": [
       [
         "Car",
@@ -14253,6 +14821,7 @@
   },
   {
     "element": "Grim reaper",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d8/Grim_reaper_2.svg/revision/latest?cb=20210829104347",
     "recipes": [
       [
         "Human",
@@ -14286,6 +14855,7 @@
   },
   {
     "element": "Gust",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c6/Gust_2.svg/revision/latest?cb=20210831023015",
     "recipes": [
       [
         "Wind",
@@ -14299,6 +14869,7 @@
   },
   {
     "element": "Hay bale",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a1/Hay_bale_2.svg/revision/latest?cb=20210827231121",
     "recipes": [
       [
         "Hay",
@@ -14320,6 +14891,7 @@
   },
   {
     "element": "Hill",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cf/Hill_2.svg/revision/latest?cb=20210827132939",
     "recipes": [
       [
         "Big",
@@ -14345,6 +14917,7 @@
   },
   {
     "element": "Honey",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a6/Honey_2.svg/revision/latest?cb=20210831120901",
     "recipes": [
       [
         "Bee",
@@ -14370,6 +14943,7 @@
   },
   {
     "element": "Ice cream",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/65/Ice_cream_2.svg/revision/latest?cb=20210830145952",
     "recipes": [
       [
         "Milk",
@@ -14387,6 +14961,7 @@
   },
   {
     "element": "Ice sculpture",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/78/Ice_sculpture_2.svg/revision/latest?cb=20210831153617",
     "recipes": [
       [
         "Ice",
@@ -14396,6 +14971,7 @@
   },
   {
     "element": "Jam",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/05/Jam_2.svg/revision/latest?cb=20210831153624",
     "recipes": [
       [
         "Juice",
@@ -14421,6 +14997,7 @@
   },
   {
     "element": "Knife",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7d/Knife_2.svg/revision/latest?cb=20210831154321",
     "recipes": [
       [
         "Blade",
@@ -14434,6 +15011,7 @@
   },
   {
     "element": "Laptop",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fa/Laptop_2.svg/revision/latest?cb=20210909182841",
     "recipes": [
       [
         "Computer",
@@ -14443,6 +15021,7 @@
   },
   {
     "element": "Little alchemy (element)",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4a/Little_alchemy_%28element%29_2.svg/revision/latest?cb=20210901125749",
     "recipes": [
       [
         "Small",
@@ -14452,6 +15031,7 @@
   },
   {
     "element": "Log cabin",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e4/Log_cabin_2.svg/revision/latest?cb=20210901125750",
     "recipes": [
       [
         "Wood",
@@ -14461,6 +15041,7 @@
   },
   {
     "element": "Maple syrup",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/46/Maple_syrup_2.svg/revision/latest?cb=20210901142427",
     "recipes": [
       [
         "Sap",
@@ -14474,6 +15055,7 @@
   },
   {
     "element": "Mayonnaise",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Mayonnaise_2.svg/revision/latest?cb=20210901142429",
     "recipes": [
       [
         "Egg",
@@ -14483,6 +15065,7 @@
   },
   {
     "element": "Moon rover",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7f/Moon_rover_2.svg/revision/latest?cb=20210827224732",
     "recipes": [
       [
         "Moon",
@@ -14496,6 +15079,7 @@
   },
   {
     "element": "Motorcycle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5c/Motorcycle_2.svg/revision/latest?cb=20210828145425",
     "recipes": [
       [
         "Bicycle",
@@ -14521,6 +15105,7 @@
   },
   {
     "element": "Needle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/70/Needle_2.svg/revision/latest?cb=20210831120907",
     "recipes": [
       [
         "Thread",
@@ -14538,6 +15123,7 @@
   },
   {
     "element": "Paper",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5b/Paper_2.svg/revision/latest?cb=20210827224735",
     "recipes": [
       [
         "Wood",
@@ -14559,6 +15145,7 @@
   },
   {
     "element": "Peanut butter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/12/Peanut_butter_2.svg/revision/latest?cb=20210902171457",
     "recipes": [
       [
         "Nuts",
@@ -14572,6 +15159,7 @@
   },
   {
     "element": "Pebble",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1a/Pebble_2.svg/revision/latest?cb=20210902171458",
     "recipes": [
       [
         "Small",
@@ -14589,6 +15177,7 @@
   },
   {
     "element": "Pencil",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e1/Pencil_2.svg/revision/latest?cb=20210828111142",
     "recipes": [
       [
         "Wood",
@@ -14602,6 +15191,7 @@
   },
   {
     "element": "Penicillin",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/12/Penicillin_2.svg/revision/latest?cb=20210902171501",
     "recipes": [
       [
         "Mold",
@@ -14623,6 +15213,7 @@
   },
   {
     "element": "Pinocchio",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4c/Pinocchio_2.svg/revision/latest?cb=20210902171504",
     "recipes": [
       [
         "Wood",
@@ -14640,6 +15231,7 @@
   },
   {
     "element": "Pitchfork",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f3/Pitchfork_2.svg/revision/latest?cb=20210830145956",
     "recipes": [
       [
         "Hay",
@@ -14661,6 +15253,7 @@
   },
   {
     "element": "Popsicle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4f/Popsicle_2.svg/revision/latest?cb=20210902171510",
     "recipes": [
       [
         "Juice",
@@ -14682,6 +15275,7 @@
   },
   {
     "element": "Quicksand",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3b/Quicksand_2.svg/revision/latest?cb=20210903114738",
     "recipes": [
       [
         "Sand",
@@ -14691,6 +15285,7 @@
   },
   {
     "element": "Rainforest",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2b/Rainforest_2.svg/revision/latest?cb=20210903114741",
     "recipes": [
       [
         "Rain",
@@ -14700,6 +15295,7 @@
   },
   {
     "element": "Rat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8f/Rat_2.svg/revision/latest?cb=20210831120908",
     "recipes": [
       [
         "Animal",
@@ -14737,6 +15333,7 @@
   },
   {
     "element": "Reindeer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e8/Reindeer_2.svg/revision/latest?cb=20210828145432",
     "recipes": [
       [
         "Animal",
@@ -14762,6 +15359,7 @@
   },
   {
     "element": "Restaurant",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e2/Restaurant_2.svg/revision/latest?cb=20210909182843",
     "recipes": [
       [
         "House",
@@ -14771,6 +15369,7 @@
   },
   {
     "element": "Roller coaster",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c8/Roller_coaster_2.svg/revision/latest?cb=20210903114745",
     "recipes": [
       [
         "Park",
@@ -14792,6 +15391,7 @@
   },
   {
     "element": "Rv",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3b/Rv_2.svg/revision/latest?cb=20210831023021",
     "recipes": [
       [
         "House",
@@ -14805,6 +15405,7 @@
   },
   {
     "element": "Sack",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4d/Sack_2.svg/revision/latest?cb=20210828104223",
     "recipes": [
       [
         "Container",
@@ -14822,6 +15423,7 @@
   },
   {
     "element": "Santa",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/86/Santa_2.svg/revision/latest?cb=20210828145435",
     "recipes": [
       [
         "Christmas tree",
@@ -14851,6 +15453,7 @@
   },
   {
     "element": "Scarecrow",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/90/Scarecrow_2.svg/revision/latest?cb=20210903150044",
     "recipes": [
       [
         "Hay",
@@ -14888,6 +15491,7 @@
   },
   {
     "element": "Scuba tank",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c1/Scuba_tank_2.svg/revision/latest?cb=20210829125346",
     "recipes": [
       [
         "Container",
@@ -14905,6 +15509,7 @@
   },
   {
     "element": "Sewing machine",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/32/Sewing_machine_2.svg/revision/latest?cb=20210903150049",
     "recipes": [
       [
         "Needle",
@@ -14934,6 +15539,7 @@
   },
   {
     "element": "Shovel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/23/Shovel_2.svg/revision/latest?cb=20210903161936",
     "recipes": [
       [
         "Tool",
@@ -14943,6 +15549,7 @@
   },
   {
     "element": "Silo",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/aa/Silo_2.svg/revision/latest?cb=20210903161936",
     "recipes": [
       [
         "Wheat",
@@ -14976,6 +15583,7 @@
   },
   {
     "element": "Smoothie",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/43/Smoothie_2.svg/revision/latest?cb=20210829104400",
     "recipes": [
       [
         "Fruit",
@@ -14993,6 +15601,7 @@
   },
   {
     "element": "Snowmobile",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/30/Snowmobile_2.svg/revision/latest?cb=20210831023024",
     "recipes": [
       [
         "Snow",
@@ -15022,6 +15631,7 @@
   },
   {
     "element": "Soap",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/93/Soap_2.svg/revision/latest?cb=20210904021055",
     "recipes": [
       [
         "Oil",
@@ -15047,6 +15657,7 @@
   },
   {
     "element": "Spider",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/dc/Spider_2.svg/revision/latest?cb=20210827132956",
     "recipes": [
       [
         "Animal",
@@ -15064,6 +15675,7 @@
   },
   {
     "element": "Squirrel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cc/Squirrel_2.svg/revision/latest?cb=20210904021100",
     "recipes": [
       [
         "Mouse",
@@ -15085,6 +15697,7 @@
   },
   {
     "element": "Steamboat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a6/Steamboat_2.svg/revision/latest?cb=20210827122045",
     "recipes": [
       [
         "Steam engine",
@@ -15110,6 +15723,7 @@
   },
   {
     "element": "Steel wool",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/82/Steel_wool_2.svg/revision/latest?cb=20210904021102",
     "recipes": [
       [
         "Wool",
@@ -15127,6 +15741,7 @@
   },
   {
     "element": "Sugar",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/aa/Sugar_2.svg/revision/latest?cb=20210828145438",
     "recipes": [
       [
         "Fruit",
@@ -15172,6 +15787,7 @@
   },
   {
     "element": "Sweater",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/dc/Sweater_2.svg/revision/latest?cb=20210904021106",
     "recipes": [
       [
         "Wool",
@@ -15185,6 +15801,7 @@
   },
   {
     "element": "Tailor",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b5/Tailor_2.svg/revision/latest?cb=20210909182850",
     "recipes": [
       [
         "Human",
@@ -15202,6 +15819,7 @@
   },
   {
     "element": "Tank",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/55/Tank_2.svg/revision/latest?cb=20210904120726",
     "recipes": [
       [
         "Car",
@@ -15223,6 +15841,7 @@
   },
   {
     "element": "Tea",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e7/Tea_2.svg/revision/latest?cb=20210829104403",
     "recipes": [
       [
         "Leaf",
@@ -15240,6 +15859,7 @@
   },
   {
     "element": "Thermometer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/82/Thermometer_2.svg/revision/latest?cb=20210829101430",
     "recipes": [
       [
         "Quicksilver",
@@ -15257,6 +15877,7 @@
   },
   {
     "element": "Titanic",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/14/Titanic_2.svg/revision/latest?cb=20210904120729",
     "recipes": [
       [
         "Boat",
@@ -15278,6 +15899,7 @@
   },
   {
     "element": "Tractor",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cc/Tractor_2.svg/revision/latest?cb=20210830150001",
     "recipes": [
       [
         "Car",
@@ -15307,6 +15929,7 @@
   },
   {
     "element": "Train",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2c/Train_2.svg/revision/latest?cb=20210827122048",
     "recipes": [
       [
         "Steam engine",
@@ -15328,6 +15951,7 @@
   },
   {
     "element": "Vault",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0d/Vault_2.svg/revision/latest?cb=20210827231237",
     "recipes": [
       [
         "Safe",
@@ -15337,6 +15961,7 @@
   },
   {
     "element": "Water pipe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Water_pipe_2.svg/revision/latest?cb=20210904141722",
     "recipes": [
       [
         "Water",
@@ -15346,6 +15971,7 @@
   },
   {
     "element": "Witch",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/89/Witch_2.svg/revision/latest?cb=20210829004334",
     "recipes": [
       [
         "Broom",
@@ -15383,6 +16009,7 @@
   },
   {
     "element": "Yogurt",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cb/Yogurt_2.svg/revision/latest?cb=20210828134800",
     "recipes": [
       [
         "Bacteria",
@@ -15396,6 +16023,7 @@
   },
   {
     "element": "Apron",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e3/Apron_2.svg/revision/latest?cb=20210827132917",
     "recipes": [
       [
         "Fabric",
@@ -15409,6 +16037,7 @@
   },
   {
     "element": "Armor",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/88/Armor_2.svg/revision/latest?cb=20210827224658",
     "recipes": [
       [
         "Metal",
@@ -15422,6 +16051,7 @@
   },
   {
     "element": "Bandage",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9d/Bandage_2.svg/revision/latest?cb=20210827231042",
     "recipes": [
       [
         "Fabric",
@@ -15439,6 +16069,7 @@
   },
   {
     "element": "Batter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Batter_2.svg/revision/latest?cb=20210827231047",
     "recipes": [
       [
         "Milk",
@@ -15452,6 +16083,7 @@
   },
   {
     "element": "Bbq",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/06/Bbq_2.svg/revision/latest?cb=20210828104050",
     "recipes": [
       [
         "Campfire",
@@ -15477,6 +16109,7 @@
   },
   {
     "element": "Beer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/95/Beer_2.svg/revision/latest?cb=20210828104059",
     "recipes": [
       [
         "Alcohol",
@@ -15486,6 +16119,7 @@
   },
   {
     "element": "Box",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/65/Box_2.svg/revision/latest?cb=20210828111114",
     "recipes": [
       [
         "Container",
@@ -15519,6 +16153,7 @@
   },
   {
     "element": "Candy cane",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5d/Candy_cane_2.svg/revision/latest?cb=20210828145354",
     "recipes": [
       [
         "Sugar",
@@ -15540,6 +16175,7 @@
   },
   {
     "element": "Canvas",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f6/Canvas_2.svg/revision/latest?cb=20210828145357",
     "recipes": [
       [
         "Fabric",
@@ -15549,6 +16185,7 @@
   },
   {
     "element": "Caramel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/33/Caramel_2.svg/revision/latest?cb=20210828145359",
     "recipes": [
       [
         "Sugar",
@@ -15558,6 +16195,7 @@
   },
   {
     "element": "Chocolate",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c0/Chocolate_2.svg/revision/latest?cb=20210829010123",
     "recipes": [
       [
         "Sugar",
@@ -15579,6 +16217,7 @@
   },
   {
     "element": "Cigarette",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d4/Cigarette_2.svg/revision/latest?cb=20210829010124",
     "recipes": [
       [
         "Tobacco",
@@ -15588,6 +16227,7 @@
   },
   {
     "element": "Confetti",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/23/Confetti_2.svg/revision/latest?cb=20210829101356",
     "recipes": [
       [
         "Paper",
@@ -15601,6 +16241,7 @@
   },
   {
     "element": "Cookbook",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/43/Cookbook_2.svg/revision/latest?cb=20210829101402",
     "recipes": [
       [
         "Recipe",
@@ -15614,6 +16255,7 @@
   },
   {
     "element": "Cotton candy",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/a2/Cotton_candy_2.svg/revision/latest?cb=20210829104330",
     "recipes": [
       [
         "Sugar",
@@ -15631,6 +16273,7 @@
   },
   {
     "element": "Crayon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5d/Crayon_2.svg/revision/latest?cb=20210828111124",
     "recipes": [
       [
         "Rainbow",
@@ -15660,6 +16303,7 @@
   },
   {
     "element": "Cup",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/04/Cup_2.svg/revision/latest?cb=20210829104333",
     "recipes": [
       [
         "Container",
@@ -15689,6 +16333,7 @@
   },
   {
     "element": "Diver",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/64/Diver_2.svg/revision/latest?cb=20210829125316",
     "recipes": [
       [
         "Scuba tank",
@@ -15714,6 +16359,7 @@
   },
   {
     "element": "Dough",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9c/Dough_2.svg/revision/latest?cb=20210827231102",
     "recipes": [
       [
         "Flour",
@@ -15731,6 +16377,7 @@
   },
   {
     "element": "Drunk",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/da/Drunk_2.svg/revision/latest?cb=20210829125325",
     "recipes": [
       [
         "Human",
@@ -15748,6 +16395,7 @@
   },
   {
     "element": "Excavator",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7e/Excavator_2.svg/revision/latest?cb=20210909182837",
     "recipes": [
       [
         "Shovel",
@@ -15761,6 +16409,7 @@
   },
   {
     "element": "Flying squirrel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/2f/Flying_squirrel_2.svg/revision/latest?cb=20210905142415",
     "recipes": [
       [
         "Squirrel",
@@ -15798,6 +16447,7 @@
   },
   {
     "element": "Fork",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7f/Fork_2.svg/revision/latest?cb=20210909182839",
     "recipes": [
       [
         "Pitchfork",
@@ -15807,6 +16457,7 @@
   },
   {
     "element": "Frozen yogurt",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bf/Frozen_yogurt_2.svg/revision/latest?cb=20210830145948",
     "recipes": [
       [
         "Yogurt",
@@ -15820,6 +16471,7 @@
   },
   {
     "element": "Gift",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c5/Gift_2.svg/revision/latest?cb=20210829010129",
     "recipes": [
       [
         "Christmas tree",
@@ -15865,6 +16517,7 @@
   },
   {
     "element": "Hamburger",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8e/Hamburger_2.svg/revision/latest?cb=20210829004318",
     "recipes": [
       [
         "Meat",
@@ -15878,6 +16531,7 @@
   },
   {
     "element": "Hamster",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/25/Hamster_2.svg/revision/latest?cb=20210828145417",
     "recipes": [
       [
         "Mouse",
@@ -15899,6 +16553,7 @@
   },
   {
     "element": "Hedgehog",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9f/Hedgehog_2.svg/revision/latest?cb=20210831120900",
     "recipes": [
       [
         "Animal",
@@ -15916,6 +16571,7 @@
   },
   {
     "element": "Ice cream truck",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/31/Ice_cream_truck_2.svg/revision/latest?cb=20210831023016",
     "recipes": [
       [
         "Ice cream",
@@ -15933,6 +16589,7 @@
   },
   {
     "element": "Iced tea",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ae/Iced_tea_2.svg/revision/latest?cb=20210831153619",
     "recipes": [
       [
         "Tea",
@@ -15946,6 +16603,7 @@
   },
   {
     "element": "Jar",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/da/Jar_2.svg/revision/latest?cb=20210827132943",
     "recipes": [
       [
         "Jam",
@@ -15967,6 +16625,7 @@
   },
   {
     "element": "Kite",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f5/Kite_2.svg/revision/latest?cb=20210831154319",
     "recipes": [
       [
         "Paper",
@@ -15984,6 +16643,7 @@
   },
   {
     "element": "Letter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b2/Letter_2.svg/revision/latest?cb=20210901125746",
     "recipes": [
       [
         "Paper",
@@ -15993,6 +16653,7 @@
   },
   {
     "element": "Library",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3b/Library_2.svg/revision/latest?cb=20210901125747",
     "recipes": [
       [
         "Book",
@@ -16006,6 +16667,7 @@
   },
   {
     "element": "Map",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d8/Map_2.svg/revision/latest?cb=20210901142426",
     "recipes": [
       [
         "Paper",
@@ -16055,6 +16717,7 @@
   },
   {
     "element": "Marshmallows",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/07/Marshmallows_2.svg/revision/latest?cb=20210901142428",
     "recipes": [
       [
         "Sugar",
@@ -16064,6 +16727,7 @@
   },
   {
     "element": "Milk shake",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e0/Milk_shake_2.svg/revision/latest?cb=20210829104351",
     "recipes": [
       [
         "Ice cream",
@@ -16081,6 +16745,7 @@
   },
   {
     "element": "Money",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b6/Money_2.svg/revision/latest?cb=20210827231130",
     "recipes": [
       [
         "Paper",
@@ -16098,6 +16763,7 @@
   },
   {
     "element": "Mouse",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1b/Mouse_2.svg/revision/latest?cb=20210827232416",
     "recipes": [
       [
         "Animal",
@@ -16123,6 +16789,7 @@
   },
   {
     "element": "Mousetrap",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cc/Mousetrap_2.svg/revision/latest?cb=20210901142440",
     "recipes": [
       [
         "Cheese",
@@ -16144,6 +16811,7 @@
   },
   {
     "element": "Musician",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/45/Musician_2.svg/revision/latest?cb=20210831120906",
     "recipes": [
       [
         "Human",
@@ -16169,6 +16837,7 @@
   },
   {
     "element": "Newspaper",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/76/Newspaper_2.svg/revision/latest?cb=20210828111137",
     "recipes": [
       [
         "Paper",
@@ -16186,6 +16855,7 @@
   },
   {
     "element": "Orchard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/1a/Orchard_2.svg/revision/latest?cb=20210830145955",
     "recipes": [
       [
         "Fruit tree",
@@ -16219,6 +16889,7 @@
   },
   {
     "element": "Origami",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Origami_2.svg/revision/latest?cb=20210902102219",
     "recipes": [
       [
         "Paper",
@@ -16288,6 +16959,7 @@
   },
   {
     "element": "Pan flute",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/65/Pan_flute_2.svg/revision/latest?cb=20210901142442",
     "recipes": [
       [
         "Flute",
@@ -16297,6 +16969,7 @@
   },
   {
     "element": "Paper airplane",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/be/Paper_airplane_2.svg/revision/latest?cb=20210829125341",
     "recipes": [
       [
         "Airplane",
@@ -16306,6 +16979,7 @@
   },
   {
     "element": "Pasta",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/25/Pasta_2.svg/revision/latest?cb=20210901142443",
     "recipes": [
       [
         "Flour",
@@ -16315,6 +16989,7 @@
   },
   {
     "element": "Pencil sharpener",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3d/Pencil_sharpener_2.svg/revision/latest?cb=20210902171500",
     "recipes": [
       [
         "Pencil",
@@ -16332,6 +17007,7 @@
   },
   {
     "element": "Pizza",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/22/Pizza_2.svg/revision/latest?cb=20210827231224",
     "recipes": [
       [
         "Cheese",
@@ -16349,6 +17025,7 @@
   },
   {
     "element": "Printer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fe/Printer_2.svg/revision/latest?cb=20210902171512",
     "recipes": [
       [
         "Computer",
@@ -16362,6 +17039,7 @@
   },
   {
     "element": "Recipe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0a/Recipe_2.svg/revision/latest?cb=20210829101429",
     "recipes": [
       [
         "Paper",
@@ -16419,6 +17097,7 @@
   },
   {
     "element": "Robot vacuum",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0d/Robot_vacuum_2.svg/revision/latest?cb=20210829010133",
     "recipes": [
       [
         "Robot",
@@ -16440,6 +17119,7 @@
   },
   {
     "element": "Rock",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/5f/Rock_2.svg/revision/latest?cb=20210828104221",
     "recipes": [
       [
         "Pebble",
@@ -16457,6 +17137,7 @@
   },
   {
     "element": "Ruler",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9b/Ruler_2.svg/revision/latest?cb=20210903114748",
     "recipes": [
       [
         "Wood",
@@ -16466,6 +17147,7 @@
   },
   {
     "element": "Sailboat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b3/Sailboat_2.svg/revision/latest?cb=20210827122026",
     "recipes": [
       [
         "Boat",
@@ -16487,6 +17169,7 @@
   },
   {
     "element": "Sandpaper",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/76/Sandpaper_2.svg/revision/latest?cb=20210903150038",
     "recipes": [
       [
         "Sand",
@@ -16500,6 +17183,7 @@
   },
   {
     "element": "Sleigh",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3a/Sleigh_2.svg/revision/latest?cb=20210831023023",
     "recipes": [
       [
         "Cart",
@@ -16537,6 +17221,7 @@
   },
   {
     "element": "Smoke signal",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/85/Smoke_signal_2.svg/revision/latest?cb=20210903161942",
     "recipes": [
       [
         "Fabric",
@@ -16554,6 +17239,7 @@
   },
   {
     "element": "Spoon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/72/Spoon_2.svg/revision/latest?cb=20210909182848",
     "recipes": [
       [
         "Shovel",
@@ -16563,6 +17249,7 @@
   },
   {
     "element": "Sprinkles",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/96/Sprinkles_2.svg/revision/latest?cb=20210904021059",
     "recipes": [
       [
         "Sugar",
@@ -16584,6 +17271,7 @@
   },
   {
     "element": "Syringe",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/dc/Syringe_2.svg/revision/latest?cb=20210904021108",
     "recipes": [
       [
         "Doctor",
@@ -16597,6 +17285,7 @@
   },
   {
     "element": "Tablet",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e4/Tablet_2.svg/revision/latest?cb=20210909182849",
     "recipes": [
       [
         "Laptop",
@@ -16606,6 +17295,7 @@
   },
   {
     "element": "Tent",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f0/Tent_2.svg/revision/latest?cb=20210904120727",
     "recipes": [
       [
         "Fabric",
@@ -16627,6 +17317,7 @@
   },
   {
     "element": "Trainyard",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fd/Trainyard_2.svg/revision/latest?cb=20210904120731",
     "recipes": [
       [
         "Train",
@@ -16648,6 +17339,7 @@
   },
   {
     "element": "Vacuum cleaner",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b7/Vacuum_cleaner_2.svg/revision/latest?cb=20210829010142",
     "recipes": [
       [
         "Broom",
@@ -16661,6 +17353,7 @@
   },
   {
     "element": "Vine",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9d/Vine_2.svg/revision/latest?cb=20210904120740",
     "recipes": [
       [
         "Rainforest",
@@ -16678,6 +17371,7 @@
   },
   {
     "element": "Wagon",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/97/Wagon_2.svg/revision/latest?cb=20210828145442",
     "recipes": [
       [
         "Cart",
@@ -16703,6 +17397,7 @@
   },
   {
     "element": "Wax",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d9/Wax_2.svg/revision/latest?cb=20210828145444",
     "recipes": [
       [
         "Beehive",
@@ -16732,6 +17427,7 @@
   },
   {
     "element": "Web",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/69/Web_2.svg/revision/latest?cb=20210831153634",
     "recipes": [
       [
         "Spider",
@@ -16753,6 +17449,7 @@
   },
   {
     "element": "Wine",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/25/Wine_2.svg/revision/latest?cb=20210828111153",
     "recipes": [
       [
         "Alcohol",
@@ -16770,6 +17467,7 @@
   },
   {
     "element": "Wrapping paper",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/da/Wrapping_paper_2.svg/revision/latest?cb=20210831023027",
     "recipes": [
       [
         "Paper",
@@ -16791,6 +17489,7 @@
   },
   {
     "element": "Writer",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/20/Writer_2.svg/revision/latest?cb=20210907093436",
     "recipes": [
       [
         "Human",
@@ -16804,6 +17503,7 @@
   },
   {
     "element": "Armadillo",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/5/57/Armadillo_2.svg/revision/latest?cb=20210827224656",
     "recipes": [
       [
         "Armor",
@@ -16821,6 +17521,7 @@
   },
   {
     "element": "Baker",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f3/Baker_2.svg/revision/latest?cb=20210827132920",
     "recipes": [
       [
         "Human",
@@ -16870,6 +17571,7 @@
   },
   {
     "element": "Banana bread",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/df/Banana_bread_2.svg/revision/latest?cb=20210827231040",
     "recipes": [
       [
         "Bread",
@@ -16883,6 +17585,7 @@
   },
   {
     "element": "Barrel",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/35/Barrel_2.svg/revision/latest?cb=20210909182833",
     "recipes": [
       [
         "Wine",
@@ -16896,6 +17599,7 @@
   },
   {
     "element": "Bat",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/43/Bat_2.svg/revision/latest?cb=20210827121957",
     "recipes": [
       [
         "Mouse",
@@ -16921,6 +17625,7 @@
   },
   {
     "element": "Bread",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e2/Bread_2.svg/revision/latest?cb=20210827231054",
     "recipes": [
       [
         "Dough",
@@ -16934,6 +17639,7 @@
   },
   {
     "element": "Bulletproof vest",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/65/Bulletproof_vest_2.svg/revision/latest?cb=20210828134742",
     "recipes": [
       [
         "Bullet",
@@ -16947,6 +17653,7 @@
   },
   {
     "element": "Candle",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/8f/Candle_2.svg/revision/latest?cb=20210828145353",
     "recipes": [
       [
         "Wax",
@@ -16972,6 +17679,7 @@
   },
   {
     "element": "Cheeseburger",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/bc/Cheeseburger_2.svg/revision/latest?cb=20210829004305",
     "recipes": [
       [
         "Cheese",
@@ -16985,6 +17693,7 @@
   },
   {
     "element": "Chocolate milk",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/17/Chocolate_milk_2.svg/revision/latest?cb=20210828111120",
     "recipes": [
       [
         "Chocolate",
@@ -16998,6 +17707,7 @@
   },
   {
     "element": "Circus",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/13/Circus_2.svg/revision/latest?cb=20210909182836",
     "recipes": [
       [
         "Tent",
@@ -17011,6 +17721,7 @@
   },
   {
     "element": "Cookie cutter",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/d/d5/Cookie_cutter_2.svg/revision/latest?cb=20210829101403",
     "recipes": [
       [
         "Blade",
@@ -17024,6 +17735,7 @@
   },
   {
     "element": "Cookie dough",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6f/Cookie_dough_2.svg/revision/latest?cb=20210827231057",
     "recipes": [
       [
         "Dough",
@@ -17041,6 +17753,7 @@
   },
   {
     "element": "Donut",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e8/Donut_2.svg/revision/latest?cb=20210827231100",
     "recipes": [
       [
         "Dough",
@@ -17062,6 +17775,7 @@
   },
   {
     "element": "Email",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b0/Email_2.svg/revision/latest?cb=20210829101411",
     "recipes": [
       [
         "Letter",
@@ -17083,6 +17797,7 @@
   },
   {
     "element": "Gingerbread house",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/ce/Gingerbread_house_2.svg/revision/latest?cb=20210831023005",
     "recipes": [
       [
         "House",
@@ -17112,6 +17827,7 @@
   },
   {
     "element": "Gingerbread man",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f9/Gingerbread_man_2.svg/revision/latest?cb=20210830145951",
     "recipes": [
       [
         "Dough",
@@ -17153,6 +17869,7 @@
   },
   {
     "element": "Hot chocolate",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/06/Hot_chocolate_2.svg/revision/latest?cb=20210831120903",
     "recipes": [
       [
         "Chocolate milk",
@@ -17166,6 +17883,7 @@
   },
   {
     "element": "Librarian",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e5/Librarian_2.svg/revision/latest?cb=20210831153626",
     "recipes": [
       [
         "Human",
@@ -17175,6 +17893,7 @@
   },
   {
     "element": "Mac and cheese",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/8/83/Mac_and_cheese_2.svg/revision/latest?cb=20210901142422",
     "recipes": [
       [
         "Cheese",
@@ -17184,6 +17903,7 @@
   },
   {
     "element": "Mail truck",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9f/Mail_truck_2.svg/revision/latest?cb=20210909182842",
     "recipes": [
       [
         "Car",
@@ -17201,6 +17921,7 @@
   },
   {
     "element": "Mailbox",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c0/Mailbox_2.svg/revision/latest?cb=20210901142423",
     "recipes": [
       [
         "Letter",
@@ -17238,6 +17959,7 @@
   },
   {
     "element": "Mailman",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/47/Mailman_2.svg/revision/latest?cb=20210901142424",
     "recipes": [
       [
         "Human",
@@ -17255,6 +17977,7 @@
   },
   {
     "element": "Music",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/eb/Music_2.svg/revision/latest?cb=20210829125340",
     "recipes": [
       [
         "Musician",
@@ -17276,6 +17999,7 @@
   },
   {
     "element": "Painting",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/9b/Painting_2.svg/revision/latest?cb=20210902171451",
     "recipes": [
       [
         "Canvas",
@@ -17289,6 +18013,7 @@
   },
   {
     "element": "Paper cup",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/69/Paper_cup_2.svg/revision/latest?cb=20210902171453",
     "recipes": [
       [
         "Cup",
@@ -17298,6 +18023,7 @@
   },
   {
     "element": "Paraglider",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f7/Paraglider_2.svg/revision/latest?cb=20210902171455",
     "recipes": [
       [
         "Kite",
@@ -17307,6 +18033,7 @@
   },
   {
     "element": "Pie",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/14/Pie_2.svg/revision/latest?cb=20210827231221",
     "recipes": [
       [
         "Dough",
@@ -17332,6 +18059,7 @@
   },
   {
     "element": "Post office",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/9/92/Post_office_2.svg/revision/latest?cb=20210829010132",
     "recipes": [
       [
         "Mailman",
@@ -17365,6 +18093,7 @@
   },
   {
     "element": "Smartphone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/4f/Smartphone_2.svg/revision/latest?cb=20210909182846",
     "recipes": [
       [
         "Small",
@@ -17374,6 +18103,7 @@
   },
   {
     "element": "Spaghetti",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/3/3f/Spaghetti_2.svg/revision/latest?cb=20210904021057",
     "recipes": [
       [
         "Pasta",
@@ -17391,6 +18121,7 @@
   },
   {
     "element": "String phone",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/e/e0/String_phone_2.svg/revision/latest?cb=20210904021103",
     "recipes": [
       [
         "Paper cup",
@@ -17412,6 +18143,7 @@
   },
   {
     "element": "Treasure map",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/1/12/Treasure_map_2.svg/revision/latest?cb=20210904120733",
     "recipes": [
       [
         "Map",
@@ -17433,6 +18165,7 @@
   },
   {
     "element": "Vinegar",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/0/0b/Vinegar_2.svg/revision/latest?cb=20210904120741",
     "recipes": [
       [
         "Wine",
@@ -17450,6 +18183,7 @@
   },
   {
     "element": "Bakery",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/46/Bakery_2.svg/revision/latest?cb=20210827231035",
     "recipes": [
       [
         "House",
@@ -17507,6 +18241,7 @@
   },
   {
     "element": "Cake",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/cb/Cake_2.svg/revision/latest?cb=20210828111117",
     "recipes": [
       [
         "Dough",
@@ -17524,6 +18259,7 @@
   },
   {
     "element": "Cookie",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/fd/Cookie_2.svg/revision/latest?cb=20210827231055",
     "recipes": [
       [
         "Cookie dough",
@@ -17549,6 +18285,7 @@
   },
   {
     "element": "Fortune cookie",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/49/Fortune_cookie_2.svg/revision/latest?cb=20210830145943",
     "recipes": [
       [
         "Paper",
@@ -17566,6 +18303,7 @@
   },
   {
     "element": "Sandwich",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/4/44/Sandwich_2.svg/revision/latest?cb=20210829004328",
     "recipes": [
       [
         "Bread",
@@ -17591,6 +18329,7 @@
   },
   {
     "element": "Sheet music",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/7/7d/Sheet_music_2.svg/revision/latest?cb=20210901142450",
     "recipes": [
       [
         "Music",
@@ -17604,6 +18343,7 @@
   },
   {
     "element": "Toast",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/c/c6/Toast_2.svg/revision/latest?cb=20210827231234",
     "recipes": [
       [
         "Sandwich",
@@ -17617,6 +18357,7 @@
   },
   {
     "element": "Treasure",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/b/b0/Treasure_2.svg/revision/latest?cb=20210904120732",
     "recipes": [
       [
         "Treasure map",
@@ -17638,6 +18379,7 @@
   },
   {
     "element": "Grilled cheese",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/a/ae/Grilled_cheese_2.svg/revision/latest?cb=20210831023014",
     "recipes": [
       [
         "Cheese",
@@ -17647,6 +18389,7 @@
   },
   {
     "element": "Picnic",
+    "image_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/6b/Picnic_2.svg/revision/latest?cb=20210902171502",
     "recipes": [
       [
         "Sandwich",
