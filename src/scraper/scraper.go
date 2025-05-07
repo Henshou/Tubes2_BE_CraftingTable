@@ -57,7 +57,7 @@ func FindRecipes() {
 			return
 		}
 
-		imageURL := e.ChildAttr("td:nth-of-type(1) img", "src")
+		imageURL := e.ChildAttr("td:nth-of-type(1) a", "href")
 		if imageURL == "" {
 			imageURL = "No image"
 		}
