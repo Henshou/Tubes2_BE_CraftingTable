@@ -15,6 +15,28 @@ type ElementWithRecipes struct {
 	Recipes  [][]string `json:"recipes"`
 }
 
+func ExcludedElements() map[string]bool {
+	excluded := make(map[string]bool)
+
+	c := colly.NewCollector()
+
+	c.OnHTML("li.category-page__member", func(e *colly.HTMLElement) {
+		name := strings.TrimSpace(e.ChildText("a.category-page__member-link"))
+		if name != "" {
+			excluded[name] = true
+		}
+	})
+
+	err := c.Visit("https://little-alchemy.fandom.com/wiki/Category:Myths_and_Monsters")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	excluded["Time"] = true
+
+	return excluded
+}
+
 func FindRecipes() {
 	var elements []ElementWithRecipes
 
@@ -25,17 +47,19 @@ func FindRecipes() {
 		"Air":   true,
 	}
 
+	excludedElements := ExcludedElements()
+
 	c := colly.NewCollector()
 
 	c.OnHTML("tr", func(e *colly.HTMLElement) {
 		elementName := e.ChildText("td:nth-of-type(1) a")
-		if elementName == "" {
+		if elementName == "" || excludedElements[elementName] {
 			return
 		}
 
-		imageURL := e.ChildAttr("td:nth-of-type(1) a", "href")
+		imageURL := e.ChildAttr("td:nth-of-type(1) img", "src")
 		if imageURL == "" {
-			imageURL = "No image" // In case the image URL is not found
+			imageURL = "No image"
 		}
 
 		var recipes [][]string
@@ -43,7 +67,7 @@ func FindRecipes() {
 			var components []string
 			li.ForEach("a", func(_ int, a *colly.HTMLElement) {
 				text := strings.TrimSpace(a.Text)
-				if text != "" {
+				if text != "" && !excludedElements[text] {
 					components = append(components, text)
 				}
 			})
@@ -63,11 +87,6 @@ func FindRecipes() {
 				Element:  elementName,
 				ImageURL: imageURL,
 				Recipes:  [][]string{{}},
-			})
-		} else if baseElements[elementName] {
-			elements = append(elements, ElementWithRecipes{
-				Element: elementName,
-				Recipes: [][]string{{}},
 			})
 		}
 	})
