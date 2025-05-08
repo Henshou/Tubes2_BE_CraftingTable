@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
@@ -17,11 +18,25 @@ func Start() {
 		log.Fatalf("Failed to read recipe JSON: %v", err)
 	}
 
+	http.HandleFunc("/api/recipes", recipesHandler)
+
 	http.HandleFunc("/api/concurrentDFS", concurrentDFSHandler)
 
 	fmt.Println("Server started on :8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
+}
+
+func recipesHandler(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Content-Type", "application/json")
+
+    data, err := os.ReadFile("recipes.json")
+    if err != nil {
+        http.Error(w, "Failed to read recipes.json", http.StatusInternalServerError)
+        return
+    }
+    w.Write(data)
 }
 
 func concurrentDFSHandler(w http.ResponseWriter, r *http.Request) {
