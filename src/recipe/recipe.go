@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strconv"
 	"sync"
 )
 
@@ -92,69 +93,154 @@ func printQueue(queue []*RecipeTreeNode) {
 	fmt.Println()
 }
 
-func BuildRecipeTreeDFS(root *RecipeTreeNode) error {
-	stack := []*RecipeTreeNode{root}
-
-	for len(stack) > 0 {
-		n := len(stack) - 1
-		current := stack[n]
-		stack = stack[:n]
-
-		if _, ok := VisitedMap[current.Name]; ok {
-			continue
-		}
-
-		recipe, ok := RecipeMap[current.Name]
-		if !ok {
-			return fmt.Errorf("recipe not found: %s", current.Name)
-		}
-
-		if len(recipe.Recipes) == 0 {
-			fmt.Println("Base Element Found:", current.Name)
-		}
-
-		for _, childGroup := range recipe.Recipes {
-			var children []*RecipeTreeNode
-			for _, childName := range childGroup {
-				if existing, ok := VisitedMap[childName]; ok {
-					children = append(children, existing)
-				} else {
-					childNode := &RecipeTreeNode{Name: childName}
-					children = append(children, childNode)
-					stack = append(stack, childNode)
-				}
-			}
-			current.AddChild(children)
-		}
-
-		VisitedMap[current.Name] = current
-	}
-	return nil
+func SetChildren(node *RecipeTreeNode, children [][]*RecipeTreeNode) {
+	node.Children = children
 }
 
-func PrintRecipeTree(node *RecipeTreeNode, prefix string, isLast bool) {
-	// Print the current node
-	if _, ok := VisitedPrintMap[node.Name]; ok {
+func BuildRecipeTreeDFS(root *RecipeTreeNode, recipeMap map[string]Recipe) {
+	// Check if the node has already been visited
+	if _, ok := VisitedMap[root.Name]; ok {
 		return
 	}
-	fmt.Print(prefix)
-	if isLast {
-		fmt.Print("└── ")
-		prefix += "    "
-	} else {
-		fmt.Print("├── ")
-		prefix += "│   "
-	}
-	fmt.Println(node.Name)
+	VisitedMap[root.Name] = root
 
-	var allChildren []*RecipeTreeNode
-	for _, group := range node.Children {
-		allChildren = append(allChildren, group...)
+	// Get the recipes for the current element
+	recipe, exists := recipeMap[root.Name]
+	if !exists {
+		return
 	}
 
-	for i, child := range allChildren {
-		PrintRecipeTree(child, prefix, i == len(allChildren)-1)
-		VisitedPrintMap[node.Name] = true
+	var children [][]*RecipeTreeNode
+	for _, r := range recipe.Recipes {
+		var childNodes []*RecipeTreeNode
+		for _, name := range r {
+			childNode := &RecipeTreeNode{Name: name}
+			childNodes = append(childNodes, childNode)
+			BuildRecipeTreeDFS(childNode, recipeMap)
+		}
+		children = append(children, childNodes)
+	}
+	root.Children = append(root.Children, children...)
+}
+
+func BuildRecipeTreeDFSConcurrent(root *RecipeTreeNode, recipeMap map[string]Recipe, wg *sync.WaitGroup, mu *sync.Mutex) {
+	if wg != nil {
+		defer wg.Done()
+	}
+
+	// Use mutex to protect the shared VisitedMap
+	mu.Lock()
+	if _, ok := VisitedMap[root.Name]; ok {
+		mu.Unlock()
+		return
+	}
+	VisitedMap[root.Name] = root
+	mu.Unlock()
+
+	// Get the recipes for the current element
+	recipe, exists := recipeMap[root.Name]
+	if !exists {
+		return
+	}
+
+	var children [][]*RecipeTreeNode
+	childWg := &sync.WaitGroup{}
+
+	for _, r := range recipe.Recipes {
+		var childNodes []*RecipeTreeNode
+		for _, name := range r {
+			childNode := &RecipeTreeNode{Name: name}
+			childNodes = append(childNodes, childNode)
+
+			// Launch a goroutine for each child
+			childWg.Add(1)
+			go BuildRecipeTreeDFSConcurrent(childNode, recipeMap, childWg, mu)
+		}
+		children = append(children, childNodes)
+	}
+
+	// Wait for all child goroutines to complete
+	childWg.Wait()
+	SetChildren(root, children)
+}
+
+func BuildRecipeTreeConcurrentBFS(target string) *RecipeTreeNode {
+	const workerCount = 5
+	queue := make(chan *RecipeTreeNode, 1000)
+	var wg sync.WaitGroup
+	var mutex sync.Mutex
+
+	root := &RecipeTreeNode{Name: target}
+	queue <- root
+
+	VisitedMap[target] = root
+
+	// Channel to signal when all workers are done
+	done := make(chan struct{})
+
+	// Start worker goroutines
+	for i := 0; i < workerCount; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+
+			for current := range queue {
+				// Get recipe for current element
+				recipe, ok := RecipeMap[current.Name]
+				if !ok || len(recipe.Recipes) == 0 {
+					continue // base element
+				}
+
+				for _, group := range recipe.Recipes {
+					var children []*RecipeTreeNode
+
+					for _, childName := range group {
+						mutex.Lock()
+						childNode, exists := VisitedMap[childName]
+						if !exists {
+							childNode = &RecipeTreeNode{Name: childName}
+							VisitedMap[childName] = childNode
+							queue <- childNode // enqueue safely
+						}
+						mutex.Unlock()
+
+						children = append(children, childNode)
+					}
+
+					mutex.Lock()
+					current.AddChild(children)
+					mutex.Unlock()
+				}
+			}
+		}()
+	}
+
+	// Wait for workers and close 'done'
+	go func() {
+		wg.Wait()
+		close(done)
+	}()
+
+	// Wait until work finishes
+	<-done
+	return root
+}
+
+func PrintRecipeTree(node *RecipeTreeNode, indent string) {
+	if node == nil {
+		return
+	}
+
+	fmt.Println(indent + "- " + node.Name)
+
+	// Print each alternative recipe path
+	for i, alternative := range node.Children {
+		if len(alternative) > 0 {
+			fmt.Println(indent + "  Recipe alternative #" + strconv.Itoa(i+1) + ":")
+			for _, child := range alternative {
+				PrintRecipeTree(child, indent+"    ")
+			}
+		}
 	}
 }
 
