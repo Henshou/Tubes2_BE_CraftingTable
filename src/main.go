@@ -1,3 +1,34 @@
+// main.go
+package main
+
+import (
+	"log"
+
+	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
+	scraper "github.com/Henshou/Tubes2_BE_CraftingTable.git/scraper"
+	"github.com/Henshou/Tubes2_BE_CraftingTable.git/server"
+)
+
+func main() {
+	// 1) Scrape all recipes into recipes.json
+	log.Println("Scraping recipes...")
+	scraper.FindRecipes()
+	log.Println("Done scraping. Written recipes.json.")
+
+	// 2) Load recipes.json into RecipeMap
+	var err error
+	recipe.RecipeMap, err = recipe.ReadJson("recipes.json")
+	if err != nil {
+		log.Fatalf("Failed to load recipes.json: %v", err)
+	}
+	log.Printf("Loaded %d recipes.\n", len(recipe.RecipeMap))
+
+	// 3) Start HTTP API server
+	server.Start()
+}
+
+
+/*
 package main
 
 import (
@@ -7,6 +38,7 @@ import (
 
 	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
 	scraper "github.com/Henshou/Tubes2_BE_CraftingTable.git/scraper"
+	server "github.com/Henshou/Tubes2_BE_CraftingTable.git/server"
 )
 
 func main() {
@@ -44,4 +76,4 @@ func main() {
 //how to compile this code?
 // go build -o main src/main.go
 //how to run without go build
-// go run src/main.go
+// go run src/main.go */

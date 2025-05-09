@@ -85,17 +85,17 @@ func BuildRecipeTreeBFS(root *RecipeTreeNode, shortest bool) error {
 	return nil
 }
 func printQueue(queue []*RecipeTreeNode) {
-	fmt.Print("Queue: [")
-	for _, node := range queue {
-		fmt.Print(node.Name, " ")
+		fmt.Print("Queue: [")
+		for _, node := range queue {
+			fmt.Print(node.Name, " ")
+		}
+		fmt.Print("]")
+		fmt.Println()
 	}
-	fmt.Print("]")
-	fmt.Println()
-}
 
-func SetChildren(node *RecipeTreeNode, children [][]*RecipeTreeNode) {
-	node.Children = children
-}
+	func SetChildren(node *RecipeTreeNode, children [][]*RecipeTreeNode) {
+		node.Children = children
+	}
 
 func BuildRecipeTreeDFS(root *RecipeTreeNode, recipeMap map[string]Recipe) {
 	// Check if the node has already been visited
@@ -291,4 +291,18 @@ func BuildConcurrentDFS(root *RecipeTreeNode, wg *sync.WaitGroup, visited *sync.
 		}
 	}
 	wgChildren.Wait() // Wait for all children
+}
+
+func BuildTreeWithLimit(target string, recipeMap map[string]Recipe, limit int) *RecipeTreeNode {
+	// Inisialisasi root
+	root := &RecipeTreeNode{Name: target}
+
+	// Jalankan DFS concurrent
+	var wg sync.WaitGroup
+	var mu sync.Mutex
+	wg.Add(1)
+	BuildRecipeTreeDFSConcurrent(root, recipeMap, &wg, &mu)
+	wg.Wait()
+
+	return root
 }

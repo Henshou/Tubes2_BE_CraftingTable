@@ -12,14 +12,7 @@ import (
 )
 
 func Start() {
-	var err error
-	recipe.RecipeMap, err = recipe.ReadJson("recipes.json")
-	if err != nil {
-		log.Fatalf("Failed to read recipe JSON: %v", err)
-	}
-
 	http.HandleFunc("/api/recipes", recipesHandler)
-
 	http.HandleFunc("/api/concurrentDFS", concurrentDFSHandler)
 
 	fmt.Println("Server started on :8080")
