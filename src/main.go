@@ -4,8 +4,8 @@ package main
 import (
 	"log"
 
-	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
-	scraper "github.com/Henshou/Tubes2_BE_CraftingTable.git/scraper"
+	"github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
+	"github.com/Henshou/Tubes2_BE_CraftingTable.git/scraper"
 	"github.com/Henshou/Tubes2_BE_CraftingTable.git/server"
 )
 
@@ -24,9 +24,9 @@ func main() {
 	log.Printf("Loaded %d recipes.\n", len(recipe.RecipeMap))
 
 	// 3) Start HTTP API server
+
 	server.Start()
 }
-
 
 /*
 package main
