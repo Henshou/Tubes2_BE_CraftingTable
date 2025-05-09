@@ -58,7 +58,7 @@ func ReadJson(filename string) (map[string]Recipe, error) {
 }
 
 
-func BuildRecipeTreeDFSConcurrents(
+func BuildRecipeTreeDFSConcurrent(
 	root *RecipeTreeNode,
 	recipeMap map[string]Recipe,
 	wg *sync.WaitGroup,
@@ -97,7 +97,7 @@ func BuildRecipeTreeDFSConcurrents(
 
 			// Launch a goroutine for each child
 			childWg.Add(1)
-			go BuildRecipeTreeDFSConcurrents(childNode, recipeMap, childWg, mu, maxRecipes, validRecipes)
+			go BuildRecipeTreeDFSConcurrent(childNode, recipeMap, childWg, mu, maxRecipes, validRecipes)
 		}
 
 		// After launching child goroutines, check if the current recipe is valid
