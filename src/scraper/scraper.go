@@ -4,105 +4,130 @@ import (
 	"encoding/json"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 
+	"github.com/PuerkitoBio/goquery"
 	"github.com/gocolly/colly"
 )
 
 type ElementWithRecipes struct {
 	Element  string     `json:"element"`
+	Tier     int        `json:"tier"` // <- fixed struct tag
 	ImageURL string     `json:"image_url"`
 	Recipes  [][]string `json:"recipes"`
 }
 
 func ExcludedElements() map[string]bool {
 	excluded := make(map[string]bool)
-
 	c := colly.NewCollector()
-
 	c.OnHTML("li.category-page__member", func(e *colly.HTMLElement) {
 		name := strings.TrimSpace(e.ChildText("a.category-page__member-link"))
 		if name != "" {
 			excluded[name] = true
 		}
 	})
-
-	err := c.Visit("https://little-alchemy.fandom.com/wiki/Category:Myths_and_Monsters")
-	if err != nil {
+	if err := c.Visit("https://little-alchemy.fandom.com/wiki/Category:Myths_and_Monsters"); err != nil {
 		log.Fatal(err)
 	}
-
 	excluded["Time"] = true
-
 	return excluded
 }
 
 func FindRecipes() {
+	excluded := ExcludedElements()
+	baseEls := map[string]bool{"Fire": true, "Earth": true, "Water": true, "Air": true}
+
 	var elements []ElementWithRecipes
-
-	baseElements := map[string]bool{
-		"Fire":  true,
-		"Earth": true,
-		"Water": true,
-		"Air":   true,
-	}
-
-	excludedElements := ExcludedElements()
 
 	c := colly.NewCollector()
 
-	c.OnHTML("tr", func(e *colly.HTMLElement) {
-		elementName := e.ChildText("td:nth-of-type(1) a")
-		if elementName == "" || excludedElements[elementName] {
+	c.OnHTML("h3", func(e *colly.HTMLElement) {
+		headline := e.ChildText("span.mw-headline")
+
+
+		if headline == "Starting elements" {
+			tableSel := e.DOM.NextUntil("h3").FilterFunction(func(_ int, s *goquery.Selection) bool {
+				return s.Is("table.list-table.col-list.icon-hover")
+			}).First()
+
+			tableSel.Find("tbody tr").Each(func(_ int, row *goquery.Selection) {
+				name := strings.TrimSpace(row.Find("td:nth-of-type(1) a").Text())
+				if name == "" || excluded[name] || !baseEls[name] {
+					return
+				}
+				imgURL, _ := row.Find("td:nth-of-type(1) a").Attr("href")
+				if imgURL == "" {
+					imgURL = "No image"
+				}
+
+				elements = append(elements, ElementWithRecipes{
+					Element:  name,
+					Tier:     0,
+					ImageURL: imgURL,
+					Recipes:  [][]string{{}}, // base element has no recipes
+				})
+			})
 			return
 		}
 
-		imageURL := e.ChildAttr("td:nth-of-type(1) a", "href")
-		if imageURL == "" {
-			imageURL = "No image"
+		if !strings.HasPrefix(headline, "Tier ") {
+			return
+		}
+		parts := strings.Fields(headline)
+		tier, err := strconv.Atoi(parts[1])
+		if err != nil {
+			return
 		}
 
-		var recipes [][]string
-		e.ForEach("td:nth-of-type(2) li", func(_ int, li *colly.HTMLElement) {
-			var components []string
-			li.ForEach("a", func(_ int, a *colly.HTMLElement) {
-				text := strings.TrimSpace(a.Text)
-				if text != "" && !excludedElements[text] {
-					components = append(components, text)
+		tableSel := e.DOM.NextUntil("h3").FilterFunction(func(_ int, s *goquery.Selection) bool {
+			return s.Is("table.list-table.col-list.icon-hover")
+		}).First()
+
+		tableSel.Find("tbody tr").Each(func(_ int, row *goquery.Selection) {
+			name := strings.TrimSpace(row.Find("td:nth-of-type(1) a").Text())
+			if name == "" || excluded[name] || baseEls[name] {
+				return
+			}
+			imgURL, _ := row.Find("td:nth-of-type(1) a").Attr("href")
+			if imgURL == "" {
+				imgURL = "No image"
+			}
+
+			var recipes [][]string
+			row.Find("td:nth-of-type(2) li").Each(func(_ int, li *goquery.Selection) {
+				var comps []string
+				li.Find("a").Each(func(_ int, a *goquery.Selection) {
+					t := strings.TrimSpace(a.Text())
+					if t != "" && !excluded[t] {
+						comps = append(comps, t)
+					}
+				})
+				if len(comps) == 2 {
+					recipes = append(recipes, comps)
 				}
 			})
-			if len(components) == 2 {
-				recipes = append(recipes, components)
-			}
-		})
 
-		if len(recipes) > 0 && !baseElements[elementName] {
 			elements = append(elements, ElementWithRecipes{
-				Element:  elementName,
-				ImageURL: imageURL,
+				Element:  name,
+				Tier:     tier,
+				ImageURL: imgURL,
 				Recipes:  recipes,
 			})
-		} else if baseElements[elementName] {
-			elements = append(elements, ElementWithRecipes{
-				Element:  elementName,
-				ImageURL: imageURL,
-				Recipes:  [][]string{{}},
-			})
-		}
+		})
 	})
 
-	err := c.Visit("https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)")
-	if err != nil {
+
+	if err := c.Visit("https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)"); err != nil {
 		log.Fatal(err)
 	}
 
-	jsonData, err := json.MarshalIndent(elements, "", "  ")
+
+	out, err := json.MarshalIndent(elements, "", "  ")
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	err = os.WriteFile("recipes.json", jsonData, 0644)
-	if err != nil {
-		log.Fatal("Failed to write JSON to file:", err)
+	if err := os.WriteFile("recipes.json", out, 0644); err != nil {
+		log.Fatal("Failed to write recipes.json:", err)
 	}
 }
