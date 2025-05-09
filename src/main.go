@@ -33,7 +33,6 @@ package main
 
 import (
 	"fmt"
-	"sync"
 	"time"
 
 	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
@@ -53,21 +52,21 @@ func main() {
 		fmt.Println("Error reading JSON file:", err)
 		return
 	}
-	name := recipe.RecipeMap["Lava"].Name
+	name := recipe.RecipeMap["Brick"].Name
 	fmt.Println("Name:", name)
 	bus := &recipe.RecipeTreeNode{Name: name}
+	var ValidRecipes []string
 
-	wg := &sync.WaitGroup{}
-	mu := &sync.Mutex{}
-	wg.Add(1)
-	go recipe.BuildRecipeTreeDFSConcurrent(bus, recipe.RecipeMap, wg, mu)
-	wg.Wait()
+	recipe.BuildRecipeTreeBFSConcurrent(bus, recipe.RecipeMap, 5, &ValidRecipes)
+
+	fmt.Println("Recipe tree string:", ValidRecipes)
+	// recipe.PrintRecipeTree(bus, "")
 	fmt.Println("Recipe tree built successfully.")
-	recipe.PrintRecipeTree(bus, "")
+	// fmt.Println(recipe.IsBaseElement("Fire"))
+	fmt.Println("Recipe tree string:", ValidRecipes)
 	end := time.Now()
 	fmt.Printf("Execution time: %v\n", end.Sub(start))
-	test := recipe.MaxQueueLength
-	fmt.Println("Max queue length:", test)
+	// fmt.Printf("number of recipes: %d\n", num)
 	// fmt.Println("Recipe tree printed successfully.")
 }
 
