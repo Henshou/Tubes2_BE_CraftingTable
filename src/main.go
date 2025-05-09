@@ -25,9 +25,9 @@ func main() {
 	bus := &recipe.RecipeTreeNode{Name: name}
 	var ValidRecipes []string
 
-	str, _ := recipe.BuildRecipeTreeBFS(bus, 30)
+	recipe.BuildRecipeTreeBFSConcurrent(bus, recipe.RecipeMap, 5, &ValidRecipes)
 
-	fmt.Println("Recipe tree string:", str)
+	fmt.Println("Recipe tree string:", ValidRecipes)
 	// recipe.PrintRecipeTree(bus, "")
 	fmt.Println("Recipe tree built successfully.")
 	// fmt.Println(recipe.IsBaseElement("Fire"))
