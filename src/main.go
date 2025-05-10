@@ -24,23 +24,21 @@ func main() {
 	log.Printf("Loaded %d recipes.\n", len(recipe.RecipeMap))
 
 	bus := &recipe.RecipeTreeNode{Name: "Life"}
-	validRecipes := []string{}
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
+
 	// Start the receiver goroutine to listen for stop signal
-	go recipe.StopSearch(stopChan)
+	go recipe.StopSearch(stopChan, wg)
 
 	// Start the recipe tree generation concurrently
 	wg.Add(1)
-	go recipe.BuildRecipeTreeBFS(bus, recipe.RecipeMap, 5, &validRecipes, stopChan, wg, mu)
+	go recipe.BuildRecipeTreeBFS(bus, recipe.RecipeMap, 43, stopChan, wg, mu)
 	wg.Wait()
 
-	recipe.PrintRecipeTree(bus, "")
-	for _, recipe := range validRecipes {
-		log.Println(recipe)
-	}
 	log.Println(recipe.CalculateTotalCompleteRecipes(bus))
+	recipe.PruneTree(bus)
+	recipe.PrintRecipeTree(bus, "")
 	// 3) Start HTTP API server
 
 	// server.Start()

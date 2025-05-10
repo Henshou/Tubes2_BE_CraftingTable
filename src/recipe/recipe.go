@@ -67,7 +67,7 @@ func ReadJson(filename string) (map[string]Recipe, error) {
 
 			for _, ingredient := range ingredients {
 				ingredientRecipe, exists := recipeMap[ingredient]
-				if exists && ingredientRecipe.Tier > recipe.Tier {
+				if exists && ingredientRecipe.Tier >= recipe.Tier {
 					valid = false
 					break
 				}
@@ -100,14 +100,14 @@ func CalculateTotalCompleteRecipes(root *RecipeTreeNode) int {
 
 	total := 0
 	for _, group := range root.Children {
+		if len(group) != 2 {
+			continue // Skip if not a valid recipe group
+		}
 		leftCount := CalculateTotalCompleteRecipes(group[0])
 		rightCount := CalculateTotalCompleteRecipes(group[1])
 		if leftCount > 0 && rightCount > 0 {
 			total += leftCount * rightCount
 		}
-	}
-	if total > 0 {
-		CompletedRecipes[root.Name] = total
 	}
 	return total
 }
@@ -127,91 +127,114 @@ func IsCompleteRecipe(recipe Recipe) bool {
 	return true
 }
 
-func BuildRecipeTreeDFSConcurrent(
-	root *RecipeTreeNode,
-	recipeMap map[string]Recipe,
-	wg *sync.WaitGroup,
-	mu *sync.Mutex,
-	maxRecipes int,
-	validRecipes *[]string,
-) {
-	if wg != nil {
-		defer wg.Done()
-	}
-
-	// Use mutex to protect the shared VisitedMap
-
-	VisitedMap[root.Name] = root
-	mu.Unlock()
-
-	// Get the recipes for the current element
-	recipe, exists := recipeMap[root.Name]
-	if !exists {
-		return
-	}
-
-	var children [][]*RecipeTreeNode
-	childWg := &sync.WaitGroup{}
-
-	// Iterate over all recipes for the current element
-	for _, r := range recipe.Recipes {
-		var childNodes []*RecipeTreeNode
-		for _, name := range r {
-			childNode := &RecipeTreeNode{Name: name}
-			childNodes = append(childNodes, childNode)
-
-			// Launch a goroutine for each child
-			childWg.Add(1)
-			go BuildRecipeTreeDFSConcurrent(childNode, recipeMap, childWg, mu, maxRecipes, validRecipes)
-		}
-
-		// After launching child goroutines, check if the current recipe is valid
-		if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
-			// Valid complete recipe found
-			if len(*validRecipes) < maxRecipes {
-				// Valid complete recipe found
-				mu.Lock() // Lock to safely append to validRecipes
-				*validRecipes = append(*validRecipes, fmt.Sprintf("%s = %s + %s", root.Name, r[0], r[1]))
-				mu.Unlock()
-			}
-
-			// Stop if we have found the maximum number of recipes
-			if len(*validRecipes) >= maxRecipes {
-				childWg.Wait() // Wait for all child goroutines to finish
-				return
-			}
-		}
-
-		children = append(children, childNodes)
-	}
-
-	// Wait for all child goroutines to complete
-	childWg.Wait()
-
-	// After the child goroutines finish, assign the children to the current node
-	SetChildren(root, children)
-
-	// Optionally, you can check for valid recipes here and append them to `validRecipes`
-	// This can be based on your recipe validation criteria
-	if len(*validRecipes) >= maxRecipes {
-		return
-	}
-}
-func BuildRecipeTreeBFS(
+func BuildRecipeTreeDFS(
 	root *RecipeTreeNode,
 	recipeMap map[string]Recipe,
 	maxRecipes int,
-	validRecipes *[]string,
 	stopChan chan bool, // Channel to signal stopping
 	wg *sync.WaitGroup, // WaitGroup for goroutines
 	mu *sync.Mutex, // Mutex to safely modify shared variables
 ) {
 	defer wg.Done()
 
+	// Queue for BFS, starting from the root node
+	stack := []*RecipeTreeNode{root}
+
+	// Loop while there are nodes in the queue and the number of valid recipes is less than maxRecipes
+	for len(stack) > 0 {
+		select {
+		case <-stopChan:
+			return // Stop further search if signal is received
+		default:
+		}
+		node := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+
+		recipe, exists := recipeMap[node.Name]
+		if !exists {
+			continue
+		}
+
+		var children [][]*RecipeTreeNode
+		var childWg sync.WaitGroup // To wait for child goroutines
+
+		// Iterate through each recipe for the current node
+		for _, r := range recipe.Recipes {
+			childWg.Add(1)
+
+			// Goroutine to process each recipe path concurrently
+			go func(r []string) {
+				defer childWg.Done()
+
+				var childNodes []*RecipeTreeNode
+				for _, name := range r {
+					childNode := &RecipeTreeNode{Name: name}
+					childNodes = append(childNodes, childNode)
+
+					mu.Lock()
+					stack = append(stack, childNode)
+					mu.Unlock()
+				}
+
+				// Check if the recipe is valid (both children must be base elements)
+				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
+					for _, name := range stack {
+						fmt.Print(name.Name, " ")
+					}
+					mu.Lock()
+					if CalculateTotalCompleteRecipes(root) >= maxRecipes {
+						stopChan <- true
+						return
+					}
+					mu.Unlock()
+				}
+
+				// Add the children for this recipe to the children list
+				mu.Lock()
+				children = append(children, childNodes)
+				mu.Unlock()
+
+			}(r)
+		}
+
+		// Wait for all goroutines to finish processing the current node's recipes
+		childWg.Wait()
+
+		// Set the children for this node
+		mu.Lock()
+		SetChildren(node, children)
+		mu.Unlock()
+
+		// Check if stop signal was received
+		select {
+		case <-stopChan:
+			return // Stop further search if signal is received
+		default:
+			// Continue processing if no stop signal
+		}
+	}
+}
+
+func BuildRecipeTreeBFS(
+	root *RecipeTreeNode,
+	recipeMap map[string]Recipe,
+	maxRecipes int,
+	stopChan chan bool, // Channel to signal stopping
+	wg *sync.WaitGroup, // WaitGroup for goroutines
+	mu *sync.Mutex, // Mutex to safely modify shared variables
+) {
+	defer wg.Done()
+
+	// Queue for BFS, starting from the root node
 	queue := []*RecipeTreeNode{root}
 
-	// Loop while the queue has nodes and the number of valid recipes is less than maxRecipes
+	// Loop while there are nodes in the queue and the number of valid recipes is less than maxRecipes
 	for len(queue) > 0 {
+		select {
+		case <-stopChan:
+			return // Stop further search if signal is received
+		default:
+		}
 		// Process the first node in the queue
 		node := queue[0]
 		queue = queue[1:]
@@ -222,116 +245,69 @@ func BuildRecipeTreeBFS(
 		}
 
 		var children [][]*RecipeTreeNode
+		var childWg sync.WaitGroup // To wait for child goroutines
 
 		// Iterate through each recipe for the current node
 		for _, r := range recipe.Recipes {
-			var childNodes []*RecipeTreeNode
+			childWg.Add(1)
 
-			// Expand the tree for this recipe
-			for _, name := range r {
-				childNode := &RecipeTreeNode{Name: name}
-				childNodes = append(childNodes, childNode)
+			// Goroutine to process each recipe path concurrently
+			go func(r []string) {
+				defer childWg.Done()
 
-				// Add to the next level (queue) for future expansion
-				queue = append(queue, childNode)
-			}
+				var childNodes []*RecipeTreeNode
+				for _, name := range r {
+					childNode := &RecipeTreeNode{Name: name}
+					childNodes = append(childNodes, childNode)
 
-			// Check if the recipe is valid (both children must be base elements)
-			if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
-				// Stop the search if we reach maxRecipes
-				mu.Lock()
-				if CalculateTotalCompleteRecipes(root) >= maxRecipes {
+					// Add to the next level (queue) for future expansion
+					mu.Lock()
+					queue = append(queue, childNode)
 					mu.Unlock()
-					stopChan <- true // Send stop signal
-					return
 				}
-				// Add the valid recipe to the list
-				*validRecipes = append(*validRecipes, fmt.Sprintf("%s = %s + %s", node.Name, r[0], r[1]))
-				mu.Unlock()
-			}
 
-			// Add the children for this node to the children list
-			children = append(children, childNodes)
+				// Check if the recipe is valid (both children must be base elements)
+				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
+					mu.Lock()
+					// Stop the search if we reach maxRecipes
+					if CalculateTotalCompleteRecipes(root) >= maxRecipes {
+						stopChan <- true // Send stop signal
+						return
+					}
+					mu.Unlock()
+				}
+
+				// Add the children for this recipe to the children list
+				mu.Lock()
+				children = append(children, childNodes)
+				mu.Unlock()
+
+			}(r)
 		}
 
+		// Wait for all goroutines to finish processing the current node's recipes
+		childWg.Wait()
+
 		// Set the children for this node
+		mu.Lock()
 		SetChildren(node, children)
+		mu.Unlock()
 
 		// Check if stop signal was received
 		select {
 		case <-stopChan:
-			return // Stop further search
+			return // Stop further search if signal is received
 		default:
 			// Continue processing if no stop signal
 		}
 	}
 }
 
-func StopSearch(stopChan chan bool) {
+func StopSearch(stopChan chan bool, wg *sync.WaitGroup) {
+	defer wg.Done()
 	<-stopChan
 	// Stop the search when the signal is received
 	fmt.Println("Stopping the search!")
-}
-
-func BuildRecipeTreeBFSConcurrent(
-	root *RecipeTreeNode,
-	recipeMap map[string]Recipe,
-	maxRecipes int,
-	validRecipes *[]string,
-) {
-	var mu sync.Mutex
-	queue := []*RecipeTreeNode{root}
-
-	for len(queue) > 0 && len(*validRecipes) < maxRecipes {
-		nextQueue := []*RecipeTreeNode{}
-		var wg sync.WaitGroup
-
-		for _, node := range queue {
-			wg.Add(1)
-
-			go func(n *RecipeTreeNode) {
-				defer wg.Done()
-
-				recipe, exists := recipeMap[n.Name]
-				if !exists {
-					return
-				}
-
-				var children [][]*RecipeTreeNode
-
-				for _, r := range recipe.Recipes {
-					var childNodes []*RecipeTreeNode
-					for _, name := range r {
-						childNode := &RecipeTreeNode{Name: name}
-						childNodes = append(childNodes, childNode)
-
-						mu.Lock()
-						// Add to next level if not visited yet
-						if _, seen := VisitedMap[name]; !seen {
-							nextQueue = append(nextQueue, childNode)
-						}
-						mu.Unlock()
-					}
-
-					// Check if recipe is valid (2 base elements)
-					if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
-						mu.Lock()
-						if len(*validRecipes) < maxRecipes {
-							*validRecipes = append(*validRecipes, fmt.Sprintf("%s = %s + %s", n.Name, r[0], r[1]))
-						}
-						mu.Unlock()
-					}
-
-					children = append(children, childNodes)
-				}
-
-				SetChildren(n, children)
-			}(node)
-		}
-
-		wg.Wait()
-		queue = nextQueue
-	}
 }
 
 func SetChildren(node *RecipeTreeNode, children [][]*RecipeTreeNode) {
@@ -368,4 +344,27 @@ func HasBaseElements(node *RecipeTreeNode) bool {
 		}
 	}
 	return false
+}
+
+func PruneTree(node *RecipeTreeNode) {
+	var newChildren [][]*RecipeTreeNode
+	for _, recipe := range node.Children {
+		bothBase := true
+		for _, child := range recipe {
+			if CalculateTotalCompleteRecipes(child) == 0 {
+				bothBase = false
+				fmt.Println("Pruning", child.Name)
+				break
+			}
+		}
+		if bothBase {
+			newChildren = append(newChildren, recipe)
+		}
+	}
+	SetChildren(node, newChildren)
+	for _, recipe := range newChildren {
+		for _, child := range recipe {
+			PruneTree(child)
+		}
+	}
 }

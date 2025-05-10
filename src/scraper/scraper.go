@@ -45,7 +45,6 @@ func FindRecipes() {
 	c.OnHTML("h3", func(e *colly.HTMLElement) {
 		headline := e.ChildText("span.mw-headline")
 
-
 		if headline == "Starting elements" {
 			tableSel := e.DOM.NextUntil("h3").FilterFunction(func(_ int, s *goquery.Selection) bool {
 				return s.Is("table.list-table.col-list.icon-hover")
@@ -117,11 +116,9 @@ func FindRecipes() {
 		})
 	})
 
-
 	if err := c.Visit("https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)"); err != nil {
 		log.Fatal(err)
 	}
-
 
 	out, err := json.MarshalIndent(elements, "", "  ")
 	if err != nil {
