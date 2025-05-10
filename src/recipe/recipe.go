@@ -11,6 +11,7 @@ import (
 type Recipe struct {
 	Name    string     `json:"element"`
 	Recipes [][]string `json:"recipes"`
+	Tier    int        `json:"tier"`
 }
 
 type RecipeTreeNode struct {
@@ -21,21 +22,24 @@ type RecipeTreeNode struct {
 // Global maps for tracking visited nodes and recipe data
 var VisitedMap = make(map[string]*RecipeTreeNode)
 var RecipeMap = make(map[string]Recipe) // from readJson
+var CompletedRecipes = make(map[string]int)
 
 // Check if an element is a base element (leaf node)
 func IsBaseElement(name string) bool {
-	baseElements := []string{
-		"Air", "Earth", "Fire", "Water"}
-	for _, base := range baseElements {
-		if name == base {
-			return true
-		}
+	recipe, exists := RecipeMap[name]
+	if !exists {
+		return false
+	}
+	if recipe.Tier == 0 {
+		return true
 	}
 	return false
 }
 
+func IsBaseElementRecipe(Recipe Recipe) bool {
+	return Recipe.Tier == 0
+}
 
-// Function to read the JSON data and load the recipes
 func ReadJson(filename string) (map[string]Recipe, error) {
 	file, err := os.Open(filename)
 	if err != nil {
@@ -50,32 +54,93 @@ func ReadJson(filename string) (map[string]Recipe, error) {
 	}
 
 	recipeMap := make(map[string]Recipe)
+
 	for _, recipe := range recipes {
 		recipeMap[recipe.Name] = recipe
+	}
+
+	for name, recipe := range recipeMap {
+		validRecipes := [][]string{}
+
+		for _, ingredients := range recipe.Recipes {
+			valid := true
+
+			for _, ingredient := range ingredients {
+				ingredientRecipe, exists := recipeMap[ingredient]
+				if exists && ingredientRecipe.Tier > recipe.Tier {
+					valid = false
+					break
+				}
+			}
+
+			if valid {
+				validRecipes = append(validRecipes, ingredients)
+			}
+		}
+
+		if len(validRecipes) > 0 {
+			recipe.Recipes = validRecipes
+			recipeMap[name] = recipe
+		} else {
+			delete(recipeMap, name)
+		}
 	}
 
 	return recipeMap, nil
 }
 
+func CalculateTotalCompleteRecipes(root *RecipeTreeNode) int {
+	if root == nil {
+		return 0
+	}
+
+	if IsBaseElement(root.Name) {
+		return 1
+	}
+
+	total := 0
+	for _, group := range root.Children {
+		leftCount := CalculateTotalCompleteRecipes(group[0])
+		rightCount := CalculateTotalCompleteRecipes(group[1])
+		if leftCount > 0 && rightCount > 0 {
+			total += leftCount * rightCount
+		}
+	}
+	if total > 0 {
+		CompletedRecipes[root.Name] = total
+	}
+	return total
+}
+
+func IsCompleteRecipe(recipe Recipe) bool {
+	if len(recipe.Recipes) == 0 {
+		return false
+	}
+	for _, r := range recipe.Recipes {
+		if len(r) != 2 {
+			return false
+		}
+		if !IsBaseElement(r[0]) || !IsBaseElement(r[1]) {
+			return false
+		}
+	}
+	return true
+}
 
 func BuildRecipeTreeDFSConcurrent(
 	root *RecipeTreeNode,
 	recipeMap map[string]Recipe,
 	wg *sync.WaitGroup,
 	mu *sync.Mutex,
-	maxRecipes int, // Stop after finding maxRecipes valid recipes
-	validRecipes *[]string, // Store the valid recipes found
+	maxRecipes int,
+	validRecipes *[]string,
 ) {
 	if wg != nil {
 		defer wg.Done()
 	}
 
 	// Use mutex to protect the shared VisitedMap
-	mu.Lock()
-	if _, ok := VisitedMap[root.Name]; ok {
-		mu.Unlock()
-		return
-	}
+
 	VisitedMap[root.Name] = root
 	mu.Unlock()
 
@@ -132,6 +197,81 @@ func BuildRecipeTreeDFSConcurrent(
 		return
 	}
 }
+func BuildRecipeTreeBFS(
+	root *RecipeTreeNode,
+	recipeMap map[string]Recipe,
+	maxRecipes int,
+	validRecipes *[]string,
+	stopChan chan bool, // Channel to signal stopping
+	wg *sync.WaitGroup, // WaitGroup for goroutines
+	mu *sync.Mutex, // Mutex to safely modify shared variables
+) {
+	defer wg.Done()
+
+	queue := []*RecipeTreeNode{root}
+
+	// Loop while the queue has nodes and the number of valid recipes is less than maxRecipes
+	for len(queue) > 0 {
+		// Process the first node in the queue
+		node := queue[0]
+		queue = queue[1:]
+
+		recipe, exists := recipeMap[node.Name]
+		if !exists {
+			continue
+		}
+
+		var children [][]*RecipeTreeNode
+
+		// Iterate through each recipe for the current node
+		for _, r := range recipe.Recipes {
+			var childNodes []*RecipeTreeNode
+
+			// Expand the tree for this recipe
+			for _, name := range r {
+				childNode := &RecipeTreeNode{Name: name}
+				childNodes = append(childNodes, childNode)
+
+				// Add to the next level (queue) for future expansion
+				queue = append(queue, childNode)
+			}
+
+			// Check if the recipe is valid (both children must be base elements)
+			if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
+				// Stop the search if we reach maxRecipes
+				mu.Lock()
+				if CalculateTotalCompleteRecipes(root) >= maxRecipes {
+					mu.Unlock()
+					stopChan <- true // Send stop signal
+					return
+				}
+				// Add the valid recipe to the list
+				*validRecipes = append(*validRecipes, fmt.Sprintf("%s = %s + %s", node.Name, r[0], r[1]))
+				mu.Unlock()
+			}
+
+			// Add the children for this node to the children list
+			children = append(children, childNodes)
+		}
+
+		// Set the children for this node
+		SetChildren(node, children)
+
+		// Check if stop signal was received
+		select {
+		case <-stopChan:
+			return // Stop further search
+		default:
+			// Continue processing if no stop signal
+		}
+	}
+}
+
+func StopSearch(stopChan chan bool) {
+	<-stopChan
+	// Stop the search when the signal is received
+	fmt.Println("Stopping the search!")
+}
 
 func BuildRecipeTreeBFSConcurrent(
 	root *RecipeTreeNode,
@@ -151,14 +291,6 @@ func BuildRecipeTreeBFSConcurrent(
 
 			go func(n *RecipeTreeNode) {
 				defer wg.Done()
-
-				mu.Lock()
-				if _, visited := VisitedMap[n.Name]; visited {
-					mu.Unlock()
-					return
-				}
-				VisitedMap[n.Name] = n
-				mu.Unlock()
 
 				recipe, exists := recipeMap[n.Name]
 				if !exists {
@@ -202,11 +334,9 @@ func BuildRecipeTreeBFSConcurrent(
 	}
 }
 
-
 func SetChildren(node *RecipeTreeNode, children [][]*RecipeTreeNode) {
 	node.Children = children
 }
-
 
 func PrintRecipeTree(node *RecipeTreeNode, indent string) {
 	if node == nil {
@@ -239,4 +369,3 @@ func HasBaseElements(node *RecipeTreeNode) bool {
 	}
 	return false
 }
-

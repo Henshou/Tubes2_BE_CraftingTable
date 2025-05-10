@@ -3,10 +3,10 @@ package main
 
 import (
 	"log"
+	"sync"
 
 	"github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
 	"github.com/Henshou/Tubes2_BE_CraftingTable.git/scraper"
-	"github.com/Henshou/Tubes2_BE_CraftingTable.git/server"
 )
 
 func main() {
@@ -23,9 +23,27 @@ func main() {
 	}
 	log.Printf("Loaded %d recipes.\n", len(recipe.RecipeMap))
 
+	bus := &recipe.RecipeTreeNode{Name: "Life"}
+	validRecipes := []string{}
+	stopChan := make(chan bool)
+	wg := &sync.WaitGroup{}
+	mu := &sync.Mutex{}
+	// Start the receiver goroutine to listen for stop signal
+	go recipe.StopSearch(stopChan)
+
+	// Start the recipe tree generation concurrently
+	wg.Add(1)
+	go recipe.BuildRecipeTreeBFS(bus, recipe.RecipeMap, 5, &validRecipes, stopChan, wg, mu)
+	wg.Wait()
+
+	recipe.PrintRecipeTree(bus, "")
+	for _, recipe := range validRecipes {
+		log.Println(recipe)
+	}
+	log.Println(recipe.CalculateTotalCompleteRecipes(bus))
 	// 3) Start HTTP API server
 
-	server.Start()
+	// server.Start()
 }
 
 /*

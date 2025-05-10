@@ -22,8 +22,8 @@ func Start() {
 	}
 
 	http.HandleFunc("/api/recipes", recipesHandler)
-	http.HandleFunc("/api/dfs",      dfsHandler)
-	http.HandleFunc("/api/bfs",      bfsHandler)
+	http.HandleFunc("/api/dfs", dfsHandler)
+	http.HandleFunc("/api/bfs", bfsHandler)
 	http.HandleFunc("/api/bidirectional", func(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Bidirectional search not implemented", http.StatusNotImplemented)
 	})
@@ -57,14 +57,13 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	recipe.VisitedMap = make(map[string]*recipe.RecipeTreeNode)
 
 	// collect up to count recipes (for testing/demo; not used by frontend)
-	validRecipes := []string{}
 
 	// build
 	root := &recipe.RecipeTreeNode{Name: target}
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
 	wg.Add(1)
-	go recipe.BuildRecipeTreeDFSConcurrent(root, recipe.RecipeMap, wg, mu, count, &validRecipes)
+	go recipe.BuildRecipeTreeDFSConcurrent(root, recipe.RecipeMap, wg, mu, count)
 	wg.Wait()
 
 	writeJSON(w, root)
@@ -82,11 +81,9 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 	// reset
 	recipe.VisitedMap = make(map[string]*recipe.RecipeTreeNode)
 
-	validRecipes := []string{}
-
 	// build
 	root := &recipe.RecipeTreeNode{Name: target}
-	recipe.BuildRecipeTreeBFSConcurrent(root, recipe.RecipeMap, count, &validRecipes)
+	recipe.BuildRecipeTreeBFSConcurrent(root, recipe.RecipeMap, count)
 
 	writeJSON(w, root)
 }
