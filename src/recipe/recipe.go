@@ -368,3 +368,186 @@ func PruneTree(node *RecipeTreeNode) {
 		}
 	}
 }
+
+// func BidirectionalBFS(
+// 	root *RecipeTreeNode,
+// 	recipeMap map[string]Recipe,
+// 	recipeToTree map[string]*RecipeTreeNode,
+// 	maxRecipes int,
+// 	stopChan chan bool, // Channel to signal stopping
+// 	wg *sync.WaitGroup, // WaitGroup for goroutines
+// 	mu *sync.Mutex, // Mutex to safely modify shared variables
+// ) {
+// 	meets := 0
+// 	owned := make(map[string]bool)
+// 	tier := 0
+// 	// do bfs on the root simultaneously with making the recipe from the ground up
+// 	// queue for bfs
+// 	queue := []*RecipeTreeNode{root}
+// 	recipeQueue := []*RecipeTreeNode{}
+// 	for _, base := range GetAllElements(tier) {
+// 		owned[base] = true
+// 		temp := &RecipeTreeNode{Name: base}
+// 		recipeQueue = append(recipeQueue, temp)
+
+// 	}
+// }
+
+func BuildFromBottom(
+	recipeMap map[string]Recipe,
+	recipeToTree map[string]*RecipeTreeNode,
+	targetTier int,
+) {
+	owned := make(map[string]bool)
+	tier := 0
+	recipeQueue := []string{}
+	for _, base := range GetAllElements(tier) {
+		temp := &RecipeTreeNode{Name: base}
+		recipeToTree[base] = temp
+		recipeQueue = append(recipeQueue, base)
+	}
+
+	// Adjusted to use && to avoid infinite loop
+	for len(recipeQueue) > 0 && !OwnAllTier(targetTier, owned) {
+		for s, w := range owned {
+			fmt.Println("Owned:", s, w)
+		}
+		fmt.Println("Queue:", recipeQueue)
+		recipeName := recipeQueue[0]
+		recipeQueue = recipeQueue[1:]
+
+		if owned[recipeName] {
+			continue
+		}
+
+		if IsBaseElement(recipeName) {
+			owned[recipeName] = true
+			canMake := GetCreatedBy(recipeName)
+			for _, r := range canMake {
+				if owned[r] {
+					continue
+				}
+				recipeQueue = append(recipeQueue, r)
+			}
+			continue
+		}
+
+		// Ensure no infinite loops for recipes that cannot be made
+		if !CanMakeRecipe(recipeName, owned) {
+			// To avoid re-adding the same recipe, we should check if it's already in the queue
+			if !contains(recipeQueue, recipeName) {
+				recipeQueue = append(recipeQueue, recipeName)
+			}
+			continue
+		}
+
+		owned[recipeName] = true
+		fmt.Println("Owned:", recipeName)
+
+		node := &RecipeTreeNode{Name: recipeName}
+		// Simplified children setup
+		var currentChildren []*RecipeTreeNode
+		for _, r := range GetValidRecipe(recipeName, owned) {
+			childTree := recipeToTree[r]
+			if childTree != nil {
+				currentChildren = append(currentChildren, childTree)
+			}
+		}
+		SetChildren(node, [][]*RecipeTreeNode{currentChildren})
+		recipeToTree[recipeName] = node
+		canMake := GetCreatedBy(recipeName)
+		for _, r := range canMake {
+			if owned[r] {
+				continue
+			}
+			recipeQueue = append(recipeQueue, r)
+		}
+	}
+}
+
+// Helper function to check if a recipe is in the queue
+func contains(slice []string, item string) bool {
+	for _, v := range slice {
+		if v == item {
+			return true
+		}
+	}
+	return false
+}
+
+func GetAllElements(tier int) []string {
+	var elements []string
+	for _, recipe := range RecipeMap {
+		if recipe.Tier == tier {
+			elements = append(elements, recipe.Name)
+		}
+	}
+	return elements
+}
+
+func CanMakeRecipe(recipeName string, ownedMap map[string]bool) bool {
+	recipe, exists := RecipeMap[recipeName]
+	if !exists {
+		return false
+	}
+	for _, ingredients := range recipe.Recipes {
+		canMake := true
+		for _, ingredient := range ingredients {
+			if !ownedMap[ingredient] {
+				canMake = false
+				break
+			}
+		}
+		if canMake {
+			return true
+		}
+	}
+	return false
+}
+
+func GetValidRecipe(recipeName string, ownedMap map[string]bool) []string {
+	recipe, exists := RecipeMap[recipeName]
+	if !exists {
+		return nil
+	}
+	var validRecipes []string
+	for _, ingredients := range recipe.Recipes {
+		canMake := true
+		for _, ingredient := range ingredients {
+			if !ownedMap[ingredient] {
+				canMake = false
+				break
+			}
+		}
+		if canMake {
+			validRecipes = append(validRecipes, ingredients...)
+			break
+		}
+	}
+	return validRecipes
+}
+
+func OwnAllTier(tier int, ownedMap map[string]bool) bool {
+	recipes := GetAllElements(tier)
+	for _, recipe := range recipes {
+		if !ownedMap[recipe] {
+			return false
+		}
+	}
+	return true
+}
+
+func GetCreatedBy(recipeName string) []string {
+	canCreate := []string{}
+	for _, recipe := range RecipeMap {
+		for _, ingredients := range recipe.Recipes {
+			for _, ingredient := range ingredients {
+				if ingredient == recipeName {
+					canCreate = append(canCreate, recipe.Name)
+					break
+				}
+			}
+		}
+	}
+	return canCreate
+}
