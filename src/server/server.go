@@ -120,20 +120,22 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	recipe.PruneTree(root)
 	dto := buildDTO(root)
 
-	// —— DEBUG: marshal and log the DTO
-	if b, err := json.MarshalIndent(dto, "", "  "); err == nil {
-		log.Printf("→ [dfsHandler] returning DTO:\n%s\n", b)
+    resp := TreeResponse{
+        Tree:         dto,
+        TimeTaken:    timeTaken.Microseconds(),
+        NodesVisited: nodeCount,
+        RecipesFound: recipeCount,
+        MethodUsed:   "BFS",
+    }
+
+	// —— DEBUG: marshal and log the entire response JSON
+	if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
+		log.Printf("→ [dfsHandler] returning DTO:\n%s\n", full)
 	} else {
 		log.Printf("!! [dfsHandler] failed to marshal DTO: %v\n", err)
 	}
 
-	writeJSON(w, TreeResponse {
-        Tree: dto,
-        TimeTaken: timeTaken.Microseconds(),
-        NodesVisited: nodeCount,
-        RecipesFound: recipeCount,
-        MethodUsed: "DFS",
-    })
+	writeJSON(w, resp)
 }
 
 func bfsHandler(w http.ResponseWriter, r *http.Request) {
@@ -164,20 +166,22 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 	recipeCount := recipe.CalculateTotalCompleteRecipes(root)
 	dto := buildDTO(root)
 
-	// —— DEBUG: marshal and log the DTO
-	if b, err := json.MarshalIndent(dto, "", "  "); err == nil {
-		log.Printf("→ [bfsHandler] returning DTO:\n%s\n", b)
+    resp := TreeResponse{
+        Tree:         dto,
+        TimeTaken:    timeTaken.Microseconds(),
+        NodesVisited: nodeCount,
+        RecipesFound: recipeCount,
+        MethodUsed:   "BFS",
+    }
+
+	// —— DEBUG: marshal and log the entire response JSON
+	if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
+		log.Printf("→ [bfsHandler] returning DTO:\n%s\n", full)
 	} else {
 		log.Printf("!! [bfsHandler] failed to marshal DTO: %v\n", err)
 	}
 
-	writeJSON(w, TreeResponse {
-		Tree: dto,
-		TimeTaken: timeTaken.Microseconds(),
-		NodesVisited: nodeCount,
-		RecipesFound: recipeCount,
-		MethodUsed: "BFS",
-	})
+	writeJSON(w, resp)
 }
 
 // Start hooks up the handlers and loads your recipes.json into memory.
