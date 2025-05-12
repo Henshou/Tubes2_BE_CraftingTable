@@ -8,7 +8,6 @@ import (
 	"os"
 	"strconv"
 	"sync"
-	"time"
 
 	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
 )
@@ -98,17 +97,19 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	start := time.Now()
+	// start := time.Now()
 	nodeCount := 0
+	treeChan := make(chan *recipe.RecipeTreeNode)
 	go recipe.StopSearch(stopChan, wg)
+	go liveUpdate(w, treeChan, stopChan)
 
 	wg.Add(1)
-	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount)
+	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan)
 	wg.Wait()
 
 	// convert to DTO
-	timeTaken := time.Since(start)
-	recipeCount := recipe.CalculateTotalCompleteRecipes(root)
+	// timeTaken := time.Since(start)
+	// recipeCount := recipe.CalculateTotalCompleteRecipes(root)
 	recipe.PruneTree(root)
 	dto := buildDTO(root)
 
@@ -137,17 +138,19 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	start := time.Now()
+	// start := time.Now()
 	nodeCount := 0
+	treeChan := make(chan *recipe.RecipeTreeNode)
 	go recipe.StopSearch(stopChan, wg)
+	go liveUpdate(w, treeChan, stopChan)
 
 	wg.Add(1)
-	go recipe.BuildRecipeTreeBFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount)
+	go recipe.BuildRecipeTreeBFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan)
 	wg.Wait()
 
 	recipe.PruneTree(root)
-	timeTaken := time.Since(start)
-	recipeCount := recipe.CalculateTotalCompleteRecipes(root)
+	// timeTaken := time.Since(start)
+	// recipeCount := recipe.CalculateTotalCompleteRecipes(root)
 	dto := buildDTO(root)
 
 	// —— DEBUG: marshal and log the DTO
@@ -185,4 +188,19 @@ func truncate(b []byte, n int) string {
 		return string(b)
 	}
 	return string(b[:n]) + "...(truncated)"
+}
+
+func liveUpdate(w http.ResponseWriter, treeChan chan *recipe.RecipeTreeNode, stopChan chan bool) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "application/json")
+	for {
+		select {
+		case <-stopChan:
+			return
+		case node := <-treeChan:
+			log.Println("Received node:", node.Name)
+			dto := buildDTO(node)
+			writeJSON(w, dto)
+		}
+	}
 }

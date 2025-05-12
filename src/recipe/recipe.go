@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"sync"
+	"time"
 )
 
 type Recipe struct {
@@ -135,6 +136,7 @@ func BuildRecipeTreeDFS(
 	wg *sync.WaitGroup, // WaitGroup for goroutines
 	mu *sync.Mutex, // Mutex to safely modify shared variables
 	nodesVisited *int,
+	treeChannel chan *RecipeTreeNode,
 ) {
 	defer wg.Done()
 
@@ -179,9 +181,9 @@ func BuildRecipeTreeDFS(
 
 				// Check if the recipe is valid (both children must be base elements)
 				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
-					for _, name := range stack {
-						fmt.Print(name.Name, " ")
-					}
+					mu.Lock()
+					treeChannel <- root
+					mu.Unlock()
 					mu.Lock()
 					if CalculateTotalCompleteRecipes(root) >= maxRecipes {
 						stopChan <- true
@@ -227,6 +229,7 @@ func BuildRecipeTreeBFS(
 	wg *sync.WaitGroup, // WaitGroup for goroutines
 	mu *sync.Mutex, // Mutex to safely modify shared variables
 	nodesVisited *int,
+	treeChannel chan *RecipeTreeNode,
 ) {
 	defer wg.Done()
 
@@ -275,6 +278,11 @@ func BuildRecipeTreeBFS(
 				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
 					mu.Lock()
 					// Stop the search if we reach maxRecipes
+					time.Sleep(500 * time.Millisecond) // Simulate some processing time
+					treeChannel <- root
+					mu.Unlock()
+
+					mu.Lock()
 					if CalculateTotalCompleteRecipes(root) >= maxRecipes {
 						stopChan <- true // Send stop signal
 						return
