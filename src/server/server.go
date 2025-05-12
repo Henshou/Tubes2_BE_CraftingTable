@@ -21,6 +21,14 @@ type NodeDTO struct {
 	Recipes []RecipeDTO `json:"recipes"`
 }
 
+type TreeResponse struct {
+    Tree NodeDTO `json:"tree"`
+    TimeTaken int64 `json:"timeTaken"` // ms
+    NodesVisited int `json:"nodesVisited"`
+    RecipesFound int `json:"recipesFound"`
+    MethodUsed string `json:"methodUsed"`
+}
+
 type RecipeDTO struct {
 	Inputs []NodeDTO `json:"inputs"`
 }
@@ -119,7 +127,13 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("!! [dfsHandler] failed to marshal DTO: %v\n", err)
 	}
 
-	writeJSON(w, dto)
+	writeJSON(w, TreeResponse {
+        Tree: dto,
+        TimeTaken: timeTaken.Microseconds(),
+        NodesVisited: nodeCount,
+        RecipesFound: recipeCount,
+        MethodUsed: "DFS",
+    })
 }
 
 func bfsHandler(w http.ResponseWriter, r *http.Request) {
@@ -157,7 +171,13 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("!! [bfsHandler] failed to marshal DTO: %v\n", err)
 	}
 
-	writeJSON(w, dto)
+	writeJSON(w, TreeResponse {
+		Tree: dto,
+		TimeTaken: timeTaken.Microseconds(),
+		NodesVisited: nodeCount,
+		RecipesFound: recipeCount,
+		MethodUsed: "BFS",
+	})
 }
 
 // Start hooks up the handlers and loads your recipes.json into memory.
