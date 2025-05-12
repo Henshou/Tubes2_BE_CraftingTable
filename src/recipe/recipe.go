@@ -279,8 +279,6 @@ func BuildRecipeTreeBFS(
 				// Check if the recipe is valid (both children must be base elements)
 				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
 					mu.Lock()
-					treeChan <- root
-					time.Sleep(500 * time.Millisecond) // Simulate some processing time
 					// Stop the search if we reach maxRecipes
 					if CalculateTotalCompleteRecipes(root) >= maxRecipes {
 						stopChan <- true // Send stop signal
@@ -314,6 +312,10 @@ func BuildRecipeTreeBFS(
 		}
 		mu.Lock()
 		*nodesVisited++
+		if *nodesVisited%6 == 0 {
+			treeChan <- root
+			time.Sleep(500 * time.Millisecond) // Simulate some processing time
+		}
 		mu.Unlock()
 	}
 }

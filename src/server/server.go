@@ -3,6 +3,7 @@ package server
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -14,39 +15,35 @@ import (
 )
 
 // NodeDTO is exactly what the front-end’s Tree.jsx expects.
-// We no longer send ImageURL here; the front-end will derive
-// its own `/images/${name}.svg` path.
 type NodeDTO struct {
 	Name    string      `json:"name"`
 	Recipes []RecipeDTO `json:"recipes"`
-}
-
-type TreeResponse struct {
-	Tree         NodeDTO `json:"tree"`
-	TimeTaken    int64   `json:"timeTaken"` // ms
-	NodesVisited int     `json:"nodesVisited"`
-	RecipesFound int     `json:"recipesFound"`
-	MethodUsed   string  `json:"methodUsed"`
 }
 
 type RecipeDTO struct {
 	Inputs []NodeDTO `json:"inputs"`
 }
 
+// TreeResponse wraps the full tree plus metrics.
+type TreeResponse struct {
+	Tree         NodeDTO `json:"tree"`
+	TimeTaken    int64   `json:"timeTaken"`    // ms
+	NodesVisited int     `json:"nodesVisited"`
+	RecipesFound int     `json:"recipesFound"`
+	MethodUsed   string  `json:"methodUsed"`
+}
+
 // buildDTO walks your in-memory RecipeTreeNode and emits a NodeDTO.
-// Note that we initialize all slices to non-nil, so JSON comes out as []
-// rather than null.
 func buildDTO(node *recipe.RecipeTreeNode) NodeDTO {
 	dto := NodeDTO{
 		Name:    node.Name,
 		Recipes: make([]RecipeDTO, 0),
 	}
 	for _, group := range node.Children {
-		// skip any empty groups
 		if len(group) == 0 {
 			continue
 		}
-		inputs := make([]NodeDTO, 0)
+		inputs := make([]NodeDTO, 0, len(group))
 		for _, child := range group {
 			inputs = append(inputs, buildDTO(child))
 		}
@@ -55,14 +52,29 @@ func buildDTO(node *recipe.RecipeTreeNode) NodeDTO {
 	return dto
 }
 
+// writeJSON is a helper for one-shot JSON responses.
 func writeJSON(w http.ResponseWriter, v interface{}) {
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Content-Type", "application/json")
-	if err := json.NewEncoder(w).Encode(v); err != nil {
-		http.Error(w, "json encode error", http.StatusInternalServerError)
-	}
+  w.Header().Set("Access-Control-Allow-Origin", "*")
+  w.Header().Set("Content-Type", "application/json")
+
+  // marshal into a []byte so we can both log it and send it
+  payload, err := json.Marshal(v)
+  if err != nil {
+    log.Printf("[writeJSON] ✗ marshal error: %v\n", err)
+    http.Error(w, "json encode error", http.StatusInternalServerError)
+    return
+  }
+  
+  // debug log the exact JSON we're about to send
+  log.Printf("[writeJSON] → sending %d bytes: %s\n", len(payload), payload)
+
+  // write it out
+  if _, err := w.Write(payload); err != nil {
+    log.Printf("[writeJSON] ✗ write error: %v\n", err)
+  }
 }
 
+// parseCount reads ?count=N or defaults to 1
 func parseCount(r *http.Request) int {
 	if s := r.URL.Query().Get("count"); s != "" {
 		if c, err := strconv.Atoi(s); err == nil {
@@ -70,6 +82,11 @@ func parseCount(r *http.Request) int {
 		}
 	}
 	return 1
+}
+
+// parseStream reads ?stream=1 to enable SSE
+func parseStream(r *http.Request) bool {
+	return r.URL.Query().Get("stream") == "1"
 }
 
 func recipesHandler(w http.ResponseWriter, r *http.Request) {
@@ -82,13 +99,13 @@ func recipesHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// —— DEBUG: print the raw recipes.json to your server log
-	log.Printf("→ [recipesHandler] loaded %d bytes from recipes.json\n", len(data))
-	log.Printf("→ [recipesHandler] sample payload:\n%s\n", truncate(data, 200))
+	log.Printf("→ [recipesHandler] loaded %d bytes\n", len(data))
+	log.Printf("→ [recipesHandler] preview:\n%s\n", truncate(data, 200))
 
 	w.Write(data)
 }
 
+// dfsHandler supports both one-shot and streaming.
 func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	target := r.URL.Query().Get("target")
 	if target == "" {
@@ -96,48 +113,84 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	maxRecipes := parseCount(r)
-	isLiveUpdate := true // TODO: make this configurable via query param
-	log.Printf("→ [dfsHandler] target=%q maxRecipes=%d\n", target, maxRecipes)
+	streaming := parseStream(r)
+
+	log.Printf("→ [dfsHandler] target=%q maxRecipes=%d stream=%v\n", target, maxRecipes, streaming)
 
 	// reset state
 	recipe.VisitedMap = make(map[string]*recipe.RecipeTreeNode)
 
-	// build the tree
+	// build root
 	root := &recipe.RecipeTreeNode{Name: target}
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	treeChan := make(chan *recipe.RecipeTreeNode)
+	treeChan := make(chan *recipe.RecipeTreeNode, 10) // buffered
+	
+	// real metrics
 	start := time.Now()
-	nodeCount := 0
-	go recipe.StopSearch(stopChan, wg)
-	go liveUpdate(w, treeChan, stopChan)
+	var nodesVisited int
 
+
+	// start the search
 	wg.Add(1)
-	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan, isLiveUpdate)
-	wg.Wait()
+	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan)
 
-	// convert to DTO
-	timeTaken := time.Since(start)
-	recipeCount := recipe.CalculateTotalCompleteRecipes(root)
+	if streaming {
+		// SSE mode
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Content-Type", "text/event-stream")
+		w.Header().Set("Cache-Control", "no-cache")
+		flusher, ok := w.(http.Flusher)
+		if !ok {
+			http.Error(w, "streaming unsupported", http.StatusInternalServerError)
+			return
+		}
+
+		// send each partial update as soon as it arrives
+		go func() {
+			wg.Wait()
+			close(treeChan)
+		}()
+
+		for node := range treeChan {
+			dto := buildDTO(node)
+        	elapsed   := time.Since(start).Milliseconds()
+        	found     := recipe.CalculateTotalCompleteRecipes(root)
+
+           sse := TreeResponse{
+               Tree:         dto,
+               TimeTaken:    elapsed,
+               NodesVisited: nodesVisited,
+               RecipesFound: found,
+               MethodUsed:   "DFS",
+           }
+           data, _ := json.Marshal(sse)
+			fmt.Fprintf(w, "data: %s\n\n", data)
+			flusher.Flush()
+		}
+		return
+	}
+
+	// one-shot mode
+	go func() {
+		wg.Wait()
+		close(treeChan)
+	}()
+
+	wg.Wait()
+	elapsed   := time.Since(start).Milliseconds()
+	recipesFound := recipe.CalculateTotalCompleteRecipes(root)	
 	recipe.PruneTree(root)
 	dto := buildDTO(root)
 
 	resp := TreeResponse{
 		Tree:         dto,
-		TimeTaken:    timeTaken.Microseconds(),
-		NodesVisited: nodeCount,
-		RecipesFound: recipeCount,
+		TimeTaken:    elapsed,
+		NodesVisited: nodesVisited,
+		RecipesFound: recipesFound,
 		MethodUsed:   "DFS",
 	}
-
-	// —— DEBUG: marshal and log the entire response JSON
-	if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
-		log.Printf("→ [dfsHandler] returning DTO:\n%s\n", full)
-	} else {
-		log.Printf("!! [dfsHandler] failed to marshal DTO: %v\n", err)
-	}
-
 	writeJSON(w, resp)
 }
 
@@ -148,48 +201,85 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	maxRecipes := parseCount(r)
-	isLiveUpdate := true // TODO: make this configurable via query param
-	log.Printf("→ [bfsHandler] target=%q maxRecipes=%d\n", target, maxRecipes)
+	streaming := parseStream(r)
 
+	log.Printf("→ [bfsHandler] target=%q maxRecipes=%d stream=%v\n", target, maxRecipes, streaming)
+
+	// reset state
 	recipe.VisitedMap = make(map[string]*recipe.RecipeTreeNode)
 
+	// build root
 	root := &recipe.RecipeTreeNode{Name: target}
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
+	treeChan := make(chan *recipe.RecipeTreeNode, 10) // buffered
+
+	// real metrics
 	start := time.Now()
-	treeChan := make(chan *recipe.RecipeTreeNode)
-	nodeCount := 0
-	go recipe.StopSearch(stopChan, wg)
-
+	var nodesVisited int
+	
+	// start the search
 	wg.Add(1)
-	go recipe.BuildRecipeTreeBFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan, isLiveUpdate)
-	wg.Wait()
+	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan)
 
+	if streaming {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Content-Type", "text/event-stream")
+		w.Header().Set("Cache-Control", "no-cache")
+		flusher, ok := w.(http.Flusher)
+		if !ok {
+			http.Error(w, "streaming unsupported", http.StatusInternalServerError)
+			return
+		}
+
+		go func() {
+			wg.Wait()
+			close(treeChan)
+		}()
+
+		for node := range treeChan {
+			dto := buildDTO(node)
+            // compute current metrics
+            elapsed   := time.Since(start).Milliseconds()
+            found     := recipe.CalculateTotalCompleteRecipes(root)
+
+            sse := TreeResponse{
+                Tree:         dto,
+                TimeTaken:    elapsed,
+                NodesVisited: nodesVisited,
+                RecipesFound: found,
+                MethodUsed:   "BFS",
+            }
+            data, _ := json.Marshal(sse)			
+			fmt.Fprintf(w, "data: %s\n\n", data)
+			flusher.Flush()
+		}
+		return
+	}
+
+	// one-shot
+	go func() {
+		wg.Wait()
+		close(treeChan)
+	}()
+
+	wg.Wait()
+	elapsed := time.Since(start).Milliseconds()
+	recipesFound := recipe.CalculateTotalCompleteRecipes(root)
 	recipe.PruneTree(root)
-	timeTaken := time.Since(start)
-	recipeCount := recipe.CalculateTotalCompleteRecipes(root)
 	dto := buildDTO(root)
 
 	resp := TreeResponse{
 		Tree:         dto,
-		TimeTaken:    timeTaken.Microseconds(),
-		NodesVisited: nodeCount,
-		RecipesFound: recipeCount,
+		TimeTaken:    elapsed,
+		NodesVisited: nodesVisited,
+		RecipesFound: recipesFound,
 		MethodUsed:   "BFS",
 	}
-
-	// —— DEBUG: marshal and log the entire response JSON
-	if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
-		log.Printf("→ [bfsHandler] returning DTO:\n%s\n", full)
-	} else {
-		log.Printf("!! [bfsHandler] failed to marshal DTO: %v\n", err)
-	}
-
 	writeJSON(w, resp)
 }
 
-// Start hooks up the handlers and loads your recipes.json into memory.
 func Start() {
 	var err error
 	recipe.RecipeMap, err = recipe.ReadJson("recipes.json")
@@ -214,39 +304,4 @@ func truncate(b []byte, n int) string {
 		return string(b)
 	}
 	return string(b[:n]) + "...(truncated)"
-}
-
-func liveUpdate(w http.ResponseWriter, treeChan chan *recipe.RecipeTreeNode, stopChan chan bool) {
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Content-Type", "application/json")
-	for {
-		select {
-		case <-stopChan:
-			return
-		case node := <-treeChan:
-			log.Println("Received node:", node.Name)
-			dto := buildDTO(node)
-			if dto.Name == "" {
-				log.Println("Received empty node, skipping...")
-				continue
-			}
-			resp := TreeResponse{
-				Tree:         dto,
-				TimeTaken:    0,
-				NodesVisited: 0,
-				RecipesFound: 0,
-				MethodUsed:   "BFS",
-			}
-
-			// —— DEBUG: marshal and log the entire response JSON
-			if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
-				log.Printf("→ [dfsHandler] returning DTO:\n%s\n", full)
-			} else {
-				log.Printf("!! [dfsHandler] failed to marshal DTO: %v\n", err)
-			}
-			writeJSON(w, resp)
-			log.Println("Live update sent:", dto.Name)
-
-		}
-	}
 }
