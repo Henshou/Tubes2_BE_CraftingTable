@@ -3,6 +3,7 @@ package recipe
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 	"sync"
@@ -148,6 +149,7 @@ func BuildRecipeTreeDFS(
 		}
 		node := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
+		log.Printf("Visiting node: %s\n", node.Name)
 
 		recipe, exists := recipeMap[node.Name]
 		if !exists {
@@ -174,8 +176,10 @@ func BuildRecipeTreeDFS(
 				}
 
 				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
+					log.Printf("Found base elements: %s and %s\n", r[0], r[1])
 					mu.Lock()
 					treeChan <- root
+					log.Printf("Sending tree to channel: %s\n", root.Name)
 					if streaming {
 						time.Sleep(500 * time.Millisecond)
 					}

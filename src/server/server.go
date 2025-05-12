@@ -111,7 +111,7 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	treeChan := make(chan *recipe.RecipeTreeNode, 10)
+	treeChan := make(chan *recipe.RecipeTreeNode, 2000)
 
 	start := time.Now()
 	var nodesVisited int
@@ -193,7 +193,7 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	treeChan := make(chan *recipe.RecipeTreeNode, 10)
+	treeChan := make(chan *recipe.RecipeTreeNode, 2000)
 
 	start := time.Now()
 	var nodesVisited int
