@@ -8,6 +8,7 @@ import (
 	"os"
 	"strconv"
 	"sync"
+	"time"
 
 	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
 )
@@ -21,11 +22,11 @@ type NodeDTO struct {
 }
 
 type TreeResponse struct {
-    Tree NodeDTO `json:"tree"`
-    TimeTaken int64 `json:"timeTaken"` // ms
-    NodesVisited int `json:"nodesVisited"`
-    RecipesFound int `json:"recipesFound"`
-    MethodUsed string `json:"methodUsed"`
+	Tree         NodeDTO `json:"tree"`
+	TimeTaken    int64   `json:"timeTaken"` // ms
+	NodesVisited int     `json:"nodesVisited"`
+	RecipesFound int     `json:"recipesFound"`
+	MethodUsed   string  `json:"methodUsed"`
 }
 
 type RecipeDTO struct {
@@ -95,6 +96,7 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	maxRecipes := parseCount(r)
+	isLiveUpdate := true // TODO: make this configurable via query param
 	log.Printf("→ [dfsHandler] target=%q maxRecipes=%d\n", target, maxRecipes)
 
 	// reset state
@@ -105,29 +107,29 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	// start := time.Now()
-	nodeCount := 0
 	treeChan := make(chan *recipe.RecipeTreeNode)
+	start := time.Now()
+	nodeCount := 0
 	go recipe.StopSearch(stopChan, wg)
 	go liveUpdate(w, treeChan, stopChan)
 
 	wg.Add(1)
-	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan)
+	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan, isLiveUpdate)
 	wg.Wait()
 
 	// convert to DTO
-	// timeTaken := time.Since(start)
-	// recipeCount := recipe.CalculateTotalCompleteRecipes(root)
+	timeTaken := time.Since(start)
+	recipeCount := recipe.CalculateTotalCompleteRecipes(root)
 	recipe.PruneTree(root)
 	dto := buildDTO(root)
 
-    resp := TreeResponse{
-        Tree:         dto,
-        TimeTaken:    timeTaken.Microseconds(),
-        NodesVisited: nodeCount,
-        RecipesFound: recipeCount,
-        MethodUsed:   "BFS",
-    }
+	resp := TreeResponse{
+		Tree:         dto,
+		TimeTaken:    timeTaken.Microseconds(),
+		NodesVisited: nodeCount,
+		RecipesFound: recipeCount,
+		MethodUsed:   "DFS",
+	}
 
 	// —— DEBUG: marshal and log the entire response JSON
 	if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
@@ -146,6 +148,7 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	maxRecipes := parseCount(r)
+	isLiveUpdate := true // TODO: make this configurable via query param
 	log.Printf("→ [bfsHandler] target=%q maxRecipes=%d\n", target, maxRecipes)
 
 	recipe.VisitedMap = make(map[string]*recipe.RecipeTreeNode)
@@ -154,28 +157,27 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	// start := time.Now()
-	nodeCount := 0
+	start := time.Now()
 	treeChan := make(chan *recipe.RecipeTreeNode)
+	nodeCount := 0
 	go recipe.StopSearch(stopChan, wg)
-	go liveUpdate(w, treeChan, stopChan)
 
 	wg.Add(1)
-	go recipe.BuildRecipeTreeBFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan)
+	go recipe.BuildRecipeTreeBFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodeCount, treeChan, isLiveUpdate)
 	wg.Wait()
 
 	recipe.PruneTree(root)
-	// timeTaken := time.Since(start)
-	// recipeCount := recipe.CalculateTotalCompleteRecipes(root)
+	timeTaken := time.Since(start)
+	recipeCount := recipe.CalculateTotalCompleteRecipes(root)
 	dto := buildDTO(root)
 
-    resp := TreeResponse{
-        Tree:         dto,
-        TimeTaken:    timeTaken.Microseconds(),
-        NodesVisited: nodeCount,
-        RecipesFound: recipeCount,
-        MethodUsed:   "BFS",
-    }
+	resp := TreeResponse{
+		Tree:         dto,
+		TimeTaken:    timeTaken.Microseconds(),
+		NodesVisited: nodeCount,
+		RecipesFound: recipeCount,
+		MethodUsed:   "BFS",
+	}
 
 	// —— DEBUG: marshal and log the entire response JSON
 	if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
@@ -224,7 +226,27 @@ func liveUpdate(w http.ResponseWriter, treeChan chan *recipe.RecipeTreeNode, sto
 		case node := <-treeChan:
 			log.Println("Received node:", node.Name)
 			dto := buildDTO(node)
-			writeJSON(w, dto)
+			if dto.Name == "" {
+				log.Println("Received empty node, skipping...")
+				continue
+			}
+			resp := TreeResponse{
+				Tree:         dto,
+				TimeTaken:    0,
+				NodesVisited: 0,
+				RecipesFound: 0,
+				MethodUsed:   "BFS",
+			}
+
+			// —— DEBUG: marshal and log the entire response JSON
+			if full, err := json.MarshalIndent(resp, "", "  "); err == nil {
+				log.Printf("→ [dfsHandler] returning DTO:\n%s\n", full)
+			} else {
+				log.Printf("!! [dfsHandler] failed to marshal DTO: %v\n", err)
+			}
+			writeJSON(w, resp)
+			log.Println("Live update sent:", dto.Name)
+
 		}
 	}
 }
