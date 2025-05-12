@@ -24,7 +24,7 @@ type RecipeDTO struct {
 
 type TreeResponse struct {
 	Tree         NodeDTO `json:"tree"`
-	TimeTaken    int64   `json:"timeTaken"`    // ms
+	TimeTaken    int64   `json:"timeTaken"` // ms
 	NodesVisited int     `json:"nodesVisited"`
 	RecipesFound int     `json:"recipesFound"`
 	MethodUsed   string  `json:"methodUsed"`
@@ -49,21 +49,21 @@ func buildDTO(node *recipe.RecipeTreeNode) NodeDTO {
 }
 
 func writeJSON(w http.ResponseWriter, v interface{}) {
-  w.Header().Set("Access-Control-Allow-Origin", "*")
-  w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "application/json")
 
-  payload, err := json.Marshal(v)
-  if err != nil {
-    log.Printf("[writeJSON] ✗ marshal error: %v\n", err)
-    http.Error(w, "json encode error", http.StatusInternalServerError)
-    return
-  }
-  
-  log.Printf("[writeJSON] → sending %d bytes: %s\n", len(payload), payload)
+	payload, err := json.Marshal(v)
+	if err != nil {
+		log.Printf("[writeJSON] ✗ marshal error: %v\n", err)
+		http.Error(w, "json encode error", http.StatusInternalServerError)
+		return
+	}
 
-  if _, err := w.Write(payload); err != nil {
-    log.Printf("[writeJSON] ✗ write error: %v\n", err)
-  }
+	log.Printf("[writeJSON] → sending %d bytes: %s\n", len(payload), payload)
+
+	if _, err := w.Write(payload); err != nil {
+		log.Printf("[writeJSON] ✗ write error: %v\n", err)
+	}
 }
 
 func parseCount(r *http.Request) int {
@@ -112,12 +112,14 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
 	treeChan := make(chan *recipe.RecipeTreeNode, 10)
-	
+
 	start := time.Now()
 	var nodesVisited int
 
+	go recipe.StopSearch(stopChan, wg)
+
 	wg.Add(1)
-	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan)
+	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan, streaming)
 
 	if streaming {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -136,17 +138,17 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 
 		for node := range treeChan {
 			dto := buildDTO(node)
-        	elapsed   := time.Since(start).Milliseconds()
-        	found     := recipe.CalculateTotalCompleteRecipes(root)
+			elapsed := time.Since(start).Milliseconds()
+			found := recipe.CalculateTotalCompleteRecipes(root)
 
-           sse := TreeResponse{
-               Tree:         dto,
-               TimeTaken:    elapsed,
-               NodesVisited: nodesVisited,
-               RecipesFound: found,
-               MethodUsed:   "DFS",
-           }
-           data, _ := json.Marshal(sse)
+			sse := TreeResponse{
+				Tree:         dto,
+				TimeTaken:    elapsed,
+				NodesVisited: nodesVisited,
+				RecipesFound: found,
+				MethodUsed:   "DFS",
+			}
+			data, _ := json.Marshal(sse)
 			fmt.Fprintf(w, "data: %s\n\n", data)
 			flusher.Flush()
 		}
@@ -159,8 +161,8 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	}()
 
 	wg.Wait()
-	elapsed   := time.Since(start).Milliseconds()
-	recipesFound := recipe.CalculateTotalCompleteRecipes(root)	
+	elapsed := time.Since(start).Milliseconds()
+	recipesFound := recipe.CalculateTotalCompleteRecipes(root)
 	recipe.PruneTree(root)
 	dto := buildDTO(root)
 
@@ -195,9 +197,10 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 
 	start := time.Now()
 	var nodesVisited int
-	
+
+	go recipe.StopSearch(stopChan, wg)
 	wg.Add(1)
-	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan)
+	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan, streaming)
 
 	if streaming {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -216,17 +219,17 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 
 		for node := range treeChan {
 			dto := buildDTO(node)
-            elapsed   := time.Since(start).Milliseconds()
-            found     := recipe.CalculateTotalCompleteRecipes(root)
+			elapsed := time.Since(start).Milliseconds()
+			found := recipe.CalculateTotalCompleteRecipes(root)
 
-            sse := TreeResponse{
-                Tree:         dto,
-                TimeTaken:    elapsed,
-                NodesVisited: nodesVisited,
-                RecipesFound: found,
-                MethodUsed:   "BFS",
-            }
-            data, _ := json.Marshal(sse)			
+			sse := TreeResponse{
+				Tree:         dto,
+				TimeTaken:    elapsed,
+				NodesVisited: nodesVisited,
+				RecipesFound: found,
+				MethodUsed:   "BFS",
+			}
+			data, _ := json.Marshal(sse)
 			fmt.Fprintf(w, "data: %s\n\n", data)
 			flusher.Flush()
 		}

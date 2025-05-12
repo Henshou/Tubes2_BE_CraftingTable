@@ -135,6 +135,7 @@ func BuildRecipeTreeDFS(
 	mu *sync.Mutex,
 	nodesVisited *int,
 	treeChan chan *RecipeTreeNode,
+	streaming bool,
 ) {
 	defer wg.Done()
 
@@ -175,7 +176,9 @@ func BuildRecipeTreeDFS(
 				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
 					mu.Lock()
 					treeChan <- root
-					time.Sleep(500 * time.Millisecond)
+					if streaming {
+						time.Sleep(500 * time.Millisecond)
+					}
 					if CalculateTotalCompleteRecipes(root) >= maxRecipes {
 						stopChan <- true
 						return
@@ -216,6 +219,7 @@ func BuildRecipeTreeBFS(
 	mu *sync.Mutex,
 	nodesVisited *int,
 	treeChan chan *RecipeTreeNode,
+	streaming bool,
 ) {
 	defer wg.Done()
 
@@ -223,7 +227,7 @@ func BuildRecipeTreeBFS(
 	for len(queue) > 0 {
 		select {
 		case <-stopChan:
-			return 
+			return
 		default:
 		}
 
@@ -256,7 +260,7 @@ func BuildRecipeTreeBFS(
 				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
 					mu.Lock()
 					if CalculateTotalCompleteRecipes(root) >= maxRecipes {
-						stopChan <- true 
+						stopChan <- true
 						return
 					}
 					mu.Unlock()
@@ -276,14 +280,16 @@ func BuildRecipeTreeBFS(
 
 		select {
 		case <-stopChan:
-			return 
+			return
 		default:
 		}
 		mu.Lock()
 		*nodesVisited++
 		if *nodesVisited%6 == 0 {
 			treeChan <- root
-			time.Sleep(500 * time.Millisecond)
+			if streaming {
+				time.Sleep(500 * time.Millisecond)
+			}
 		}
 		mu.Unlock()
 	}
@@ -293,7 +299,6 @@ func StopSearch(stopChan chan bool, wg *sync.WaitGroup) {
 	defer wg.Done()
 	<-stopChan
 	fmt.Println("Stopping the search!")
-	time.Sleep(1 * time.Second)
 }
 
 func SetChildren(node *RecipeTreeNode, children [][]*RecipeTreeNode) {
