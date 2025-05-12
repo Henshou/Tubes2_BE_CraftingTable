@@ -1,4 +1,36 @@
 // main.go
+
+// main.go
+package main
+
+import (
+    "log"
+
+    "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
+    "github.com/Henshou/Tubes2_BE_CraftingTable.git/scraper"
+    "github.com/Henshou/Tubes2_BE_CraftingTable.git/server"
+)
+
+func main() {
+    // 1) (Re-)generate recipes.json
+    log.Println("Scraping recipes…")
+    scraper.FindRecipes()
+    log.Println("Finished scraping; wrote recipes.json")
+
+    // 2) Load recipes.json into the global RecipeMap
+    var err error
+    recipe.RecipeMap, err = recipe.ReadJson("recipes.json")
+    if err != nil {
+        log.Fatalf("Failed to load recipes.json: %v", err)
+    }
+    log.Printf("Loaded %d recipes.\n", len(recipe.RecipeMap))
+
+    // 3) Start the REST API
+    log.Println("Starting HTTP server on :8080")
+    server.Start()
+}
+
+/*
 package main
 
 import (
@@ -43,6 +75,8 @@ func main() {
 
 	// server.Start()
 }
+
+*/
 
 /*
 package main
