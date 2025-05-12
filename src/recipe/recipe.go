@@ -134,6 +134,7 @@ func BuildRecipeTreeDFS(
 	stopChan chan bool, // Channel to signal stopping
 	wg *sync.WaitGroup, // WaitGroup for goroutines
 	mu *sync.Mutex, // Mutex to safely modify shared variables
+	nodesVisited *int,
 ) {
 	defer wg.Done()
 
@@ -212,6 +213,9 @@ func BuildRecipeTreeDFS(
 		default:
 			// Continue processing if no stop signal
 		}
+		mu.Lock()
+		*nodesVisited++
+		mu.Unlock()
 	}
 }
 
@@ -222,6 +226,7 @@ func BuildRecipeTreeBFS(
 	stopChan chan bool, // Channel to signal stopping
 	wg *sync.WaitGroup, // WaitGroup for goroutines
 	mu *sync.Mutex, // Mutex to safely modify shared variables
+	nodesVisited *int,
 ) {
 	defer wg.Done()
 
@@ -300,6 +305,9 @@ func BuildRecipeTreeBFS(
 		default:
 			// Continue processing if no stop signal
 		}
+		mu.Lock()
+		*nodesVisited++
+		mu.Unlock()
 	}
 }
 
