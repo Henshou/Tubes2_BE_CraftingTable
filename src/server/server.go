@@ -1,4 +1,3 @@
-// server.go
 package server
 
 import (
@@ -14,7 +13,6 @@ import (
 	recipe "github.com/Henshou/Tubes2_BE_CraftingTable.git/recipe"
 )
 
-// NodeDTO is exactly what the front-end’s Tree.jsx expects.
 type NodeDTO struct {
 	Name    string      `json:"name"`
 	Recipes []RecipeDTO `json:"recipes"`
@@ -24,7 +22,6 @@ type RecipeDTO struct {
 	Inputs []NodeDTO `json:"inputs"`
 }
 
-// TreeResponse wraps the full tree plus metrics.
 type TreeResponse struct {
 	Tree         NodeDTO `json:"tree"`
 	TimeTaken    int64   `json:"timeTaken"`    // ms
@@ -33,7 +30,6 @@ type TreeResponse struct {
 	MethodUsed   string  `json:"methodUsed"`
 }
 
-// buildDTO walks your in-memory RecipeTreeNode and emits a NodeDTO.
 func buildDTO(node *recipe.RecipeTreeNode) NodeDTO {
 	dto := NodeDTO{
 		Name:    node.Name,
@@ -52,12 +48,10 @@ func buildDTO(node *recipe.RecipeTreeNode) NodeDTO {
 	return dto
 }
 
-// writeJSON is a helper for one-shot JSON responses.
 func writeJSON(w http.ResponseWriter, v interface{}) {
   w.Header().Set("Access-Control-Allow-Origin", "*")
   w.Header().Set("Content-Type", "application/json")
 
-  // marshal into a []byte so we can both log it and send it
   payload, err := json.Marshal(v)
   if err != nil {
     log.Printf("[writeJSON] ✗ marshal error: %v\n", err)
@@ -65,16 +59,13 @@ func writeJSON(w http.ResponseWriter, v interface{}) {
     return
   }
   
-  // debug log the exact JSON we're about to send
   log.Printf("[writeJSON] → sending %d bytes: %s\n", len(payload), payload)
 
-  // write it out
   if _, err := w.Write(payload); err != nil {
     log.Printf("[writeJSON] ✗ write error: %v\n", err)
   }
 }
 
-// parseCount reads ?count=N or defaults to 1
 func parseCount(r *http.Request) int {
 	if s := r.URL.Query().Get("count"); s != "" {
 		if c, err := strconv.Atoi(s); err == nil {
@@ -84,7 +75,6 @@ func parseCount(r *http.Request) int {
 	return 1
 }
 
-// parseStream reads ?stream=1 to enable SSE
 func parseStream(r *http.Request) bool {
 	return r.URL.Query().Get("stream") == "1"
 }
@@ -105,7 +95,6 @@ func recipesHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write(data)
 }
 
-// dfsHandler supports both one-shot and streaming.
 func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	target := r.URL.Query().Get("target")
 	if target == "" {
@@ -116,28 +105,21 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	streaming := parseStream(r)
 
 	log.Printf("→ [dfsHandler] target=%q maxRecipes=%d stream=%v\n", target, maxRecipes, streaming)
-
-	// reset state
 	recipe.VisitedMap = make(map[string]*recipe.RecipeTreeNode)
 
-	// build root
 	root := &recipe.RecipeTreeNode{Name: target}
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	treeChan := make(chan *recipe.RecipeTreeNode, 10) // buffered
+	treeChan := make(chan *recipe.RecipeTreeNode, 10)
 	
-	// real metrics
 	start := time.Now()
 	var nodesVisited int
 
-
-	// start the search
 	wg.Add(1)
 	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan)
 
 	if streaming {
-		// SSE mode
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Content-Type", "text/event-stream")
 		w.Header().Set("Cache-Control", "no-cache")
@@ -147,7 +129,6 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		// send each partial update as soon as it arrives
 		go func() {
 			wg.Wait()
 			close(treeChan)
@@ -172,7 +153,6 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// one-shot mode
 	go func() {
 		wg.Wait()
 		close(treeChan)
@@ -205,21 +185,17 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 
 	log.Printf("→ [bfsHandler] target=%q maxRecipes=%d stream=%v\n", target, maxRecipes, streaming)
 
-	// reset state
 	recipe.VisitedMap = make(map[string]*recipe.RecipeTreeNode)
 
-	// build root
 	root := &recipe.RecipeTreeNode{Name: target}
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	treeChan := make(chan *recipe.RecipeTreeNode, 10) // buffered
+	treeChan := make(chan *recipe.RecipeTreeNode, 10)
 
-	// real metrics
 	start := time.Now()
 	var nodesVisited int
 	
-	// start the search
 	wg.Add(1)
 	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan)
 
@@ -240,7 +216,6 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 
 		for node := range treeChan {
 			dto := buildDTO(node)
-            // compute current metrics
             elapsed   := time.Since(start).Milliseconds()
             found     := recipe.CalculateTotalCompleteRecipes(root)
 
@@ -258,7 +233,6 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// one-shot
 	go func() {
 		wg.Wait()
 		close(treeChan)
@@ -298,7 +272,6 @@ func Start() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
-// truncate returns up to `n` bytes of `b` (for logging).
 func truncate(b []byte, n int) string {
 	if len(b) <= n {
 		return string(b)

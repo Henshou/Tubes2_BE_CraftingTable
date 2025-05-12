@@ -13,7 +13,7 @@ import (
 
 type ElementWithRecipes struct {
 	Element  string     `json:"element"`
-	Tier     int        `json:"tier"` // <- fixed struct tag
+	Tier     int        `json:"tier"`
 	ImageURL string     `json:"image_url"`
 	Recipes  [][]string `json:"recipes"`
 }
@@ -64,7 +64,7 @@ func FindRecipes() {
 					Element:  name,
 					Tier:     0,
 					ImageURL: imgURL,
-					Recipes:  [][]string{{}}, // base element has no recipes
+					Recipes:  [][]string{{}},
 				})
 			})
 			return
