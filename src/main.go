@@ -26,7 +26,6 @@ func main() {
 	log.Printf("Loaded %d recipes.\n", len(recipe.RecipeMap))
 
 	// 3) Start the REST API
-	log.Println("WHEREEEEEEEE")
 	log.Println("Starting HTTP server on :8080")
 	server.Start()
 }
