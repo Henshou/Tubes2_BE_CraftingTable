@@ -31,6 +31,7 @@ func ExcludedElements() map[string]bool {
 		log.Fatal(err)
 	}
 	excluded["Time"] = true
+	excluded["Ruins"] = true
 	return excluded
 }
 
