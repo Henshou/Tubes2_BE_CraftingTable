@@ -257,6 +257,7 @@ func BuildRecipeTreeBFS(
 					childNode := &RecipeTreeNode{Name: name}
 					childNodes = append(childNodes, childNode)
 
+					mu.Lock()
 					queue = append(queue, childNode)
 					mu.Unlock()
 				}

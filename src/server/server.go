@@ -111,7 +111,7 @@ func dfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	treeChan := make(chan *recipe.RecipeTreeNode, 2000)
+	treeChan := make(chan *recipe.RecipeTreeNode, 20000000)
 
 	start := time.Now()
 	var nodesVisited int
@@ -193,14 +193,14 @@ func bfsHandler(w http.ResponseWriter, r *http.Request) {
 	stopChan := make(chan bool)
 	wg := &sync.WaitGroup{}
 	mu := &sync.Mutex{}
-	treeChan := make(chan *recipe.RecipeTreeNode, 2000)
+	treeChan := make(chan *recipe.RecipeTreeNode, 20000000)
 
 	start := time.Now()
 	var nodesVisited int
 
 	go recipe.StopSearch(stopChan, wg)
 	wg.Add(1)
-	go recipe.BuildRecipeTreeDFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan, streaming)
+	go recipe.BuildRecipeTreeBFS(root, recipe.RecipeMap, maxRecipes, stopChan, wg, mu, &nodesVisited, treeChan, streaming)
 
 	if streaming {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
