@@ -153,7 +153,7 @@ func BuildRecipeTreeDFS(
 
 		recipe, exists := recipeMap[node.Name]
 		if !exists {
-			continue
+			return
 		}
 
 		var children [][]*RecipeTreeNode
@@ -176,10 +176,8 @@ func BuildRecipeTreeDFS(
 				}
 
 				if len(r) == 2 && IsBaseElement(r[0]) && IsBaseElement(r[1]) {
-					log.Printf("Found base elements: %s and %s\n", r[0], r[1])
 					mu.Lock()
 					treeChan <- root
-					log.Printf("Sending tree to channel: %s\n", root.Name)
 					if streaming {
 						time.Sleep(500 * time.Millisecond)
 					}
@@ -240,7 +238,7 @@ func BuildRecipeTreeBFS(
 
 		recipe, exists := recipeMap[node.Name]
 		if !exists {
-			continue
+			return
 		}
 
 		var children [][]*RecipeTreeNode
